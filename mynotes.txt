@@ -1,0 +1,6 @@
+
+
+gnome-desktop-item-edit ~/Escritorio --create-new
+
+
+sudo update-alternatives --config java
