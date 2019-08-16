@@ -1,16 +1,145 @@
 
-
+para crear accesos directos en el escritorio en ubuntu:
 gnome-desktop-item-edit ~/Escritorio --create-new
 
 
 sudo update-alternatives --config java
 
-
+217.124.189.50:614
 
 https://github.com/andrespallareslopez/mynotes.git
+https://github.com/andrespallareslopez/prueba32.git
 
 git remote add origin https://github.com/andrespallareslopez/mynotes.git
 
 
 git push -u origin master
+
+
+npx babel src/shared/js/prueba30.js -w -o src/shared/js/prueba30-bis.js
+
+ npx babel src/webComponents -w --out-dir src/lib
+
+export WINEARCH=win32
+
+wine ~/.wine/drive_c/MSDERelA/setup.exe SAPWD="" DISABLENETWORKPROTOCOLS=0 SECURITYMODE=SQL
+
+
+Tutorial Instalacion Samba ubuntu 18.04
+
+https://linuxize.com/post/how-to-install-and-configure-samba-on-ubuntu-18-04/
+
+Crear carpeta para samba:
+sudo chgrp sambashare /samba
+
+Pasos para crear un usuario con su carpeta,permisos y usuarios:
+---------------------------------------------------------------
+sudo useradd -M -d /samba/andrespallares -s /usr/sbin/nologin -G sambashare andrespallares
+
+sudo mkdir /samba/andrespallares
+sudo chown andrespallares:sambashare /samba/andrespallares
+sudo chmod 2770 /samba/andrespallares
+
+sudo smbpasswd -a andrespallares
+sudo smbpasswd -e andrespallares
+
+Pasos para crear el un sadmin para samba con mas privilegios que un usuario normal:
+----------------------------------------------------------------
+
+sudo useradd -M -d /samba/users -s /usr/sbin/nologin -G sambashare sadmin
+
+sudo smbpasswd -a sadmin
+sudo smbpasswd -e sadmin
+
+sudo mkdir /samba/users
+
+sudo chown sadmin:sambashare /samba/users
+sudo chmod 2770 /samba/users
+
+Luego tenemos que configurar un archivo config para compartir los usuarios en samba y queden registrados:
+-----------------------------------------------------------
+
+sudo nano /etc/samba/smb.conf
+
+[users]
+    path = /samba/users
+    browseable = yes
+    read only = no
+    force create mode = 0660
+    force directory mode = 2770
+    valid users = @sambashare @sadmin
+
+[andrespallares]
+    path = /samba/andrespallares
+    browseable = no
+    read only = no
+    force create mode = 0660
+    force directory mode = 2770
+    valid users = andrespallares @sadmin
+
+____________________________________________________________
+reiniciar samba despues de añadir esto al archivo smb.conf
+
+sudo systemctl restart nmbd
+
+Podemos añadir en smb.conf el nombre netbios:
+
+debajo de la clave workgroup=WORKGROUP
+
+netbios name = Andres-PC-Linux
+
+Despues de esto reiniciamos como:
+
+sudo systemctl restart smbd
+sudo systemctl restart nmbd
+
+Luego podemos instalar un cliente para samba
+
+sudo apt install smbclient
+
+mbclient //samba_hostname_or_server_ip/share_name -U username
+
+en nuestro caso ponemos:
+
+smbclient //192.168.8.101/andrespallares -U andrespallares
+
+smbclient //Andres-PC-Linux/andrespallares -U andrespallares
+
+
+
+Montar un samba compartido:
+---------------------------
+Primero hay que instalar lo siguiente:
+
+sudo apt install cifs-utils
+
+
+sudo mkdir /mnt/smbmount
+
+Montar un recurso compartido con el siguiente comando:
+sudo mount -t cifs -o username=username //samba_hostname_or_server_ip/sharename /mnt/smbmount
+
+En nuestro caso hacemos lo siguiente:
+
+sudo mount -t cifs -o username=andrespallares //192.168.8.101/andrespallares /mnt/smbmount
+
+Podemos desde el explorador de gnome en other locations en el apartado de abajo con un input que pone "Connect to Server" y podemos poner lo siguiente:
+
+smb://192.168.8.101/andrespallares
+
+Cliente grafico para samba desde ubuntu
+
+sudo touch /etc/libuser.conf
+sudo system-config-samba
+
+
+
+
+
+
+
+
+
+
+
 

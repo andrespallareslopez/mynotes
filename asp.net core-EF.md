@@ -8,6 +8,43 @@ dotnet run<br>
 dotnet build<br>
 
 </code>
+Tenemos ejemplos mas concretos. <br>
+En este ejemplo creatmos un proyecto de tipo webapi:<br>
+<code>
+dotnet new webapi -n AspNetCoreWebApi
+</code>
+
+Para crear un proyecto de consola :<br>
+
+<code>
+dotnet new console -o console01
+</code>
+
+Para crear un proyecto MVC:<br>
+
+<code>dotnet new mvc -o proyectmvc01</code>
+
+Para crear un  proyecto de  solucion:
+
+<code>dotnet new sln -o nuevasolucion</code>
+
+
+<code>dotnet sln todo.sln add todo-app/todo-app.csproj</code>
+
+Agregue varios proyectos de C# a una solución:
+
+<code>dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj</code>
+
+Quite un proyecto de C# de una solución:<br>
+dotnet sln todo.sln remove todo-app/todo-app.csproj
+
+
+Tenemos en la pagina de microsoft explicando todos los comandos:<br>
+
+[dotnet new](https://docs.microsoft.com/es-es/dotnet/core/tools/dotnet-new?tabs=netcore22)
+
+
+
 
 [Tutorial EF de todas las versiones](https://www.entityframeworktutorial.net/) muy bueno.
 
