@@ -36,7 +36,31 @@ Agregue varios proyectos de C# a una solución:
 <code>dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj</code>
 
 Quite un proyecto de C# de una solución:<br>
-dotnet sln todo.sln remove todo-app/todo-app.csproj
+<code>dotnet sln todo.sln remove todo-app/todo-app.csproj</code>
+
+Tambien tenemos msbuild para la  creacion  y compilacion de todas sus dependencias:
+
+<code>dotnet msbuild</code>
+
+Tambien tenemos comandos de referencia de proyecto:<br>
+
+<code>dotnet add reference</code><br>
+<code>dotnet list reference</code><br>
+<code>dotnet remove reference</code><br>
+
+Tambien tenemos comandos de paquete de proyecto:
+
+<code>dotnet add package</code><br>
+<code>dotnet list package</code><br>
+<code>dotnet  remove package</code><br>
+
+Con la version 3.0 de net tenemos:
+
+<pre>
+dotnet new wpf
+dotnet new winforms
+</pre>
+
 
 
 Tenemos en la pagina de microsoft explicando todos los comandos:<br>

@@ -2,6 +2,15 @@
 para crear accesos directos en el escritorio en ubuntu:
 gnome-desktop-item-edit ~/Escritorio --create-new
 
+cambiar themas y un gestos de temas:
+
+sudo apt install arc-theme papirus-icon-theme
+sudo apt-get install gnome-tweak-tool
+
+sudo apt install xenlism-minimalism-theme
+sudo apt install xenlism-storm-icon-theme
+
+
 
 sudo update-alternatives --config java
 
@@ -133,8 +142,17 @@ sudo touch /etc/libuser.conf
 sudo system-config-samba
 
 
+Notas para sql server para activar sa
+-------------------------------------
+
+Hay que activar la autentificacion mixta, porque por instalacion solo estara la de usuario de windows, hay que poner las dos
 
 
+
+windows xp
+MRX3F-47B9T-2487J-KWKMF-RPWBY
+
+Para virtual box hay que insertar las guest addition para compartir carpetas
 
 
 
