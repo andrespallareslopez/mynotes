@@ -1,0 +1,736 @@
+ASP.NET MVC
+-----------
+
+-DisplayModeProvider: other way to redirect views in mobile or desktop
+
+
+
+-Detect mobile or desktop agent
+--------------------------------
+
+there are diferent libraries:WURFL or 51Degrees.
+
+
+Enable remote connections on IIS EXPRESS
+-----------------------------------------
+http://johan.driessen.se/posts/Accessing-an-IIS-Express-site-from-a-remote-computer
+
+Principal Concepts ASP.NET MVC
+------------------------------
+
+-Controllers
+
+-Views
+
+-Models
+
+-Routing
+
+Concepts in Details
+--------------------
+
+Controllers:
+
+
+Temas ASP.NET MVC Security
+---------------------------
+Custom Authentication and Authoization with Session in ASP.NET MVC(Youtube):
+https://www.youtube.com/watch?v=iNSy97kqGQY
+
+How to create Custom Login Registration in Asp.Net MVC 5 (Code First)(Youtube):
+https://www.youtube.com/watch?v=Uq0y8oxnx-8
+
+Autenticacion por objeto Session en los anteriores videos
+
+Custom Auth ASP MVC 5 with Owin Security:
+http://lvasquez.github.io/2015/07/20/ASP-MVC-5-Authentication/
+
+Using the ASP.NET OAuth providers without ASP.NET Identity:
+http://www.jerriepelser.com/blog/using-aspnet-oauth-providers-without-identity/
+Autenticacion Externa utilizando proveedor de login de github
+
+
+A Beginner's Tutorial on Custom Forms Authentication in ASP.NET MVC Application:(Custom Forms Authentication)
+https://www.codeproject.com/articles/578374/aplusbeginner-splustutorialplusonpluscustomplusf
+
+Muy intersante aqui utiliza el global.asax y utiliza el evento Application_PostAuthenticateRquest(...)
+
+Understanding and Implementing ASP.NET Custom Forms Authentication:
+https://www.codeproject.com/articles/408306/understanding-and-implementing-asp-net-custom-form
+
+Como implementar custom forms authentication utilizando ficheros web.config como lo que utilizamos en webforms para definir authorization con roles y usuarios.
+
+Four Easy Steps to Set Up OWIN for Form-authentication:
+https://www.codeproject.com/tips/849113/four-easy-steps-to-set-up-owin-for-form-authentica
+
+Como utilizar forms authentication con asp.net webform con owin y forms authentication en pasos.
+
+Basic Authentication with ASP.NET Web API Using OWIN Middleware:
+https://lbadri.wordpress.com/2013/07/13/basic-authentication-with-asp-net-web-api-using-owin-middleware/
+
+Ejemplo muy basico de autentificacion basica http con owin.Este es interesante porque dentro del midleware hay un evento donde podemos inyectar cosas al encabezado
+
+Understanding OWIN Forms authentication in MVC 5:
+https://blogs.msdn.microsoft.com/webdev/2013/07/03/understanding-owin-forms-authentication-in-mvc-5/
+
+Informacion de la msdn muy completa sobre este tema, dentro del articulo hay mas link sobre mvc y owin forms authentication, o las options de forms authentication modo activo,pasivo,etc
+
+A primer on OWIN cookie authentication middleware for the ASP.NET developer:
+https://brockallen.com/2013/10/24/a-primer-on-owin-cookie-authentication-middleware-for-the-asp-net-developer/
+
+Ejemplo de autentificacion basada en cookies y que en owin es el sustituto de forms authentication
+
+Token Based Authentication Using ASP.Net Web API, OWIN and Identity With Entity Framework:
+http://www.c-sharpcorner.com/UploadFile/ff2f08/token-based-authentication-using-Asp-Net-web-api-owin-and-i/
+
+Ejemplo hecho con owin sobre autentificacion basado en token y asp.net identity
+
+ASP.NET MVC 5 Authentication Breakdown : Part Deux:
+http://www.khalidabuhakmeh.com/asp-net-mvc-5-authentication-breakdown-part-deux
+
+Otro ejemplo de autentificacion basada en cookies en owin
+
+OWIN Basic Authentication:
+https://www.scottbrady91.com/Katana/OWIN-Basic-Authentication
+
+Otro ejemplo de authenticacion basica con OWIN
+
+ASP.NET Web Api: Understanding OWIN/Katana Authentication/Authorization Part I: Concepts:
+https://www.codeproject.com/articles/876867/asp-net-web-api-understanding-owin-katana-authenti
+
+Ejemplo bastante simple de token authenticacion con roles en owin-katana
+
+Como hacer seguros tus servicios WebApi:
+http://geeks.ms/etomas/2013/02/20/como-hacer-seguros-tus-servicios-webapi/
+
+En este caso utiliza un ejemplo de autenticacion basica en la web api utilizando un atributo personalizado,
+luego utilizando un message handler y un http module, luego al final del post nos da pistas de como
+mejorar y hacer una autentificacion mejor e implementarlo en cada una de las maneras. Muy bueno el post.
+Tambien explica que el verdadero trabajo de los atributos autorize es este:
+
+IPrincipal user = Thread.CurrentPrincipal;
+if (user == null || !user.Identity.IsAuthenticated)
+{
+    return false;
+}
+
+ 
+Token Based Authentication using ASP.NET Web API 2, Owin, and Identity:
+http://bitoftech.net/2014/06/01/token-based-authentication-asp-net-web-api-2-owin-asp-net-identity/
+
+Tutorial bastante sencillo de autenticacion basada en tokens con asp.net identity, es bastante
+sencillo lo que ha hecho aqui con Asp.net identity.
+
+Simple explanation of bearer authentication for Web Api 2:
+http://discoveringdotnet.alexeyev.org/2014/08/simple-explanation-of-bearer-authentication-for-web-api-2.html
+
+Tutorial sobre autenficacion basado en tokens sencillo.
+
+Basic Authentication with ASP.NET Web API Using OWIN Middleware:
+https://lbadri.wordpress.com/2013/07/13/basic-authentication-with-asp-net-web-api-using-owin-middleware/
+
+Aqui utiliza un midleware y utiliza un evento especial para poder meter cosas en el encabezado
+y luego devuelve Next.invoke(req,resp)
+
+
+Forms Authentication using Web API
+https://www.codeproject.com/Tips/996859/Forms-Authentication-using-Web-API
+
+
+
+
+
+
+
+
+
+
+Temas Angular JS ASP.NET Web Api
+--------------------------------
+Angular Js with ASP.NET Web Api(youtube):
+https://www.youtube.com/watch?v=W54LgapPiIo
+
+Securing ASP.NET Web API using Token Based Authentication and using it in Angular.js application:
+http://www.dotnetcurry.com/aspnet/1223/secure-aspnet-web-api-using-tokens-owin-angularjs
+
+Configurando un Cliente AngularJS con IdentityServer3:
+https://ginollerena.wordpress.com/2015/06/01/configurando-un-cliente-angularjs-con-identityserver3/
+
+ASP.NET 5 and AngularJS Part 6, Security:
+http://stephenwalther.com/archive/2015/01/29/asp-net-5-and-angularjs-part-6-security
+
+Este tutorial es de una serie de tutoriales de angular js con asp.net 5 y en este tema trata
+el tema de seguridad desde asp.net 5 identity con angular js, es muy bueno y original el enfoque
+que le da a la autorizacion y como maneja los archivos de angular y los modulos.
+Obligada lectura
+Al principio de esta misma pagina hay mas tutoriales con angular js y asp.net 5 relacionado
+con el mismo proyecto
+
+
+OWIN Microsoft Katana
+------------------------
+How to write OWIN middleware in 5 different steps:
+http://benfoster.io/blog/how-to-write-owin-middleware-in-5-different-steps
+
+Diferentes maneras a lo bruto de crear un midleware a efectos didacticos, muy interesante
+y casi obligado leerlo.
+
+The future is now – OWIN and multi-hosting ASP.NET web applications:
+http://www.strathweb.com/2013/05/the-future-is-now-owin-and-multi-hosting-asp-net-web-applications/
+
+Lo interesante de este articulo es:
+ static void Main(string[] args)
+    {
+        var options = new StartOptions();
+        options.Urls.Add("http://localhost:999/");
+        using (WebApp.Start(options, builder =>
+            {
+                var config = new HttpConfiguration();
+                config.Routes.MapHttpRoute("Default", "api/{controller}/{id}", new {id = RouteParameter.Optional});
+ 
+                builder.Properties["host.AppName"] = "filip app";
+                builder.UseWebApi(config);
+                builder.MapHubs("signalr", new HubConfiguration
+                {
+                    EnableCrossDomain = true,
+                    EnableJavaScriptProxies = true,
+                    Resolver = new DefaultDependencyResolver()
+                });
+ 
+                builder.UseNancy();
+            }))
+        {
+            Console.ReadKey();
+        }
+Como en el Start mete ya los diferente midleware
+
+
+Time to start getting familiar with Owin/Katana:
+http://www.blinkingcaret.com/2016/03/30/time-start-getting-familiar-owin-katana/
+
+
+OWIN Middleware in the IIS integrated pipeline:
+https://www.asp.net/aspnet/overview/owin-and-katana/owin-middleware-in-the-iis-integrated-pipeline
+
+Open Web Interface for .NET (OWIN):
+https://docs.microsoft.com/en-us/aspnet/core/fundamentals/owin
+
+public Task OwinHello(IDictionary<string, object> environment)
+{
+    string responseText = "Hello World via OWIN";
+    byte[] responseBytes = Encoding.UTF8.GetBytes(responseText);
+
+    // OWIN Environment Keys: http://owin.org/spec/spec/owin-1.0.0.html
+    var responseStream = (Stream)environment["owin.ResponseBody"];
+    var responseHeaders = (IDictionary<string, string[]>)environment["owin.ResponseHeaders"];
+
+    responseHeaders["Content-Length"] = new string[] { responseBytes.Length.ToString(CultureInfo.InvariantCulture) };
+    responseHeaders["Content-Type"] = new string[] { "text/plain" };
+
+    return responseStream.WriteAsync(responseBytes, 0, responseBytes.Length);
+}
+Y luego
+
+public void Configure(IApplicationBuilder app)
+{
+    app.UseOwin(pipeline =>
+    {
+        pipeline(next => OwinHello);
+    });
+}
+
+var environment = new OwinEnvironment(HttpContext);
+   var features = new OwinFeatureCollection(environment);
+
+OWIN Key Guidelines and Common Keys:
+http://owin.org/spec/spec/CommonKeys.html
+
+Las principales claves del diccionario
+
+IT:AD:OWin:HowTo:Create an Owin Middleware Component:
+http://skysigal.com/it/ad/owin/howto/create_an_owin_middleware_component
+
+Un ejemplo de midleware y vemos como utilizadmos los stream para produdir un resultado
+  
+
+public async Task Invoke(IDictionary<string, object> environment)
+        {
+            //Access the environment variables, rather than have a dependency on System.Web:
+            IDictionary<string, string[]> responseHeaders = (IDictionary<string, string[]>)environment["owin.ResponseHeaders"];
+ 
+            //It's a bit raw like this, but using helper methods/assemblies (later on), makes this smooth as butter.
+            responseHeaders["Content-Type"]= new string[]{"text/html"};
+            environment["owin.ResponseStatusCode"] = 200;
+ 
+            Stream responseBody = environment["owin.ResponseBody"] as Stream;
+            using (StreamWriter responseWriter = new StreamWriter(responseBody)){
+                responseWriter.Write("<h1>Foo</h1>");
+                return;
+            } 
+            //Or chain on to the next component (eg if doing an authentication middleware):
+            //await _nextComponent(environment);
+
+Owin, Katana and getting started:
+https://weblogs.asp.net/pglavich/owin-katana-and-getting-started
+
+Otro ejeemplo de crear midleware y utiliza el midleware flujos de stream
+
+public Task Invoke(IDictionary<string, object> environment)
+{
+   var responseBytes = System.Text.ASCIIEncoding.UTF8.GetBytes(
+            string.Format("Serviced request on {0} at {1}",DateTime.Now.ToLongDateString(), DateTime.Now.ToLongTimeString()));
+    Stream responseStream = (Stream)environment["owin.ResponseBody"];
+    IDictionary<string, string[]> responseHeaders =
+        (IDictionary<string, string[]>)environment["owin.ResponseHeaders"];
+    responseHeaders["Content-Length"] = new string[] { responseBytes.Length.ToString(CultureInfo.InvariantCulture) };
+    responseHeaders["Content-Type"] = new string[] { "text/plain" };
+    return responseStream.WriteAsync(responseBytes, 0, responseBytes.Length);
+
+ASP.NET: Understanding OWIN, Katana, and the Middleware Pipeline:
+https://www.codeproject.com/articles/864725/asp-net-understanding-owin-katana-and-the-middlewa
+
+Completo tutorial de como hacer midleware y sobre las clases de abstracion de katana sobre owin
+como IOwincontext que nos facilita el trabajo con el diccionario de entorno
+
+public AppFunc MyMiddleWare(AppFunc next)
+{
+    AppFunc appFunc = async (IDictionary<string, object> environment) =>
+    {
+        IOwinContext context = new OwinContext(environment);
+        await context.Response.WriteAsync("<h1>Hello from My First Middleware</h1>");
+        await next.Invoke(environment);
+    };
+    return appFunc;
+
+Tiene una forma de crear midleware personalizados como :
+
+public AppFunc MyMiddleWare(AppFunc next)
+{
+    AppFunc appFunc = async (IDictionary<string, object> environment) =>
+    {
+        // Do something with the incoming request:
+        var response = environment["owin.ResponseBody"] as Stream;
+        using (var writer = new StreamWriter(response))
+        {
+            await writer.WriteAsync("<h1>Hello from My First Middleware</h1>");
+        }
+        // Call the next Middleware in the chain:
+        // await next.Invoke(environment);
+    };
+    return appFunc;
+}
+
+Y incluso tiene ejemplos simple de seguridad.Este es para leerlo
+
+Journey to Multi tenancy with Katana:
+https://www.codeproject.com/Articles/858680/Journey-to-Multi-tenancy-with-Katana
+
+Decouple OWIN Authorization Server from Resource Server:
+https://www.codeproject.com/Articles/824238/Decouple-OWIN-Authorization-Server-from-Resource-S
+Interesamte articulo como desacoplar el autorization server y resource server en diferentes maquinas
+y que tenemos que hacer con unas claves y ponerlas en comun en los diferentes proyectos
+del webconfig.
+
+Owin middleware:
+http://blog.2mas.xyz/owin-middleware/
+
+muy buen tutorial de como escribir un midleware a pelo, como lo que sigue:
+
+ private Task SecureHandler(IDictionary<string, object> environment)
+    {
+        if (!IsAuthenticated(environment))
+        {
+            return Redirect(environment, _options.LoginPath);
+        }
+        WriteToResponseStream(environment, "You are watching super secret stuff! ");
+        return _next(environment);
+
+   public Task Invoke(IDictionary<string, object> environment)
+    {
+        var path = environment["owin.RequestPath"] as string;
+        Func<IDictionary<string, object>, Task> handler;
+        if (_requestDispatcher.TryGetValue(path, out handler))
+        {
+            return handler(environment);
+        }
+        return _next(environment);
+    }
+
+    private Task WriteToResponseStream(IDictionary<string, object> environment, string message)
+    {
+        var response = environment["owin.ResponseBody"] as Stream;
+        var streamWriter = new StreamWriter(response);
+        return Task.Factory.StartNew(() =>
+        {
+            streamWriter.Write(message);
+            streamWriter.Dispose();
+        });
+    }
+
+he puesto varias piezas de codigo del ejemplo para que se vea como no utiliza ningun ensamblado
+, solo utiliza definiciones de interfaces y librerias basicas para formar un midleware que se
+llama stupidAuth, es el nombre de la clase midleware pero nada mas, interesante.
+
+
+Understanding OWIN – more on the IAppBuilder abstraction and middleware creation:
+http://chris.59north.com/post/Understanding-OWIN-more-on-the-IAppBuilder-abstraction-and-middleware-creation
+
+En este post utiliza el enviroment dictionary para agregar algo nuevo al diccionario, para luego
+utilizarlo en otros midlewares mas abajo, este post ejemplo es intersantisimo
+
+public Task ProcessMessage(IOwinContext context, Func<Task> next)
+{
+    context.Environment["caching.addToCache"] = new Action<IOwinContext, string, TimeSpan>(AddToCache);
+ 
+    var path = context.Request.Path.Value;
+
+    if (!_responseCache.ContainsKey(path))
+    {
+        return next();
+    }
+ 
+    var cacheItem = _responseCache[path];
+    if (cacheItem.ExpiryTime <= DateTime.Now)
+    {
+        _responseCache.Remove(path);
+        return next();
+    }
+ 
+    context.Response.Write(cacheItem.Response);
+    return Task.FromResult(0);
+}
+Creating OWIN Middleware using Microsoft Katana:
+https://www.scottbrady91.com/Katana/Creating-OWIN-Middleware-using-Microsoft-Katana
+
+Ejemplo de midleware donde crea cookies, tambien envia un archivo, y tambien un ejeplo de autenticacion
+con cookies
+
+
+Can OWIN middleware use the http session?:
+http://stackoverflow.com/questions/23565543/can-owin-middleware-use-the-http-session
+
+Ejemplo en stackoverflow de como manejar el objeto session en owin, pero avisa que esto no
+es estandar
+
+Creating OWIN based WS-Federation application:
+https://blogs.msdn.microsoft.com/sakamati/2015/07/06/creating-owin-based-ws-federation-application/
+
+Enabling Windows Authentication in Katana:
+https://www.asp.net/aspnet/overview/owin-and-katana/enabling-windows-authentication-in-katana
+
+OWIN and Katana part 4: Web API on top of OWIN:
+https://dotnetcodr.com/2014/04/24/owin-and-katana-part-4-web-api-on-top-of-owin/
+
+En este post vemos ejemplo de como establecer una web api en katana en self-hosting, aparte
+vemos que podemos cambiar el despliegue desde un self-hosting a un iis-express, cambiando
+varios parametros de la configuracion del proyecto que cargaria con un console para hacer
+self-hosting a ese mismo proyecto funcionar bajo iis-express
+Esto es lo interesante del articulo.
+
+OwinResponse cookies not set when remove an HttpResponse cookie:
+http://appetere.com/post/owinresponse-cookies-not-set-when-remove-an-httpresponse-cookie
+
+A la hora de crear cookies podemos tenes problemas por cookies no establecidad podemos hacer lo
+siguiente
+
+private void SetCookies()
+{
+    var owinContext = HttpContext.GetOwinContext();
+    var owinResponse = owinContext.Response;
+
+    owinResponse.Cookies.Append("owinResponseCookie1", "value1");
+
+    owinResponse.OnSendingHeaders(state =>
+    {
+        owinResponse.Cookies.Append("owinResponseCookie2", "value2");
+    },
+    null);
+
+    var httpResponse = HttpContext.Response;
+    httpResponse.Cookies.Remove("httpResponseCookie1");
+}
+
+Podemos utilizar onSendingHeaders
+
+Data caching per request in Owin application:
+http://stackoverflow.com/questions/28227078/data-caching-per-request-in-owin-application
+
+Bastante interesante este articulo porque sale lo siguiente para cachear:
+
+Finally I found OwinRequestScopeContext. Very simple to use:
+
+In Startup:
+
+app.UseRequestScopeContext();
+then I can add per request cache like this:
+
+OwinRequestScopeContext.Current.Items["myclient"] = new Client();
+Then anywhere in my code I can do (just like HttpContext.Current):
+
+var currentClient = OwinRequestScopeContext.Current.Items["myclient"] as Client;
+
+Tambien en otra respuesta aparece lo siguiente:
+
+You just need to use OwinContext for this:
+
+From your middleware:
+
+public class HelloWorldMiddleware : OwinMiddleware
+{
+   public HelloWorldMiddleware (OwinMiddleware next) : base(next) { }
+
+   public override async Task Invoke(IOwinContext context)
+   {   
+       context.Set("Hello", "World");
+       await Next.Invoke(context);     
+   }   
+}
+From MVC or WebApi:
+
+Request.GetOwinContext().Get<string>("Hello");
+
+
+
+Owin 101 a progressive walkthrough:
+http://localghost.io/articles/owin-101-a-progressive-walkthrough-2014-01-22/
+
+Es un tutorial con repositorios github muy bueno sobre owin-katana en crudo.
+
+Modify OWIN/Katana PhysicalFileSystem page on request:
+http://stackoverflow.com/questions/30495582/modify-owin-katana-physicalfilesystem-page-on-request?rq=1
+
+Interesante porque refiere a como cargar archivos y mostrarlos
+
+appBuilder.UseFileServer(new FileServerOptions {
+    FileSystem = new PhysicalFileSystem(filePath)
+});
+
+Luego tiene un ejemplo hecho manualmente
+
+Is there Application_End from Global.asax in Owin?:
+http://stackoverflow.com/questions/27444924/is-there-application-end-from-global-asax-in-owin
+
+Implementing HTTP Request Handler on ASP.NET Core Applications
+https://blog.kloud.com.au/tag/owin/
+
+Siguiendo el articulo buscando referencias a application_start, realmente es la clase
+startup el analogo a application_start, aparte habla de owin en asp.net core
+
+Luego habla de una cosa muy importante:
+
+HTTP modules process requests and pass them to another modules.
+HTTP handlers process requests and return their responses to browsers.
+
+Sharing cookies between applications:
+https://docs.microsoft.com/en-us/aspnet/core/security/data-protection/compatibility/cookie-sharing
+
+How to get cookies at pure owin?:
+https://forums.asp.net/t/2094511.aspx?How+to+get+cookies+at+pure+owin+
+
+OWIN Startup Class Detection:
+https://www.asp.net/aspnet/overview/owin-and-katana/owin-startup-class-detection
+
+Este articulo es interesante por este codigo:
+   public class Startup
+   {
+      public void Configuration(IAppBuilder app)
+      {
+         app.Use((context, next) =>
+         {
+            TextWriter output = context.Get<TextWriter>("host.TraceOutput");
+            return next().ContinueWith(result =>
+            {
+               output.WriteLine("Scheme {0} : Method {1} : Path {2} : MS {3}",
+               context.Request.Scheme, context.Request.Method, context.Request.Path, getTime());
+            });
+         });
+
+         app.Run(async context =>
+         {
+            await context.Response.WriteAsync(getTime() + " My First OWIN App");
+         });
+      }
+
+      string getTime()
+      {
+         return DateTime.Now.Millisecond.ToString();
+      }
+   }
+
+Accede a un contexto con context.get<...>
+Luego pone ejemplos de como utilizar owinhost.
+
+Conceptos básicos de oAuth2:
+http://www.thegameofcode.com/2012/07/conceptos-basicos-de-oauth2.html
+
+ The OAuth 2.0 Authorization Framework:
+https://tools.ietf.org/html/rfc6749#section-4.1
+
+Using OpenID Connect:
+https://blogs.msdn.microsoft.com/mvpawardprogram/2016/09/27/using-openid-connect/
+
+muy bueno y explica openid connect y su historia a parte de implementarlo, explica muy bien todo
+el flujo de trabajo
+
+OWIN OAuth 2.0 Authorization Server:
+https://www.asp.net/aspnet/overview/owin-and-katana/owin-oauth-20-authorization-server
+
+Un ejemplo de autorization server en owin katana siguiendo unos pasos
+
+OAuth is not Single Sign-On;
+https://stormpath.com/blog/oauth-is-not-sso
+
+Explicando lo que es SSO Single sign-on
+
+JSON Web Token in ASP.NET Web API 2 using Owin:
+http://bitoftech.net/2014/10/27/json-web-token-asp-net-web-api-2-jwt-owin-authorization-server/
+
+Securing ASP.NET Web API endpoints – Using OWIN, OAuth 2.0 and Claims:
+https://blog.jayway.com/2014/09/25/securing-asp-net-web-api-endpoints-using-owin-oauth-2-0-and-claims/
+
+ASP.NET Identity Stripped Bare - MVC Part 1:
+http://benfoster.io/blog/aspnet-identity-stripped-bare-mvc-part-1
+
+es un ejemplo utilizando autentificacion por cookies muy simple y utilizando claimprincipals, llega a 
+proponer un codigo como esto:
+
+public class AppUser : ClaimsPrincipal
+{
+    public AppUser(ClaimsPrincipal principal)
+        : base(principal)
+    {
+    }
+
+    public string Name
+    {
+        get
+        {
+            return this.FindFirst(ClaimTypes.Name).Value;
+        }
+    }
+
+    public string Country
+    {
+        get
+        {
+            return this.FindFirst(ClaimTypes.Country).Value;
+        }
+    }
+}
+
+Mirar el codigo del articulo, muy interesante
+
+ASP.NET MVC Web API Identity (OWIN Security): Auto Login after Register + Custom Login Service Endpoint:
+http://www.nakov.com/blog/2014/12/22/webapi-owin-identity-custom-login-service/
+
+Secure a Web API with Individual Accounts and Local Login in ASP.NET Web API 2.2:
+https://www.asp.net/web-api/overview/security/individual-accounts-in-web-api
+
+Interesante por esto:
+
+config.SuppressDefaultHostAuthentication();
+config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
+
+
+
+
+Securiza tu WebApi con tokens autogenerados:
+http://geeks.ms/etomas/2015/02/04/securiza-tu-webapi-con-tokens-autogenerados/
+
+Aqui se puede ver un pedazo de codigo del proveedor de autorizacion creado, bastante interesante
+
+Ojo con la linea de codigo que es importante
+
+context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
+
+
+public class CredentialsAuthorizationServerProvider : OAuthAuthorizationServerProvider
+{
+    public override async Task ValidateClientAuthentication(OAuthValidateClientAuthenticationContext context)
+    {
+        context.Validated();
+    }
+ 
+    public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
+    {
+ 
+        context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
+ 
+        using (TestContext db = new TestContext())
+        {
+            var user = db.Users.FirstOrDefault(u => u.Login == context.UserName && u.Password == context.Password);
+            if (user == null)
+            {
+                context.SetError("invalid_grant", "The user name or password is incorrect.");
+                return;
+            }
+        }
+ 
+        var identity = new ClaimsIdentity(context.Options.AuthenticationType);
+        identity.AddClaim(new Claim(ClaimTypes.Name, context.UserName));
+        identity.AddClaim(new Claim(ClaimTypes.Role, "user"));
+        context.Validated(identity);
+    }
+}
+
+Tambien al final de startup tenemos que poner algo parecido para que la web api haga algo con los
+tokens
+
+var authOptions = new OAuthBearerAuthenticationOptions()
+{
+    AuthenticationMode = Microsoft.Owin.Security.AuthenticationMode.Active
+};
+app.UseOAuthBearerAuthentication(authOptions);
+
+
+Generar Token con nombre de usuario incluido:
+https://social.msdn.microsoft.com/Forums/es-ES/9582344a-1fc4-4ce5-b8a0-d804003a7038/generar-token-con-nombre-de-usuario-incluido?forum=vcses
+
+En este punto sugieren como descifrar el token con las siquientes lineas de codigo en una web api
+
+    string token = Request.Headers["Authorization"].Replace("Bearer ", "");
+            Microsoft.Owin.Security.AuthenticationTicket ticket = Startup.OAuthBearerOptions.AccessTokenFormat.Unprotect(token);
+            var username = ticket.Identity.Name;
+
+Tambien hablan del machinekey la clave en el webconfig para encriptar el token y sugerencias para crearla desde powershell
+o desde iis.
+
+
+Securizar Owin con oAuth - Bearer:
+http://eltori.blogspot.com.es/2016/07/securizar-owin-con-oauth-bearer.html
+
+Filtros en ASP.NET MVC:
+http://josemartinez.info/2015/05/11/filtros-en-asp-net-mvc/
+
+Este articulo es muy bueno hablando sobre filtros , caracteristicas , tipos, y ejemplos pequeños y con
+un diagrama al principio.Muy bien explicado, un detalle habla que puedes aplicar filtros(separacion 
+de responsabilidades) o tambien en el controlador estan los metodos de los filtros, pero perderiamos
+separacion de responsabilidades, hacer filtro lo podemos reutilizar en otros controladores y acciones
+
+Filtros de seguridad de la API web de ASP.NET:
+https://msdn.microsoft.com/es-es/magazine/dn781361.aspx
+
+
+Authentication and Authorization in ASP.NET Web API:
+https://www.asp.net/web-api/overview/security/authentication-and-authorization-in-aspnet-web-api
+
+ASP.NET MVC 5 Authentication Filters:
+https://visualstudiomagazine.com/articles/2013/08/28/asp_net-authentication-filters.aspx
+
+ASP.NET Identity Tutorial – Basics:
+http://tektutorialshub.com/asp-net-identity-tutorial-basics/
+
+ASP.NET Identity Tutorial – OWIN Setup:
+http://tektutorialshub.com/asp-net-identity-tutorial-owin-setup/
+
+ASP.NET Identity Tutorial – User Login and Registration:
+http://tektutorialshub.com/asp-net-identity-tutorial-user-login-and-registration/
+
+Membership and Administration con Webforms:
+https://www.asp.net/web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/membership-and-administration
+
+
+
+
+
+
