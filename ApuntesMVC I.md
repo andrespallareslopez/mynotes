@@ -1,5 +1,30 @@
 # Apunte MVC
 
+### Usando los ActionLink
+
+Sintaxis del helper ActionLink
+
+
+@Html.ActionLink("descripcion del link", "Action","controlador del Action",objecto parameter para query string(por ejemplo),objecto para definir atributos en el link y hasta clases con @class)
+Ejemplos:
+<pre>
+@Html.ActionLink("Home","Index","Home") /*Descripcion link,action,controles*/
+
+@Html.ActionLink("Mi About","About","Home",null,new {miatributo="valor1",@class="btn btn-class"})
+
+@Html.ActionLink("mi about","about","home",new {edad=88},new {miAtributo="valor2"})
+
+</pre>
+
+### Inline and Custom HTML Helpers in ASP.NET MVC
+
+https://dzone.com/articles/inline-and-custom-html-helpers-in-aspnet-mvc
+
+
+
+### Formas de almacenar datos temporales en Asp.net MVC (ViewData, ViewBag, TempData y Session)
+
+https://www.tiracodigo.com/index.php/programacion/mvc/formas-de-almacenar-datos-temporales-en-asp-net-mvc-viewdata-viewbag-tempdata-y-session
 
 
 
