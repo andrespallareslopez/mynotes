@@ -113,7 +113,11 @@ Eliminar el archivo
 
 Confirmar los cambios (Commit)
 
-<pre>git commit -m 'comentario'</pre>
+<pre>
+git commit -m 'comentario'
+tambien podemos staggear y hacer el commit como:
+git commit -a -m "comentario"
+</pre>
 
 Ver los logs de git
 <pre>git log</pre>
@@ -208,5 +212,23 @@ git push origin master
 
 Para bajarnos en remoto y actualizar en local:
 <pre>
-git fetch <remote-repo> <remote-branch>:<local-branch>
+git fetch remote-repo remote-branch:local-branch
+</pre>
+
+Renombar remotos
+<pre>
+<b>pb</b> seria el antiguo remoto
+<b>paul</b> seria el nuevo remoto
+git remote rename pb paul
+</pre>
+
+Para eliminar un remoto
+<pre>
+git remote rm paul
+</pre>
+
+para añadir cambios hacemos lo siguiente:
+<pre>
+git add filename
+git add .
 </pre>
