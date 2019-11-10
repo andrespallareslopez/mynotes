@@ -232,3 +232,4 @@ para añadir cambios hacemos lo siguiente:
 git add filename
 git add .
 </pre>
+
