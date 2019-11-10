@@ -150,6 +150,63 @@ para borrar la rama
 Tambien podemos crear una rama con *branch*
 <pre>git branch nombre rama</pre>
 
+**Mostrando tus repositorios remotos**
+<pre>
+git remote -v
+</pre>
+**Inspeccionando un repositorio remotos**
 
+<pre>
+git remote show origin
+</pre>
 
+**Enviando a tus repositorios remotos**
 
+<pre>
+git push [nombre-remoto][nombre-rama]
+
+git push origin master
+</pre>
+
+Podemos crear una rama local de la siquiente manera:
+<pre>
+git checkout -b dev
+</pre>
+Y luego podemos subir a la rama remota
+<pre>
+git push origin dev
+</pre>
+
+Para sincronizar con el repositorio remoto, y actualizar nuestro repositorio local con cualquier dato que no tengamos, como en este caso la nueva rama, lanzaríamos el siguiente comando:
+<pre>
+ git fetch origin
+</pre>
+Podemos crear nuestra propia rama local de la siguiente manera desde una rama remota:
+<pre>
+git checkout -b rediseno origin/rediseno
+
+tambien se podria hacer 
+
+git checkout --track origin/rediseno
+</pre>
+
+En el caso de querer eliminar una rama del repositorio remoto, la sintaxis será la siguiente:
+<pre>
+git push origin :nombre-rama
+en el caso de arriva
+git push origin :dev
+</pre>
+
+Otra manera de hacer pull en local:
+
+<pre>
+git fetch origin
+
+git checkout master
+git push origin master
+</pre>
+
+Para bajarnos en remoto y actualizar en local:
+<pre>
+git fetch <remote-repo> <remote-branch>:<local-branch>
+</pre>
