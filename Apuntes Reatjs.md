@@ -35,3 +35,4 @@ In the project root, create a file called .babelrc. Here, we’re telling babel 
   "presets": ["env", "react"]
 }
 ~~~
+

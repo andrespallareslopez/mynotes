@@ -2,8 +2,22 @@
 
 **Comandos:**
 
+Aqui tenemos un ejemplo de crear una maquina virtual con Hyper-V pero primero hay que crear como Virtual Swith o un adaptador de red:
+<pre>
+docker-machine create --driver hyperv vm
+</pre>
+Pero en este articulo:
 
+https://docs.docker.com/machine/drivers/hyper-v/#example
 
+como podemos crear un virtual swith con conexion externa a internet.
+___
+
+***Configurar una red NAT***
+
+https://docs.microsoft.com/es-es/virtualization/hyper-v-on-windows/user-guide/setup-nat-network
+
+___
 ~~~
 docker info
 
