@@ -162,3 +162,96 @@ https://weblogs.asp.net/dixin/entity-framework-core-and-linq-to-entities-6-query
 
 ___
 
+Execute multiple queries async and in parallel
+
+https://riptutorial.com/entity-framework/example/13437/execute-multiple-queries-async-and-in-parallel
+
+<pre>
+public async Task<IEnumerable<TResult>> GetResult<TResult>()
+{
+    using(var context = new Context())
+    {
+        return await context.Set<TResult1>().ToListAsync().ConfigureAwait(false);
+    }
+}
+
+
+
+IEnumerable<TResult1> result1;
+IEnumerable<TResult2> result2;
+
+var result1Task = GetResult<TResult1>();
+var result2Task = GetResult<TResult2>();
+
+await Task.WhenAll(result1Task, result2Task).ConfigureAwait(false);
+
+var result1 = result1Task.Result;
+var result2 = result2Task.Result;
+</pre>
+
+___
+
+Execute multiple task and await all have completed
+
+http://www.andrearegoli.it/Blog/2014/08/26/execute-multiple-task-and-await-all-have-completed/
+En este articulo propone tres soluciones:
+
+<pre>
+// call each thread and execute both and wait for eachone
+var T1 = serviceClient.GetBusinessHours(SelectedStore.id);
+var T2 = serviceClient.GetFlyerByStoreId(SelectedStore.id)
+ 
+ListStoreHours = await T1();
+ListFlyer = await T2();
+</pre>
+
+
+
+<pre>
+   Task[] tasks = new Task[] {
+                serviceClient.GetBusinessHours(SelectedStore.id).ContinueWith(
+                    (TResult) => ListStoreHours = TResult.Result),
+                serviceClient.GetFlyerByStoreId(SelectedStore.id).ContinueWith(
+                    (TResult) => ListFlyer = TResult.Result)
+                };
+   
+   await Task.WhenAll(tasks);
+</pre>
+
+<pre>
+Parallel.Invoke(
+    async () => ListFlyer = await serviceClient.GetFlyerByStoreId(SelectedStore.id),
+    async () => ListStoreHours = await serviceClient.GetBusinessHours(SelectedStore.id)
+);
+</pre>
+
+___
+C# Async Antipatterns
+
+https://markheath.net/post/async-antipatterns
+
+___
+
+How To: use your existing CSDL/MSL/SSDL files in the Entity Designer CTP2
+
+https://blogs.msdn.microsoft.com/dsimmons/2007/12/07/how-to-use-your-existing-csdlmslssdl-files-in-the-entity-designer-ctp2/
+
+___
+Exploring how the Entity Data Model (EDM) Generates Code and Executes Queries – Entity Framework 4.0
+
+https://www.dotnetcurry.com/ShowArticle.aspx?ID=603
+
+___
+
+Working With Large Models In Entity Framework – Part 2
+
+https://blogs.msdn.microsoft.com/adonet/2008/11/25/working-with-large-models-in-entity-framework-part-2/
+
+___
+
+Este articulo es sobre los modelos edm en ef en ef 6.0
+
+
+Creating an Entity Data Model
+
+https://www.entityframeworktutorial.net/entityframework6/create-entity-data-model.aspx
