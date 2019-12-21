@@ -80,3 +80,9 @@ Mostrar logs de kubernetes de un pod
 kubectl log nginx(<-nombre del contenedor creado en kubernetes)
 ~~~
 
+
+Putting the ".NET" into "Kubernetes"
+
+https://www.youtube.com/watch?v=GBOPBfcJ2zM
+
+

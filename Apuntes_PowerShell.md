@@ -26,4 +26,8 @@ Enable PowerShell Remoting on the PC You Want to Access Remotely
 
 https://www.howtogeek.com/117192/how-to-run-powershell-commands-on-remote-computers/
 
+Putting the ".NET" into "Kubernetes"
+
+https://www.youtube.com/watch?v=GBOPBfcJ2zM
+
 
