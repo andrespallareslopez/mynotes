@@ -27,3 +27,13 @@ https://strapi.io/blog/building-a-static-website-using-gatsby-and-strapi
 
 ___
 
+How to keep state between pages with local state in Gatsby.js
+
+https://www.freecodecamp.org/news/keeping-state-between-pages-with-local-state-in-gatsby-js/
+
+___
+
+Añadiendo estilos globales con un componente layout
+
+https://github.com/gatsbyjs/gatsby-es/blob/master/docs/docs/global-css.md
+
