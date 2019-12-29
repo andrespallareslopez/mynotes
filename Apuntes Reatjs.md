@@ -145,7 +145,33 @@ export const useForm= initialValues => {
 ## useEffect
 
 ~~~
+import React,{useEffect} from "react";
+import {useForm} from "./useForm";
+
+const App = () => {
+   const [values,handleChange] = useForm({email: "",password:""});
+
+   useEffect(() => {
+      console.log('render');
+
+   },[]);
    
+   return (
+     <div>
+          <input name="email" 
+         value={value.email}
+         onChange= {handleChange}
+       />
+       <input 
+         name="password" 
+         type="password"
+         onChange={handleChange}
+       />
+     </div>
+
+   )
+   
+};
 ~~~
 
 
