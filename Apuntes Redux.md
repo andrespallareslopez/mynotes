@@ -202,7 +202,7 @@ export default findResults
 Ahora vamos a retocar los componentes para conectar con los reducers:
 
 Componente results
-~~~
+<pre>
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import Page from './page';
@@ -231,7 +231,7 @@ const wrapper = connect(mapStateToProps);
 cons component = wrapper(Results);
 
 export default component;
-~~~
+</pre>
 Otra manera de poner el final el *conect* es de la siguiente manera:
 
 ~~~
@@ -248,9 +248,9 @@ https://www.youtube.com/watch?v=7qMBEFzS_xU&list=PL33bS175Qm6dRwGuzW6AX7Ru7Opubi
 
 
 
-~~~
+<pre>
 
-~~~
+</pre>
 
 ~~~
 
