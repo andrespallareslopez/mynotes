@@ -215,8 +215,9 @@ class Results extends Component {
         console.log(suggestions);
 
         return (
-            <Page 
-                  suggestions={suggestions} />
+            < Page 
+                  suggestions={suggestions}
+                   />
         );
     }
 }
@@ -247,12 +248,104 @@ ___
 https://www.youtube.com/watch?v=7qMBEFzS_xU&list=PL33bS175Qm6dRwGuzW6AX7Ru7OpubipSw&index=3
 
 
-
+Tenemos un componente appbar:
+Primero el componente contenedor
 <pre>
+import React,{Component} from 'react';
+import {connect} from 'react-redux';
+import Page from './page';
+
+class IAppBar extends Component {
+    constructor(props){
+       super(props);
+
+       this.state = {
+           text: '',
+       };
+
+       this.onChangeText = this.onChangeText.bind(this);
+       this.onChangeSelection = this.onChangeSelection.bind(this);
+    }
+    
+    onChangeText(text){
+        this.setState(text);
+    }
+    onChangeSelection(text){
+
+    }
+    
+    render(){
+        const {text} = this.state;
+        const {suggestions} = this.state;
+
+        return (
+            < Page 
+               text={text}
+               suggestions={suggestions}
+               onChangeText={this.onChangeText}
+               onChangeSelection= {this.onChangeSelection}
+              />
+            
+        );
+    }
+
+}
+
+const mapStateToProps = (state) => {
+    return {
+        return {
+            suggestions: state.suggestions,
+        };
+    };
+}
+
+export default connect(mapStateToProps)(IAppBar);
 
 </pre>
 
+El componente grafico:
 ~~~
+import React from 'react';
+import AppBar from '@material-ui/core/AppBar';
+import ToolBar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import AccountCircle from '@material-ui/icons/AccounCircle';
+import Autocomplete from '../autocomplete';
+
+function Page(props){
+    const {
+        text,
+        suggestions,
+        onChangeText,
+        onChangeSelection,
+    } = props;
+    
+    return (
+        <AppBar position="static" >
+          <Toolbar className="appbar" >
+             <Typography variant="h6" color = "inherit" >
+              
+             </Typography>
+        
+             <Autocomplete 
+               text={''}
+               suggestions={[]}
+               onChangeText={(text)=>{}}
+               onChangeSelection={(text) => {}}
+             />
+             <AccountCircle />
+          </Toolbar>
+        </AppBar>
+    
+    );
+    export default Page;
+
+}
+~~~
+
+AutoComplete.js
+~~~
+
 
 ~~~
 
@@ -261,4 +354,7 @@ https://www.youtube.com/watch?v=7qMBEFzS_xU&list=PL33bS175Qm6dRwGuzW6AX7Ru7Opubi
 ~~~
 
 ___
+
+
+
 

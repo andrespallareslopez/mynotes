@@ -116,4 +116,25 @@ var with2Decimals = num.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]
 
 ___
 
+Se refiere a poner alias en los imports en vez de poner toda la ruta completa en el import
+
+How to use module path aliases in Visual Studio Code, TypeScript and JavaScript
+
+https://medium.com/@caludio/how-to-use-module-path-aliases-in-visual-studio-typescript-and-javascript-e7851df8eeaa
+
+___
+
+Configuring aliases in webpack + VS Code + Typescript + Jest
+
+https://www.basefactor.com/configuring-aliases-in-webpack-vs-code-typescript-jest
+
+___
+
+Caporal (Crear CLI js)
+
+https://github.com/mattallty/Caporal.js?files=1
+
+Libreria para construir linea de comandos cli de javascript
+
+___
 
