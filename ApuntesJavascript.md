@@ -138,3 +138,25 @@ Libreria para construir linea de comandos cli de javascript
 
 ___
 
+Compile ES6 Code with Gulp and Babel, Part 2
+
+https://cobwwweb.com/compile-es6-code-gulp-babel-part-2
+
+___
+
+JavaScript - Pure Pagination Logic in Vanilla JS / TypeScript
+
+https://jasonwatmore.com/post/2018/08/07/javascript-pure-pagination-logic-in-vanilla-js-typescript
+
+___
+
+Squel.js
+
+- lightweight Javascript library for building SQL query strings.
+
+- usable with node.js and in the browser.
+
+- well tested.
+
+http://hiddentao.github.io/squel/
+

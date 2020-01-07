@@ -355,6 +355,134 @@ AutoComplete.js
 
 ___
 
+Redux For Beginners | React Redux Tutorial
+
+https://www.youtube.com/watch?v=CVpUuw9XSjY&t=1564s
+
+
+//STORE-->GLOBALIZED state
+
+//ACTION INCREMENT
+~~~
+const increment = () => {
+    return {
+        type:'INCREMENT'
+    }
+}
+~~~
+~~~
+const decrement = () => {
+    return {
+        type: 'DECREMENT'
+    }
+}
+~~~
+//REDUCER
+~~~
+const counter = (state = 0,action) => {
+    switch(action.type){
+        case 'INCREMENT':
+           return state + 1;
+        case 'DECREMENT':
+           return state - 1;
+    }
+}
+
+let store = createStore(counter);
+
+//Display it in the console
+store.subscribe(()=> console.log(store.getState()))
+
+//DISPATCH
+store.dispatch(increment());
+~~~
+Podemos poner los reducer y los actions en carpetas aparte y con sus respectivos archivos aparte.
+counter.js
+~~~
+const counterReducer = ( state= 0 , action ){
+    switch(action.type){
+        case 'INCREMENT':
+           return state + 1;
+        case 'DECREMENT':
+           return state - 1;
+    }
+}
+export default counterReducer;
+~~~
+isLogged.js
+~~~
+const loggedReducer = (state=false, action) =>{
+    switch(action.type){
+        case 'SIGN_IN':
+          return !state
+    }
+};
+export default loggedReducer;
+~~~
+index.js de la carpeta reducer
+~~~
+import counterReducer from './counter'
+import loggedReducer from ./isLogged'
+import {combineReducers} from 'redux'
+
+const allReducer = combineReducers({
+    counter: counterReducer,
+    isLogged:loggedReducer
+})
+export default allReducer;
+~~~
+index.js principal
+~~~
+import React from 'react';
+import ReactDOM from 'react-dom'
+import './index.js'
+import App from './App';
+import {createStore} from 'redux'
+import allReducer from './reducers'
+
+const store = createStore(allReducer);
+
+ReactDOM.render(<App/>, document.getElementById('root'));
+
+~~~
+actions.js
+~~~
+export const increment = () => {
+    return {
+        type: 'INCREMENT'
+    }
+}
+~~~
+App.js
+~~~
+import React from 'react'
+import {useSelector,useDispatch} from 'react-redux'
+import {increment} from './actions';
+
+
+function App(){
+    const counter = useSelector(state => state.counter);
+    const isLooged = useSelector(state => state.isLogged);
+    const dispatch = useDispatch();
+
+    return (
+        <div className="App" >
+          <h1> Counter {counter} </h1>
+          <button onClick = {() => dispatch(increment())}>+</button>
+          <button>-</button>
+
+          {isLogged ? <h3> Valuable informacion I shouldn't see </h3> :''}
+        </div>
+    );
+}
+~~~
+
+___
+How to use useReducer in React Hooks for performance optimization
+
+https://medium.com/crowdbotics/how-to-use-usereducer-in-react-hooks-for-performance-optimization-ecafca9e7bf5
+
+___
 
 
 

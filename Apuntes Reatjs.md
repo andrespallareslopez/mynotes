@@ -187,10 +187,6 @@ https://daveceddia.com/pluggable-slots-in-react-components/
 
 
 ~~~
-<Button>
-  <Icon name="dollars"/>
-  <span>BUY NOW</span>
-</Button>
 
 function Button(props) {
   return (
@@ -199,6 +195,12 @@ function Button(props) {
     </button>
   );
 }
+
+<Button>
+  <Icon name="dollars"/>
+  <span>BUY NOW</span>
+</Button>
+
 ~~~
 #### Use Props as Named Slots
 ~~~
@@ -269,7 +271,7 @@ const Content = () => (
 ~~~
 
 ~~~
-unction App({ user }) {
+function App({ user }) {
 	return (
 		<div className="app">
 			<Nav user={user} />
@@ -337,4 +339,6 @@ npm i @babel/core
       --save
 ~~~
 ___
+
+
 

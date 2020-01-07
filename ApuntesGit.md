@@ -233,3 +233,16 @@ git add filename
 git add .
 </pre>
 
+## Pull Requests: En mi Equipo Funcionan
+
+https://www.nocountryforgeeks.com/pull-requests/
+
+Articulo que aparte de hablar de que son las pull request, menciona que aparte de crear una rama master deberiamos crear una rama develop y crear mas ramas aparte de la develop llamadas features, ir haciendo commits limpios y habla de utilizar git rebase para juntar varios commits, hacer commits mas limpios, estrategias de commits, y de juntar varios commits en uno y mergearlo a develop.
+
+___
+
+## DIFERENCIA ENTRE GIT REBASE Y GIT MERGE , WORKSHOP DE GIT 
+
+https://medium.com/@MiguelCasas/diferencia-entre-git-rebase-y-git-merge-workshop-de-git-8622dedde2d7
+
+___
