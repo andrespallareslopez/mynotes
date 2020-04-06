@@ -46,5 +46,69 @@ https://www.youtube.com/watch?v=35lXWvCuM8o&list=PLDyQo7g0_nsVHmyZZpVJyFn5ojlboV
 
 
 ___
+### useState
+
+React Hooks useState Tutorial
+
+https://www.youtube.com/watch?v=9xhKH43llhU&list=PLN3n1USn4xlmyw3ebYuZmGp60mcENitdM
+
+
+
+
+
+___
+### useEffect
+
+React Hooks useEffect Tutorial
+
+https://www.youtube.com/watch?v=j1ZRyw7OtZs&list=PLN3n1USn4xlmyw3ebYuZmGp60mcENitdM&index=2
+
+
+
+
+___
+### useRef
+
+
+React Hooks useRef Tutorial
+
+https://www.youtube.com/watch?v=W6AJ-gRupCs&list=PLN3n1USn4xlmyw3ebYuZmGp60mcENitdM&index=3
+
+
+___
+
+### useLayoutEffect
+
+React Hooks useLayoutEffect Tutorial
+
+https://www.youtube.com/watch?v=ommC6fS1SZg&list=PLN3n1USn4xlmyw3ebYuZmGp60mcENitdM&index=4
+
+
+___
+
+### useCallback
+
+React Hooks useCallback Tutorial
+
+https://www.youtube.com/watch?v=-Ls48dd-vJE&list=PLN3n1USn4xlmyw3ebYuZmGp60mcENitdM&index=5
+
+___
+
+### useReducer
+
+React Hooks useReducer Tutorial
+
+https://www.youtube.com/watch?v=wcRawY6aJaw&list=PLN3n1USn4xlmyw3ebYuZmGp60mcENitdM&index=7
+
+
+___
+
+### useContext
+
+React Hooks useContext Tutorial (Storing a User)
+
+___
+
+
 
 
