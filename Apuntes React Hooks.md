@@ -1,11 +1,12 @@
 # React Hooks
 
 ### useEffect
+---
+Descripcion: Usando el Hook de efecto
 
-Usando el Hook de efecto
+Link :https://es.reactjs.org/docs/hooks-effect.html
 
-https://es.reactjs.org/docs/hooks-effect.html
-
+Ejemplo:
 ~~~
 import React, { useState, useEffect } from 'react';
 
@@ -28,19 +29,18 @@ function Example() {
   );
 }
 ~~~
+---
+___
+
+Descripcion: como usar react refs? string refs, callback refs, create ref, use ref
+
+Link: https://www.youtube.com/watch?v=xLHDPSIDVyc
 
 ___
 
-como usar react refs? string refs, callback refs, create ref, use ref
+Descripcion: React State Management Tutorial | Context Api | React Tutorial For Beginners
 
-https://www.youtube.com/watch?v=xLHDPSIDVyc
-
-
-___
-
-React State Management Tutorial | Context Api | React Tutorial For Beginners
-
-https://www.youtube.com/watch?v=35lXWvCuM8o&list=PLDyQo7g0_nsVHmyZZpVJyFn5ojlboVEhE&index=1
+Link: https://www.youtube.com/watch?v=35lXWvCuM8o&list=PLDyQo7g0_nsVHmyZZpVJyFn5ojlboVEhE&index=1
 
 
 

@@ -2,10 +2,11 @@
 
 Instalacion en windows:
 
-Running the TICK Stack on Windows
+---
+Descripcion :Running the TICK Stack on Windows
 
-https://www.influxdata.com/blog/running-the-tick-stack-on-windows/
-
+Link: https://www.influxdata.com/blog/running-the-tick-stack-on-windows/
+---
 ~~~
 C:\Program Files\InfluxDB>influxd.exe
 
