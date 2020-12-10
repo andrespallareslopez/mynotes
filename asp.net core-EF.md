@@ -762,6 +762,38 @@ Scaffold-DbContext ... -Tables Artist, Album
 dotnet ef dbcontext scaffold ... --table Artist --table Album
 </pre>
 
+___
+
+ .NET Core 3.1 Web API & Entity Framework Core Jumpstart
+
+ https://www.youtube.com/watch?v=H4qg9HJX_SE
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ ___
+
+Entity Framework Core (CRUD Operation in .NET Core 3.0)
+
+https://www.youtube.com/watch?v=VVWi9ZdAS9M
+
+
+Hay que instalar Microsoft.EntityFrameworkCore y 
+                 Microsoft.EntityFramework.SqlServer
+
+                 
+
+
+
+
+___
+
+
+
 
 
 
