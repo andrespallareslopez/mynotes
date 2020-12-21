@@ -1,0 +1,51 @@
+Descripcion: Apuntes Asp Net Core
+Articulos: 
+    - Articulo:  
+        Titulo: Factory pattern using built-in dependency injection of ASP.Net Core
+        Link: https://medium.com/null-exception/factory-pattern-using-built-in-dependency-injection-of-asp-net-core-f91bd3b58665
+        Categoria: [".Net","IoC","Asp.Net Core","Dependency Inyection"]
+    - Articulo: 
+        Titulo: Injecting a Factory Service in ASP.NET Core
+        Link: https://espressocoder.com/2018/10/08/injecting-a-factory-service-in-asp-net-core/
+        Categoria: [".Net","IoC","Asp.Net Core","Dependency Inyection"]
+    - Articulo:
+        Titulo: Factorías en ASP.NET Core 3.1 - Construyendo Web APIs
+        Link: https://www.youtube.com/watch?v=VCElUcZ-tY0&list=PL0kIvpOlieSMW4tT12lX4Fzb6sbOw7QQc&index=18
+        Categoria: [".Net","IoC","Asp.Net Core","Dependency Inyection"]
+    - Articulo: 
+        Titulo: ASP.NET Core 3.1 Using Factories in the Dependency Injection System
+        Link: https://gavilan.blog/2020/01/20/asp-net-core-3-1-using-factories-in-the-dependency-injection-system/
+        Categoria: [".Net","IoC","Asp.Net Core","Dependency Inyection"]
+    - Articulo: 
+        Titulo: Automatic CQRS handler registration in ASP.NET Core with reflection
+        Link: https://dejanstojanovic.net/aspnet/2019/may/automatic-cqrs-handler-registration-in-aspnet-core-with-reflection/
+        Categoria: [".Net","IoC","Asp.Net Core","Dependency Inyection"]
+    - Articulo:
+        Titulo: How to register multiple implementations of the same interface in Asp.Net Core?
+        Link: https://stackoverflow.com/questions/39174989/how-to-register-multiple-implementations-of-the-same-interface-in-asp-net-core
+        Categoria: [".Net","IoC","Asp.Net Core","Dependency Inyection"]
+    - Articulo:
+        Titulo: ASP.NET Core and the Strategy Pattern
+        Link: https://adamstorr.azurewebsites.net/blog/aspnetcore-and-the-strategy-pattern
+        Categoria: [".Net","IoC","Asp.Net Core","Dependency Inyection"]
+    - Articulo:
+        Titulo: NET CORE 3.1 Cookie Authentication
+        Link: https://bjdejongblog.nl/net-core-3-1-cookie-authentication/
+        Categoria: [".Net","Asp.Net Core","Asp.Net Identity","Seguridad"]
+    - Articulo:
+        Titulo: ASP.NET Core 2.0 Cookie Authentication – Local logins
+        Link: http://codereform.com/blog/post/asp-net-core-2-0-cookie-authentication-local-logins/
+        Categoria: [".Net","Asp.Net Core","Asp.Net Identity","Seguridad"]
+    - Articulo:
+        Titulo: Cookie authentication in ASP.NET Core 2 without ASP.NET Identity
+        Link: https://www.meziantou.net/cookie-authentication-in-asp-net-core-2-without-asp-net-identity.htm
+        Categoria: [".Net","Asp.Net Core","Asp.Net Identity","Seguridad"]
+    - Articulo:
+        Titulo: Getting Started With Entity Framework Core - ASP.NET Core
+        Link: https://www.learnentityframeworkcore.com/walkthroughs/aspnetcore-application
+        Categoria: [".Net","Asp.Net Core","Asp.Net EF","Entity Framework"]
+    - Articulo:
+        Titulo: IdentityServer4 (I) - Conceptos básicos
+        Link: https://www.youtube.com/watch?v=Jj2ghnm7gL8
+        Categoria: [".Net","Asp.Net Core","IdentityServer4","Seguridad"]
+        
