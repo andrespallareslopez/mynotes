@@ -1,4 +1,21 @@
+---
+Titulo: "Apuntes OWIN"
+---
+
 # Apuntes Owin
+
+- [Apuntes Owin](#apuntes-owin)
+    - [**Using Dependency Injection with ASP.NET Web API Hosted on Katana**](#using-dependency-injection-with-aspnet-web-api-hosted-on-katana)
+    - [**Building A Simple File Server With OWIN and Katana**](#building-a-simple-file-server-with-owin-and-katana)
+    - [**Creating OWIN Middleware using Microsoft Katana**](#creating-owin-middleware-using-microsoft-katana)
+    - [**Using OWIN to self-host Web API and secure endpoints**](#using-owin-to-self-host-web-api-and-secure-endpoints)
+    - [**Implement Owin Pipeline using Asp.net Core**](#implement-owin-pipeline-using-aspnet-core)
+    - [**Porting OWIN middleware to ASP.Net Core**](#porting-owin-middleware-to-aspnet-core)
+    - [**randyburden/OwinRequestExtensions.cs**](#randyburdenowinrequestextensionscs)
+    - [**Cookie Authentication & CRSF with AngularJs, Owin & Mono**](#cookie-authentication--crsf-with-angularjs-owin--mono)
+    - [**OwinResponse.Cookies Property**](#owinresponsecookies-property)
+    - [**Capturing REST API Calls with an OWIN Middleware**](#capturing-rest-api-calls-with-an-owin-middleware)
+    - [**OWIN and NGINX**](#owin-and-nginx)
 
 ### **Using Dependency Injection with ASP.NET Web API Hosted on Katana**
 

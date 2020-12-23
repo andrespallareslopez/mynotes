@@ -1,4 +1,12 @@
+---
+Titulo: "Apuntes Comenzar proyecto Asp.net Web api"
+---
+
 # Apuntes Comenzar proyecto Asp.net Web api
+
+- [Apuntes Comenzar proyecto Asp.net Web api](#apuntes-comenzar-proyecto-aspnet-web-api)
+    - [**Building a Web API 2 project from scratch using OWIN/Katana .NET Part 1**](#building-a-web-api-2-project-from-scratch-using-owinkatana-net-part-1)
+    - [**Web API with OWIN, Bootstrap and AngularJS from scratch - part 1**](#web-api-with-owin-bootstrap-and-angularjs-from-scratch---part-1)
 
 ### **Building a Web API 2 project from scratch using OWIN/Katana .NET Part 1**
 

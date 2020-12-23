@@ -1,9 +1,21 @@
-# **Apuntes influxDB**
-
-Instalacion en windows:
+---
+Titulo: Apuntes influxDB
 
 ---
-Descripcion :Running the TICK Stack on Windows
+
+# **Apuntes influxDB**
+
+- [**Apuntes influxDB**](#apuntes-influxdb)
+  - [Instalacion en windows:](#instalacion-en-windows)
+    - [Descripcion :Running the TICK Stack on Windows](#descripcion-running-the-tick-stack-on-windows)
+  - [Link: https://www.influxdata.com/blog/running-the-tick-stack-on-windows/](#link-httpswwwinfluxdatacomblogrunning-the-tick-stack-on-windows)
+  - [**InfluxDB Client for .NET**](#influxdb-client-for-net)
+
+
+## Instalacion en windows:
+
+---
+### Descripcion :Running the TICK Stack on Windows
 
 Link: https://www.influxdata.com/blog/running-the-tick-stack-on-windows/
 ---

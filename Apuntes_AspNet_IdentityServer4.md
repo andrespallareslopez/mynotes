@@ -1,6 +1,24 @@
+---
+Titulo: Apuntes IdentityServer
+---
+
 # Apuntes IdentityServer
 
-## Resumen OAUTH OPENID Connect
+- [Apuntes IdentityServer](#apuntes-identityserver)
+    - [Resumen OAUTH OPENID Connect](#resumen-oauth-openid-connect)
+    - [IdentityServer4 (I) - Conceptos básicos](#identityserver4-i---conceptos-básicos)
+    - [IdentityServer4 (II) - Creando servidor de autentificación en ASP.Net Core 2](#identityserver4-ii---creando-servidor-de-autentificación-en-aspnet-core-2)
+    - [ASP.NET Core 3 - IdentityServer4 - Ep.9 Client Credentials (Introduction)](#aspnet-core-3---identityserver4---ep9-client-credentials-introduction)
+    - [Cómo securizar tus apps con Identity Server y .NET Core (Parte I)](#cómo-securizar-tus-apps-con-identity-server-y-net-core-parte-i)
+    - [ASP.NET Core: Building a Robust Authentication and Authorization System using IdentityServer](#aspnet-core-building-a-robust-authentication-and-authorization-system-using-identityserver)
+    - [Creating your First IdentityServer4 Solution](#creating-your-first-identityserver4-solution)
+    - [Creacion de un proyecto con IdentityServer4 desde cero](#creacion-de-un-proyecto-con-identityserver4-desde-cero)
+    - [Creacion de un proyecto Asp.net Web api](#creacion-de-un-proyecto-aspnet-web-api)
+    - [Creacion de una aplicacion Asp.net Core MVC](#creacion-de-una-aplicacion-aspnet-core-mvc)
+
+
+___
+### Resumen OAUTH OPENID Connect
 
 **OAUTH 2**
 
@@ -8,6 +26,8 @@
 - Client
 - Resource Owner
 - Autorizacion Server
+
+**Consentimiento**
 
 **Endpoints**
 
@@ -21,7 +41,7 @@
 - Clientes confidenciales
 - Clientes publicos
 
-## Diferentes formas de obtener un token de acceso
+**Diferentes formas de obtener un token de acceso**
 
 **Autorization Code Flow**
 
@@ -32,20 +52,21 @@ Parametros obligatorios
 - state
 - scope
 
+
 **Implicit Flow**
 
 **Client Credentials Flow**
 
 **Resource Owner Password Credentials (ROPC) Flow**
+___
 
-
-IdentityServer4 (I) - Conceptos básicos
+### IdentityServer4 (I) - Conceptos básicos
 
 https://www.youtube.com/watch?v=Jj2ghnm7gL8
 
 ____
 
-IdentityServer4 (II) - Creando servidor de autentificación en ASP.Net Core 2
+### IdentityServer4 (II) - Creando servidor de autentificación en ASP.Net Core 2
 
 https://www.youtube.com/watch?v=F_eL4wcs-Fc
 
@@ -53,7 +74,7 @@ https://www.youtube.com/watch?v=F_eL4wcs-Fc
 ____
 
 
-ASP.NET Core 3 - IdentityServer4 - Ep.9 Client Credentials (Introduction)
+### ASP.NET Core 3 - IdentityServer4 - Ep.9 Client Credentials (Introduction)
 
 https://www.youtube.com/watch?v=jARHHUsljeo&list=PLOeFnOV9YBa7dnrjpOG6lMpcyd7Wn7E8V&index=11
 
@@ -61,18 +82,18 @@ https://www.youtube.com/watch?v=jARHHUsljeo&list=PLOeFnOV9YBa7dnrjpOG6lMpcyd7Wn7
 ____
 
 
-Cómo securizar tus apps con Identity Server y .NET Core (Parte I)
+### Cómo securizar tus apps con Identity Server y .NET Core (Parte I)
 
 https://blogs.encamina.com/piensa-en-software-desarrolla-en-colores/securizar-tus-apps-identity-server-net-core-parte-i/
 
 ____
-ASP.NET Core: Building a Robust Authentication and Authorization System using IdentityServer
+### ASP.NET Core: Building a Robust Authentication and Authorization System using IdentityServer
 
 https://www.codeproject.com/Articles/5281881/ASP-NET-Core-Building-a-Robust-Authentication-and
 
 ____
 
-Creating your First IdentityServer4 Solution
+### Creating your First IdentityServer4 Solution
 
 https://www.youtube.com/watch?v=HJQ2-sJURvA&list=PLz9t0GSOz9eCS7Bd3ChKavbQgOyKVjleD
 
@@ -82,7 +103,7 @@ https://www.youtube.com/watch?v=HJQ2-sJURvA&list=PLz9t0GSOz9eCS7Bd3ChKavbQgOyKVj
 - Host Identity Server on Azure
 - Add AdminUI to Identity Server on Azure
   
-## Creacion de un proyecto con IdentityServer4 desde cero
+### Creacion de un proyecto con IdentityServer4 desde cero
 podemos crear un proyecto desde cero y añadir identityserver4
 
   Nombre de Paquetes nugets para identityserver4
@@ -259,7 +280,7 @@ y obtengo un token y el contenido del token si nos vamos auna pagina https://jwt
 
 y decodificamos el token obtendremos lo siguiente los claims y informacion del token que estaba codificado.
 
-## Creacion de un proyecto Asp.net Web api
+### Creacion de un proyecto Asp.net Web api
 
 
 
@@ -315,7 +336,7 @@ curl -X Get -H "Autorization: Bearer ........." -H "Cache-Control: no-cache" "ht
 
 Y nos dara el json de la peticion a la web api, si no lo hacemos con llamada token, nos va a devolver un error 401.
 
-## Creacion de una aplicacion Asp.net Core MVC
+### Creacion de una aplicacion Asp.net Core MVC
 
 Ahora vamos a hacer la llamada desde una web application asp.net core MVC y como hacer las llamadas para conseguir el token desde este tipo de aplicaciones.
 

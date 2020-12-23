@@ -1,12 +1,26 @@
-# Apuntes Asp.Net Core
+---
+Titulo: "Apuntes Asp.Net Core"
+---
 
-NET CORE 3.1 Cookie Authentication
+# Apuntes Asp.Net Core
+- [Apuntes Asp.Net Core](#apuntes-aspnet-core)
+    - [NET CORE 3.1 Cookie Authentication](#net-core-31-cookie-authentication)
+    - [ASP.NET Core 2.0 Cookie Authentication – Local logins](#aspnet-core-20-cookie-authentication--local-logins)
+    - [Cookie authentication in ASP.NET Core 2 without ASP.NET Identity](#cookie-authentication-in-aspnet-core-2-without-aspnet-identity)
+    - [Getting Started With Entity Framework Core - ASP.NET Core](#getting-started-with-entity-framework-core---aspnet-core)
+    - [Creacion de una aplicacion ASP.NET core](#creacion-de-una-aplicacion-aspnet-core)
+    - [Tutorial: Introducción a EF Core en una aplicación web de ASP.NET Core MVC](#tutorial-introducción-a-ef-core-en-una-aplicación-web-de-aspnet-core-mvc)
+    - [Haciendo fácil el acceso a datos con Entity Framework Core (Parte 2)](#haciendo-fácil-el-acceso-a-datos-con-entity-framework-core-parte-2)
+  - [Entity Framework Core «Code First» en Visual Studio](#entity-framework-core-code-first-en-visual-studio)
+  - [Entity Framework Core «Code First» en DotNet CLI](#entity-framework-core-code-first-en-dotnet-cli)
+
+### NET CORE 3.1 Cookie Authentication
 
 https://bjdejongblog.nl/net-core-3-1-cookie-authentication/
 
 ____
 
-ASP.NET Core 2.0 Cookie Authentication – Local logins
+### ASP.NET Core 2.0 Cookie Authentication – Local logins
 
 http://codereform.com/blog/post/asp-net-core-2-0-cookie-authentication-local-logins/
 
@@ -15,17 +29,17 @@ Como Extender Asp.net Identity y customizarlo
 ____
 
  
-Cookie authentication in ASP.NET Core 2 without ASP.NET Identity
+### Cookie authentication in ASP.NET Core 2 without ASP.NET Identity
 
 
 https://www.meziantou.net/cookie-authentication-in-asp-net-core-2-without-asp-net-identity.htm
 
 ____
-Getting Started With Entity Framework Core - ASP.NET Core
+### Getting Started With Entity Framework Core - ASP.NET Core
 
 https://www.learnentityframeworkcore.com/walkthroughs/aspnetcore-application
 
-# Creacion de una aplicacion ASP.NET core
+### Creacion de una aplicacion ASP.NET core
 
 para crear una aplicacion ASP.NET core necesitamos desde la linea de comandos los siguiente:
 
@@ -56,9 +70,9 @@ Si abrimos desde visual studio .csproj incluye la siguiente seccion:
 
 Una vez que tenemos las herramientas de linea de comandos para entityframework podemos consultar lo siguiente:
 
-<pre>
+<code>
     dotnet ef -h
-</pre>
+</code>
 
 Una vez que en el proyecto lo tenemos añadido, tenemos que crear un folder llamado Model y añadir lo siguiente:
 
@@ -319,7 +333,7 @@ Y luego tenemos las vistas asociadas:
 
 ____
 
-Tutorial: Introducción a EF Core en una aplicación web de ASP.NET Core MVC
+### Tutorial: Introducción a EF Core en una aplicación web de ASP.NET Core MVC
 
 https://docs.microsoft.com/es-es/aspnet/core/data/ef-mvc/intro?view=aspnetcore-5.0
 
@@ -602,7 +616,7 @@ Luego creamos las vistas:
 
 ____
 
-Haciendo fácil el acceso a datos con Entity Framework Core (Parte 2)
+### Haciendo fácil el acceso a datos con Entity Framework Core (Parte 2)
 
 https://www.fixedbuffer.com/entity-framework-core-2/
 

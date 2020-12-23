@@ -1,3 +1,7 @@
+---
+Titulo: "ASP.NET Core and the Strategy Pattern"
+---
+
 # Inyeccion de dependencias en Asp.net Core
 
 ASP.NET Core and the Strategy Pattern

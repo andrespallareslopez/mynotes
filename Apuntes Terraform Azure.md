@@ -1,8 +1,26 @@
-#Apuntes Terraform Azure
+---
+Titulo: "Apuntes Terraform Azure"
+---
+# Apuntes Terraform Azure
+
+- [Apuntes Terraform Azure](#apuntes-terraform-azure)
+    - [Getting Started with Terraform for Azure: Quick Azure Primer](#getting-started-with-terraform-for-azure-quick-azure-primer)
+    - [Desplegar infraestructura en Azure con Terraform(Desplegar un App service para desplegar aplicaciones web) (Alberto picazo)](#desplegar-infraestructura-en-azure-con-terraformdesplegar-un-app-service-para-desplegar-aplicaciones-web-alberto-picazo)
+    - [Getting Started with Terraform for Azure: Authentication Demo (Otra forma de autenticarnos)](#getting-started-with-terraform-for-azure-authentication-demo-otra-forma-de-autenticarnos)
+    - [4 ways to create an SQL Database in Azure](#4-ways-to-create-an-sql-database-in-azure)
+    - [Terraforming Azure SQL Database](#terraforming-azure-sql-database)
+    - [Building Azure SQL Db with Terraform using Azure DevOps](#building-azure-sql-db-with-terraform-using-azure-devops)
+    - [Building SQL Server in Azure with Terraform](#building-sql-server-in-azure-with-terraform)
+    - [Terraform in Azure with Azure DevOps](#terraform-in-azure-with-azure-devops)
+    - [«Terraformando» nuestra infraestructura desde Azure Pipelines](#terraformando-nuestra-infraestructura-desde-azure-pipelines)
+    - [How To Deploy an Azure SQL Database using Terraform](#how-to-deploy-an-azure-sql-database-using-terraform)
+    - [Como crear un SQL Server y Base de datos con Azure](#como-crear-un-sql-server-y-base-de-datos-con-azure)
+    - [From Zero to WOW! with HashiCorp Nomad](#from-zero-to-wow-with-hashicorp-nomad)
+    - [From Zero to WOW! with Nomad](#from-zero-to-wow-with-nomad)
 
 
 
-Getting Started with Terraform for Azure: Quick Azure Primer
+### Getting Started with Terraform for Azure: Quick Azure Primer
 
 https://www.youtube.com/watch?v=CRueD4fU0AI&list=PLD7svyKaquTlE9dErhMazFhWbSSCfMP_4
 
@@ -27,7 +45,7 @@ resource    "Azurerm_resource_group"  "miGrupoEnAzure"
 
 ___
 
-Desplegar infraestructura en Azure con Terraform(Desplegar un App service para desplegar aplicaciones web) (Alberto picazo)
+### Desplegar infraestructura en Azure con Terraform(Desplegar un App service para desplegar aplicaciones web) (Alberto picazo)
 
 https://www.youtube.com/watch?v=EN1CnJIK-n4
 
@@ -38,7 +56,7 @@ az login
 
 ___
 
-Getting Started with Terraform for Azure: Authentication Demo (Otra forma de autenticarnos)
+### Getting Started with Terraform for Azure: Authentication Demo (Otra forma de autenticarnos)
 
 https://www.youtube.com/watch?v=IHHIXf39Igo&list=PLD7svyKaquTlE9dErhMazFhWbSSCfMP_4&index=8
 
@@ -106,7 +124,7 @@ terraform graph
 
 ___
 
-4 ways to create an SQL Database in Azure
+### 4 ways to create an SQL Database in Azure
 
 https://www.youtube.com/watch?v=6e_YPjxFURc
 
@@ -123,43 +141,41 @@ az sql server create \
 
 az sql db create --resource-group "cloud5mins" --server "sqlcloud5minutes"  --name "cloud5db" \
 
-
-
 ___
 
-Terraforming Azure SQL Database
+### Terraforming Azure SQL Database
 
 https://www.phillipsj.net/posts/terraforming-azure-sql-db/
 
 
 ___
 
-Building Azure SQL Db with Terraform using Azure DevOps
+### Building Azure SQL Db with Terraform using Azure DevOps
 
 https://sqldbawithabeard.com/2019/04/20/building-azure-sql-db-with-terraform-using-azure-devops/
 
 
 ___
 
-Building SQL Server in Azure with Terraform
+### Building SQL Server in Azure with Terraform
 
 http://www.winopsdba.com/blog/Building-SQL-server-in-Azure-with-Terraform.html
 
 ___
 
-Terraform in Azure with Azure DevOps
+### Terraform in Azure with Azure DevOps
 
 https://ifi.tech/2020/07/23/terraform-in-azure-with-azure-devops/
 
 ___
 
-«Terraformando» nuestra infraestructura desde Azure Pipelines
+### «Terraformando» nuestra infraestructura desde Azure Pipelines
 
 https://www.fixedbuffer.com/terraform-azure-pipelines/
 
 ___
 
-How To Deploy an Azure SQL Database using Terraform
+### How To Deploy an Azure SQL Database using Terraform
 
 http://dbainthecloud.com/tag/azure-sql-database/
 
@@ -185,7 +201,7 @@ resource "azurerm_sql_server" "test2" {
 
 ___
 
-Como crear un SQL Server y Base de datos con Azure
+### Como crear un SQL Server y Base de datos con Azure
 
 https://www.youtube.com/watch?v=QrCa25p4ixE&t=681s
 
@@ -193,14 +209,14 @@ https://www.youtube.com/watch?v=QrCa25p4ixE&t=681s
 
 ___
 
-From Zero to WOW! with HashiCorp Nomad
+### From Zero to WOW! with HashiCorp Nomad
 
 
 https://www.hashicorp.com/resources/from-zero-to-wow-with-hashicorp-nomad
 
 ___
 
-From Zero to WOW! with Nomad
+### From Zero to WOW! with Nomad
 
 https://www.youtube.com/watch?v=xl58mjMJjrg&t=2732s
 

@@ -1,3 +1,7 @@
+---
+Titulo: "Apuntes Asp.Net Core Entity Frameworkd(Recipes)"
+---
+
 # Apuntes Asp.Net Core Entity Frameworkd(Recipes)
 
 Command line for .Net core<br><br>

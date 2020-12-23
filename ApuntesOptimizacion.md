@@ -1,3 +1,7 @@
+---
+Titulo: "Apuntes Optimizacion"
+---
+
 # Apuntes Otptimizacion
 
 ~~~

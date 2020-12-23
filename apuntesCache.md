@@ -1,5 +1,28 @@
+---
+Titulo: "Apuntes Cache ASP.NET"
+---
+
 # Apuntes Cache ASP.NET
-## **Cache Data, tipos:**
+
+- [Apuntes Cache ASP.NET](#apuntes-cache-aspnet)
+  - [### **Cache Data, tipos:**](#-cache-data-tipos)
+    - [**Simple way to implement caching in ASP.NET Web API**](#simple-way-to-implement-caching-in-aspnet-web-api)
+    - [**In memory caching in ASP.NET MVC 5 is not working**](#in-memory-caching-in-aspnet-mvc-5-is-not-working)
+    - [**How to cache data in a MVC application**](#how-to-cache-data-in-a-mvc-application)
+    - [**Caching and Session in ASP.NET, part 1**](#caching-and-session-in-aspnet-part-1)
+    - [**Working with System.Runtime.Caching.MemoryCache**](#working-with-systemruntimecachingmemorycache)
+    - [**Enterprise Asp.Net MVC Part 8: Asp.Net cache before repository**](#enterprise-aspnet-mvc-part-8-aspnet-cache-before-repository)
+    - [**Caching Data at Application Startup**](#caching-data-at-application-startup)
+    - [**A Beginner's Tutorial for Understanding and Implementing Caching in ASP.NET MVC**](#a-beginners-tutorial-for-understanding-and-implementing-caching-in-aspnet-mvc)
+    - [**Walkthrough: Caching Application Data in ASP.NET**](#walkthrough-caching-application-data-in-aspnet)
+    - [**Using MemoryCache in .NET 4.0**](#using-memorycache-in-net-40)
+    - [**what is difference between normal cache class and MemoryCache class?**](#what-is-difference-between-normal-cache-class-and-memorycache-class)
+    - [**Caching in WCF Services: Part 2 AppFabric distributed cache**](#caching-in-wcf-services-part-2-appfabric-distributed-cache)
+    - [**How to implement SQL Caching in ASP.NET (Poll based SQL Cache dependency)**](#how-to-implement-sql-caching-in-aspnet-poll-based-sql-cache-dependency)
+    - [**HttpRuntime.Cache vs. HttpContext.Current.Cache**](#httpruntimecache-vs-httpcontextcurrentcache)
+    - [**Caching in .NET and SQL Server Notifications**](#caching-in-net-and-sql-server-notifications)
+
+### **Cache Data, tipos:**
 ---
 ~~~
 - InProc

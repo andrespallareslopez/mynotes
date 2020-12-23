@@ -1,5 +1,40 @@
+---
+Titulo: "Apuntes Seguridad ASP.NET"
+---
 # Apuntes Seguridad ASP.NET
 
+- [Apuntes Seguridad ASP.NET](#apuntes-seguridad-aspnet)
+    - [Paquetes nugets para OWIN](#paquetes-nugets-para-owin)
+    - [**ASP.NET authentication and authorization**](#aspnet-authentication-and-authorization)
+    - [**ASP.NET authentication and authorization**](#aspnet-authentication-and-authorization-1)
+    - [**ASP.NET Identity Tutorial – Basics**](#aspnet-identity-tutorial--basics)
+    - [**Custom Authentication and Authorization in ASP.NET MVC**](#custom-authentication-and-authorization-in-aspnet-mvc)
+    - [**Custom Authentication and Authorization in MVC 5**](#custom-authentication-and-authorization-in-mvc-5)
+    - [**ASP.NET Web Api: Understanding OWIN/Katana Authentication/Authorization Part I: Concepts**](#aspnet-web-api-understanding-owinkatana-authenticationauthorization-part-i-concepts)
+    - [**Token Based Authentication using ASP.NET Web API 2, Owin, and Identity**](#token-based-authentication-using-aspnet-web-api-2-owin-and-identity)
+    - [**OAuth 2 Simplified**](#oauth-2-simplified)
+    - [**JSON Web Token in ASP.NET Web API 2 using Owin**](#json-web-token-in-aspnet-web-api-2-using-owin)
+    - [**ASP.NET Web Api and Identity 2.0 – Customizing Identity Models and Implementing Role-Based Authorization**](#aspnet-web-api-and-identity-20--customizing-identity-models-and-implementing-role-based-authorization)
+    - [**ASP.NET MVC and Identity 2.0: Understanding the Basics**](#aspnet-mvc-and-identity-20-understanding-the-basics)
+    - [**ASP.NET MVC Web API Identity (OWIN Security): Auto Login after Register + Custom Login Service Endpoint**](#aspnet-mvc-web-api-identity-owin-security-auto-login-after-register--custom-login-service-endpoint)
+    - [**Autenticación con Membership ASP.NET Identity**](#autenticación-con-membership-aspnet-identity)
+    - [**[ASP.NET IDENTITY] Configuracion inicial**](#aspnet-identity-configuracion-inicial)
+    - [**[ASP.NET IDENTITY] DBContext y clases de gestion de usuarios**](#aspnet-identity-dbcontext-y-clases-de-gestion-de-usuarios)
+    - [**[ASP.NET IDENTITY] Listado de usuarios registrados**](#aspnet-identity-listado-de-usuarios-registrados)
+    - [**Securing ASP.NET MVC Applications with ASP.NET Identity**](#securing-aspnet-mvc-applications-with-aspnet-identity)
+    - [**Authentication and Authorization in ASP.NET Web API**](#authentication-and-authorization-in-aspnet-web-api)
+    - [**ASP.NET Identity 2.1 Roles Based Authorization with ASP.NET Web API**](#aspnet-identity-21-roles-based-authorization-with-aspnet-web-api)
+    - [**Understanding, Using and Customizing ASP.NET Identity System for Authentication and Authorization**](#understanding-using-and-customizing-aspnet-identity-system-for-authentication-and-authorization)
+    - [**Securing ASP.NET Web API using Token Based Authentication and using it in Angular.js application**](#securing-aspnet-web-api-using-token-based-authentication-and-using-it-in-angularjs-application)
+    - [**RESTful Day #5: Security in Web APIs-Basic Authentication and Token based custom Authorization in Web APIs using Action Filters**](#restful-day-5-security-in-web-apis-basic-authentication-and-token-based-custom-authorization-in-web-apis-using-action-filters)
+    - [**OWIN OAuth 2.0 Authorization Server**](#owin-oauth-20-authorization-server)
+  - [**Implement an OAuth 2.0 Authorization Server using OWIN OAuth middleware on ASP.NET web API.**](#implement-an-oauth-20-authorization-server-using-owin-oauth-middleware-on-aspnet-web-api)
+    - [**ASP.NET Web Api: Understanding OWIN/Katana Authentication/Authorization Part I: Concepts**](#aspnet-web-api-understanding-owinkatana-authenticationauthorization-part-i-concepts-1)
+    - [**OAuth “Implicit Grant” flow with OWIN/Katana**](#oauth-implicit-grant-flow-with-owinkatana)
+    - [**OWIN Authorization Code Grant (SSO)**](#owin-authorization-code-grant-sso)
+
+
+### Paquetes nugets para OWIN
 ~~~
 Install-Package Microsoft.AspNet.Identity.Owin -Version 2.0.1
 Install-Package Microsoft.AspNet.Identity.EntityFramework -Version 2.0.1

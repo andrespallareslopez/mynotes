@@ -1,3 +1,6 @@
+---
+Titulo: "Injecting a Factory Service in ASP.NET Core"
+---
 # Inyeccion de dependencias en Asp.net Core
 
 Injecting a Factory Service in ASP.NET Core

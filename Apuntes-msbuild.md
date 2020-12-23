@@ -1,6 +1,22 @@
+---
+Titulo: "Apuntes msbuild"
+---
+
 # Apuntes msbuild
 
-**AUTOMATIZANDO LA COMPILACIÓN CON MSBUILD Y XUNIT**
+- [Apuntes msbuild](#apuntes-msbuild)
+    - [**AUTOMATIZANDO LA COMPILACIÓN CON MSBUILD Y XUNIT**](#automatizando-la-compilación-con-msbuild-y-xunit)
+    - [***MSBuild script for compiling all .cs files into a single assembly (DLL or EXE)***](#msbuild-script-for-compiling-all-cs-files-into-a-single-assembly-dll-or-exe)
+    - [***Csc (tarea)***](#csc-tarea)
+    - [***Tutorial: Crear un archivo de proyecto de MSBuild desde cero***](#tutorial-crear-un-archivo-de-proyecto-de-msbuild-desde-cero)
+    - [***Procedimiento Seleccionar los archivos que se van a compilar***](#procedimiento-seleccionar-los-archivos-que-se-van-a-compilar)
+    - [***Learn Web Assembly (WASM) In 1 Video***](#learn-web-assembly-wasm-in-1-video)
+    - [***Getting Started with the sample***](#getting-started-with-the-sample)
+    - [***WebAssembly packager.exe***](#webassembly-packagerexe)
+    - [***Uno.Wasm.Bootstrap***](#unowasmbootstrap)
+    - [***Introducing Uno WebAssembly Projects and Debugging***](#introducing-uno-webassembly-projects-and-debugging)
+
+### **AUTOMATIZANDO LA COMPILACIÓN CON MSBUILD Y XUNIT**
 
 http://xurxodev.com/automatizando-la-compilacion-con-msbuild-y-xunit/
 
@@ -54,7 +70,7 @@ http://xurxodev.com/automatizando-la-compilacion-con-msbuild-y-xunit/
 
 ___
 
-***MSBuild script for compiling all .cs files into a single assembly (DLL or EXE)***
+### ***MSBuild script for compiling all .cs files into a single assembly (DLL or EXE)***
 
 https://blogs.msdn.microsoft.com/dotnetinterop/2008/04/08/msbuild-script-for-compiling-all-cs-files-into-a-single-assembly-dll-or-exe/
 
@@ -308,11 +324,11 @@ Important line:
 ~~~
 ___
 
-***Csc (tarea)***
+### ***Csc (tarea)***
 
 https://docs.microsoft.com/es-es/visualstudio/msbuild/csc-task?view=vs-2019
 
-***Tutorial: Crear un archivo de proyecto de MSBuild desde cero***
+### ***Tutorial: Crear un archivo de proyecto de MSBuild desde cero***
 
 https://docs.microsoft.com/es-es/visualstudio/msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch?view=vs-2019
 
@@ -326,7 +342,7 @@ https://docs.microsoft.com/es-es/visualstudio/msbuild/walkthrough-creating-an-ms
   </Target>
 </Project>
 ~~~
-***Procedimiento Seleccionar los archivos que se van a compilar***
+### ***Procedimiento Seleccionar los archivos que se van a compilar***
 
 https://docs.microsoft.com/es-es/visualstudio/msbuild/how-to-select-the-files-to-build?view=vs-2019
 
@@ -363,29 +379,29 @@ https://docs.microsoft.com/es-es/visualstudio/msbuild/how-to-select-the-files-to
 
 ___
 
-***Learn Web Assembly (WASM) In 1 Video***
+### ***Learn Web Assembly (WASM) In 1 Video***
 
 https://www.youtube.com/watch?v=LNqicUieSqI&t=50s
 
 Here show how to write and use javasscript code for loading wasm files with vanila js code.
 
-***Getting Started with the sample***
+### ***Getting Started with the sample***
 
 https://github.com/mono/mono/blob/master/sdks/wasm/docs/getting-started/sample.md
 
 In this url it is showing how to compile c# code from sdk of webassembly for mono and after that and with dll created,it create wasm files and html scaffolding from packager.exe that belong sdk mono wasm tools
 
-***WebAssembly packager.exe***
+### ***WebAssembly packager.exe***
 
 https://github.com/mono/mono/blob/master/sdks/wasm/docs/packager.md
 
 Explanations about packager.exe tool from sdk webassembly of mono and it gives a full information about how to use this tool on command line prompt.
 
-***Uno.Wasm.Bootstrap***
+### ***Uno.Wasm.Bootstrap***
 
 https://github.com/nventive/Uno.Wasm.Bootstrap/blob/master/Readme.md
 
-***Introducing Uno WebAssembly Projects and Debugging***
+### ***Introducing Uno WebAssembly Projects and Debugging***
 
 https://hackernoon.com/introducing-uno-webassembly-projects-and-debugging-f360d4776df3
 

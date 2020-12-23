@@ -1,4 +1,17 @@
+---
+Titulo: "Apuntes AutoFac"
+---
+
 # Apuntes AutoFac
+
+- [Apuntes AutoFac](#apuntes-autofac)
+    - [**Using Dependency Injection with AutoFac in the ASP.NET Web API for an Entity Framework 5 Repository implementation**](#using-dependency-injection-with-autofac-in-the-aspnet-web-api-for-an-entity-framework-5-repository-implementation)
+    - [**DI con Autofac: I Vistazo rápido**](#di-con-autofac-i-vistazo-rápido)
+    - [**Binding autofac with webapi using generic repository**](#binding-autofac-with-webapi-using-generic-repository)
+  - [**Instalacion de AutoFac**](#instalacion-de-autofac)
+    - [**ASP.NET Web API 2 with Autofac Owin**](#aspnet-web-api-2-with-autofac-owin)
+    - [**ASP.NET Web API, Autofac & Self-Hosting**](#aspnet-web-api-autofac--self-hosting)
+
 
 ### **Using Dependency Injection with AutoFac in the ASP.NET Web API for an Entity Framework 5 Repository implementation**
 

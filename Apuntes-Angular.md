@@ -1,4 +1,54 @@
+---
+Titulo: "Apuntes Angular"
+---
+
 # Apuntes Angular
+
+- [Apuntes Angular](#apuntes-angular)
+    - [**Angular ¿qué son los módulos y cómo se refactoriza una aplicación?**](#angular-qué-son-los-módulos-y-cómo-se-refactoriza-una-aplicación)
+    - [**Aprendiendo desarrollo web: Angular**](#aprendiendo-desarrollo-web-angular)
+    - [**Include and use NPM Libraries in Angular with Angular-CLI**](#include-and-use-npm-libraries-in-angular-with-angular-cli)
+    - [**Using a browserified JS library with Angular 2**](#using-a-browserified-js-library-with-angular-2)
+    - [**Angular Cli (Webpack) - How to Add Global Libraries**](#angular-cli-webpack---how-to-add-global-libraries)
+    - [**How to use JavaScript libraries in Angular 2+ apps?**](#how-to-use-javascript-libraries-in-angular-2-apps)
+    - [**How to Add Third-Party Library in Angular CLI**](#how-to-add-third-party-library-in-angular-cli)
+    - [**External JavaScript dependencies in Typescript and Angular 2**](#external-javascript-dependencies-in-typescript-and-angular-2)
+    - [**Setting Up Angular from Scratch**](#setting-up-angular-from-scratch)
+    - [**Building an App from Scratch with Angular and Webpack**](#building-an-app-from-scratch-with-angular-and-webpack)
+    - [**Clases Especiales en la creacion de componentes**](#clases-especiales-en-la-creacion-de-componentes)
+      - [Understanding ViewChildren, ContentChildren, and QueryList in Angular](#understanding-viewchildren-contentchildren-and-querylist-in-angular)
+      - [ContentChildren(desde la documentacion de angular)](#contentchildrendesde-la-documentacion-de-angular)
+      - [QueryList(Desde la documentacion de angular)](#querylistdesde-la-documentacion-de-angular)
+      - [Structural Directives](#structural-directives)
+    - [**Creating structural directives in Angular**](#creating-structural-directives-in-angular)
+    - [**The Power of Structural Directives in Angular**](#the-power-of-structural-directives-in-angular)
+    - [**Angular 2 Custom Structural Directive Example(muy interesante)**](#angular-2-custom-structural-directive-examplemuy-interesante)
+    - [**Exploring Angular DOM manipulation techniques using ViewContainerRef**](#exploring-angular-dom-manipulation-techniques-using-viewcontainerref)
+    - [Creando una vista embebida(Embedded view)](#creando-una-vista-embebidaembedded-view)
+    - [Creaccion de una vista de host(host view)](#creaccion-de-una-vista-de-hosthost-view)
+    - [View ContainerRef](#view-containerref)
+    - [Manipulando vistas](#manipulando-vistas)
+    - [Creacion de vistas](#creacion-de-vistas)
+      - [Angular 2 Transclusion using ng-content](#angular-2-transclusion-using-ng-content)
+    - [**Angular series I - Proyección de contenido (Content projection)**](#angular-series-i---proyección-de-contenido-content-projection)
+    - [**Angular Series II - Templating**](#angular-series-ii---templating)
+      - [Angular ng-template, ng-container and ngTemplateOutlet - The Complete Guide To Angular Templates](#angular-ng-template-ng-container-and-ngtemplateoutlet---the-complete-guide-to-angular-templates)
+      - [Angular Templates: las directivas ng-template, ng-container y ngTemplateOutlet](#angular-templates-las-directivas-ng-template-ng-container-y-ngtemplateoutlet)
+      - [Dynamically Creating Components with Angular](#dynamically-creating-components-with-angular)
+      - [Learning Dynamic Components — Making a Pizza Creator App using Angular](#learning-dynamic-components--making-a-pizza-creator-app-using-angular)
+      - [Learn Several Angular Advanced Features - ng-template, ng-container and ngTemplateOutlet](#learn-several-angular-advanced-features---ng-template-ng-container-and-ngtemplateoutlet)
+      - [HostListener & HostBinding || Angular6 Tutorials for Beginners. || Custom Directives](#hostlistener--hostbinding--angular6-tutorials-for-beginners--custom-directives)
+    - [**Angular Templates: las directivas ng-template, ng-container y ngTemplateOutlet**](#angular-templates-las-directivas-ng-template-ng-container-y-ngtemplateoutlet-1)
+      - [Template Syntax(desde la documentacion de angular)](#template-syntaxdesde-la-documentacion-de-angular)
+    - [**component factory resolver**](#component-factory-resolver)
+    - [**Añadir una clase CSS al host del componente**](#añadir-una-clase-css-al-host-del-componente)
+    - [**CSS Encapsulation with Angular Components**](#css-encapsulation-with-angular-components)
+    - [Angular Crash Course - 2019](#angular-crash-course---2019)
+    - [Communicating Between Components](#communicating-between-components)
+    - [Sharing Data between Components in Angular](#sharing-data-between-components-in-angular)
+    - [Attribute Directives](#attribute-directives)
+    - [Writing Allocation Free Code in C# - Matt Ellis](#writing-allocation-free-code-in-c---matt-ellis)
+
 
 ### **Angular ¿qué son los módulos y cómo se refactoriza una aplicación?**
 
@@ -68,7 +118,7 @@ Angular 5.2 officially supports 2.6
 
 npm install typescript@'>=2.7.2 <2.8.0'
 ___
-## **Clases Especiales en la creacion de componentes**
+### **Clases Especiales en la creacion de componentes**
 
 
 #### Understanding ViewChildren, ContentChildren, and QueryList in Angular
@@ -440,17 +490,27 @@ export class AppComponent {
 
 ___
 
+### Angular Crash Course - 2019
+
+
 [Angular Crash Course - 2019](https://www.youtube.com/watch?v=Fdf5aTYRW0E&t=2227s)
+
+### Communicating Between Components
+
 
 [Communicating Between Components](https://www.youtube.com/watch?v=o5V_eGdE7-A)
 En este video solo habla de comunicacion entre componentes en angular  a traves de rx con subscriptor y subject a traves
 del modelo que vamos a compartir
+
+### Sharing Data between Components in Angular
 
 [Sharing Data between Components in Angular](https://www.youtube.com/watch?v=I317BhehZKM)
 - parent =>child via Input() decorator.
 - child => parent via Output()+EventEmitter.
 - child => parent via ViewChild().
 - Any => Any via shared service across rx.js library.
+
+### Attribute Directives 
 
 [Attribute Directives](https://angular.io/guide/attribute-directives)
 Este enlace es de la documentacion de angular.
@@ -500,6 +560,8 @@ export class HighlightDirective {
 
 
 ___
+
+### Writing Allocation Free Code in C# - Matt Ellis 
 
 [Writing Allocation Free Code in C# - Matt Ellis](https://www.youtube.com/watch?v=nK54s84xRRs)
 

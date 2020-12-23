@@ -1,5 +1,9 @@
-***Apuntes Kubernetes***
 ---
+Titulo: "Apuntes Kubernetes"
+---
+
+# Apuntes KuberneteS
+
 
 (Win 10)
 Podemos bajar nuestro instable de kubernetes minikube en el directorio Minikube_home para ejecutar y levantar kubertes.

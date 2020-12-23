@@ -1,4 +1,12 @@
+---
+Titulo: "Apuntes Javascript tratamiento de formularios y clientes de javascript http"
+---
+
 # Apuntes Javascript tratamiento de formularios y clientes de javascript http
+
+- [Apuntes Javascript tratamiento de formularios y clientes de javascript http](#apuntes-javascript-tratamiento-de-formularios-y-clientes-de-javascript-http)
+    - [**Sending HTML Form Data in ASP.NET Web API: Form-urlencoded Data**](#sending-html-form-data-in-aspnet-web-api-form-urlencoded-data)
+    - [**Receiving Data As FormDataCollection In ASP.NET Web API**](#receiving-data-as-formdatacollection-in-aspnet-web-api)
 
 ### **Sending HTML Form Data in ASP.NET Web API: Form-urlencoded Data**
 

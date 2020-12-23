@@ -1,3 +1,7 @@
+---
+Titulo: "Automatic CQRS handler registration in ASP.NET Core with reflection"
+---
+
 # Inyeccion de dependencias en Asp.net Core
 
 Automatic CQRS handler registration in ASP.NET Core with reflection

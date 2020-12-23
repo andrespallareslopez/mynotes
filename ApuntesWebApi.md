@@ -1,6 +1,55 @@
+---
+Titulo: "Apuntes Web API"
+---
 # Apuntes Web Api
 
-USING NINJECT WITH ASP.NET WEB API 2
+- [Apuntes Web Api](#apuntes-web-api)
+    - [USING NINJECT WITH ASP.NET WEB API 2](#using-ninject-with-aspnet-web-api-2)
+    - [**Web API 2 and ninject, how to make them work together**](#web-api-2-and-ninject-how-to-make-them-work-together)
+    - [**ASP .NET WEB API DEPENDENCY INJECTION WITH NINJECT**](#asp-net-web-api-dependency-injection-with-ninject)
+    - [**Quick tip: How to Make Ninject work with ASP.NET Web API**](#quick-tip-how-to-make-ninject-work-with-aspnet-web-api)
+    - [**USING NINJECT WITH WEB-API 2**](#using-ninject-with-web-api-2)
+    - [**Simple way to share Dependency Resolvers between MVC and Web API**](#simple-way-to-share-dependency-resolvers-between-mvc-and-web-api)
+    - [**Ninject dependency injection in MVC5 with WebApi**](#ninject-dependency-injection-in-mvc5-with-webapi)
+    - [**Befriending ASP.NET Web.API2, OWIN and Ninject**](#befriending-aspnet-webapi2-owin-and-ninject)
+    - [**Setting up a OWIN WebApi application Ninject**](#setting-up-a-owin-webapi-application-ninject)
+    - [**ASP.NET Web API Compression**](#aspnet-web-api-compression)
+    - [**Replace JSON.NET with Jil JSON serializer in ASP.NET Web API**](#replace-jsonnet-with-jil-json-serializer-in-aspnet-web-api)
+    - [**Implement ASP.NET Web API GZip compression ActionFilter**](#implement-aspnet-web-api-gzip-compression-actionfilter)
+    - [**Simple way to implement caching in ASP.NET Web API**](#simple-way-to-implement-caching-in-aspnet-web-api)
+    - [**Manual JSON serialization from DataReader in ASP.NET Web API**](#manual-json-serialization-from-datareader-in-aspnet-web-api)
+    - [**JSON Serialization of a DataReader**](#json-serialization-of-a-datareader)
+    - [**Customize Json result in Web API**](#customize-json-result-in-web-api)
+    - [**Using an alternate JSON Serializer in ASP.NET Web API**](#using-an-alternate-json-serializer-in-aspnet-web-api)
+    - [**FastJsonParser**](#fastjsonparser)
+    - [**Web API Compression Using GZip**](#web-api-compression-using-gzip)
+    - [**Owin.Compression**](#owincompression)
+    - [**http://thorium.github.io/Owin.Compression/index.html#Getting-started**](#httpthoriumgithubioowincompressionindexhtmlgetting-started)
+    - [**ASP.NET Web API GZip compression ActionFilter with 8 lines of code**](#aspnet-web-api-gzip-compression-actionfilter-with-8-lines-of-code)
+    - [**Implement Resources Pagination**](#implement-resources-pagination)
+    - [**How to access ETag header with jQuery AJAX request?**](#how-to-access-etag-header-with-jquery-ajax-request)
+    - [**Securing Web API**](#securing-web-api)
+    - [**Caching resources using CacheCow and ETag**](#caching-resources-using-cachecow-and-etag)
+    - [**[ASP.NET Web API] Web API VI – Implementando Cache **](#aspnet-web-api-web-api-vi--implementando-cache-)
+    - [**[ASP.NET Web API] Subiendo archivo con jQuery y Web API**](#aspnet-web-api-subiendo-archivo-con-jquery-y-web-api)
+    - [**[ASP.NET Web API] HTTPActionResult, ahora en Web API 2**](#aspnet-web-api-httpactionresult-ahora-en-web-api-2)
+    - [**simplePagination.js**](#simplepaginationjs)
+    - [**kottenator/simple-pagination.js**](#kottenatorsimple-paginationjs)
+    - [**Async query and Save:**](#async-query-and-save)
+    - [**Generic Data Access Helper using Entity Framework 6.1 (Code First)**](#generic-data-access-helper-using-entity-framework-61-code-first)
+    - [**A generic repository for .NET Entity Framework 6 with Async operations**](#a-generic-repository-for-net-entity-framework-6-with-async-operations)
+    - [**Generic Data Access Helper using Entity Framework 6.1 (Code First)**](#generic-data-access-helper-using-entity-framework-61-code-first-1)
+    - [**New Features in ASP.NET Web API 2 - Part I**](#new-features-in-aspnet-web-api-2---part-i)
+    - [**[ASP.NET Web API] Web API VIII – Trabajando con ActionName**](#aspnet-web-api-web-api-viii--trabajando-con-actionname)
+    - [**Paging in ASP.NET Web API: Using a JSON Envelope**](#paging-in-aspnet-web-api-using-a-json-envelope)
+    - [**Paging in ASP.NET Web API: Introduction**](#paging-in-aspnet-web-api-introduction)
+    - [**Paging in ASP.NET Web API: Using HTTP Headers**](#paging-in-aspnet-web-api-using-http-headers)
+    - [**Paging in ASP.NET Web API: Generating Pagination Links**](#paging-in-aspnet-web-api-generating-pagination-links)
+    - [**ASP.NET Web API and Query Strings**](#aspnet-web-api-and-query-strings)
+    - [**WebAPI: Getting Headers, QueryString and Cookie Values**](#webapi-getting-headers-querystring-and-cookie-values)
+
+
+### USING NINJECT WITH ASP.NET WEB API 2
 
 http://ralbu.com/using-ninject-with-asp-net-web-api-2
 ___

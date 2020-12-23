@@ -1,41 +1,72 @@
-#Apuntes Powershell para window core.
+---
+Titulo: "Apuntes Powershell para window core."
+---
+
+# Apuntes Powershell para window core.
+- [Apuntes Powershell para window core.](#apuntes-powershell-para-window-core)
+    - [Remotely managing your Server Core using WinRM and WinRS](#remotely-managing-your-server-core-using-winrm-and-winrs)
+    - [Server Core 2019: Installing Features on Demand (FOD)](#server-core-2019-installing-features-on-demand-fod)
+    - [Remotely Manage a Non-Domain Hyper-V Server from Windows 10](#remotely-manage-a-non-domain-hyper-v-server-from-windows-10)
+    - [Change network location type with PowerShell in Windows 10](#change-network-location-type-with-powershell-in-windows-10)
+    - [REMOTELY MANAGING HYPER-V SERVER IN A WORKGROUP OR NON-DOMAIN](#remotely-managing-hyper-v-server-in-a-workgroup-or-non-domain)
+    - [Enable PowerShell Remoting on the PC You Want to Access Remotely](#enable-powershell-remoting-on-the-pc-you-want-to-access-remotely)
+    - [Putting the ".NET" into "Kubernetes"](#putting-the-net-into-kubernetes)
+    - [Installing IIS on nano server container](#installing-iis-on-nano-server-container)
+    - [Install and manage IIS with SSL using PowerShell](#install-and-manage-iis-with-ssl-using-powershell)
+    - [Automating IIS Feature Installation with Powershell](#automating-iis-feature-installation-with-powershell)
+  - [Como crear archivos y folder en powershell](#como-crear-archivos-y-folder-en-powershell)
+    - [Create a file in the current directory](#create-a-file-in-the-current-directory)
+    - [Create a directory](#create-a-directory)
+    - [Create a directory in a different directory](#create-a-directory-in-a-different-directory)
+    - [Remove a directory](#remove-a-directory)
+    - [Read and write web config file](#read-and-write-web-config-file)
+- [get the directory of this script file](#get-the-directory-of-this-script-file)
+- [get the full path and file name of the App.config file in the same directory as this script](#get-the-full-path-and-file-name-of-the-appconfig-file-in-the-same-directory-as-this-script)
+- [initialize the xml object](#initialize-the-xml-object)
+- [load the config file as an xml object](#load-the-config-file-as-an-xml-object)
+- [iterate over the settings](#iterate-over-the-settings)
+- [save the updated config file](#save-the-updated-config-file)
+    - [Politicas de ejecucion de powershell](#politicas-de-ejecucion-de-powershell)
+    - [Working with git from powershell](#working-with-git-from-powershell)
+
 
 ***Articulos para configuracion remota de windows server core:***
 
-Remotely managing your Server Core using WinRM and WinRS
+### Remotely managing your Server Core using WinRM and WinRS
 
 https://dirteam.com/sander/2008/02/23/remotely-managing-your-server-core-using-winrm-and-winrs/
 
-Server Core 2019: Installing Features on Demand (FOD)
+### Server Core 2019: Installing Features on Demand (FOD)
 
 https://sid-500.com/2019/01/19/server-core-2019-installing-features-on-demand-fod/
 
-Remotely Manage a Non-Domain Hyper-V Server from Windows 10
+### Remotely Manage a Non-Domain Hyper-V Server from Windows 10
 
 https://tweaks.com/windows/67216/remotely-manage-a-nondomain-hyperv-server-from-windows-10/
 
-Change network location type with PowerShell in Windows 10
+### Change network location type with PowerShell in Windows 10
 
 https://winaero.com/blog/network-location-type-powershell-windows-10/
 
-REMOTELY MANAGING HYPER-V SERVER IN A WORKGROUP OR NON-DOMAIN
+### REMOTELY MANAGING HYPER-V SERVER IN A WORKGROUP OR NON-DOMAIN
 
 https://timothygruber.com/hyper-v-2/remotely-managing-hyper-v-server-in-a-workgroup-or-non-domain/
 
-Enable PowerShell Remoting on the PC You Want to Access Remotely
+### Enable PowerShell Remoting on the PC You Want to Access Remotely
 
 https://www.howtogeek.com/117192/how-to-run-powershell-commands-on-remote-computers/
 
-Putting the ".NET" into "Kubernetes"
+### Putting the ".NET" into "Kubernetes"
 
 https://www.youtube.com/watch?v=GBOPBfcJ2zM
 
 
-Installing IIS on nano server container
+### Installing IIS on nano server container
 
 https://www.youtube.com/watch?v=c3UfTBumehU
 
-Install and manage IIS with SSL using PowerShell
+### Install and manage IIS with SSL using PowerShell
+
 https://4sysops.com/archives/install-and-manage-iis-with-ssl-using-powershell/
 
 
@@ -78,7 +109,7 @@ get-WebBinding
 </code>
 _____
 
-Automating IIS Feature Installation with Powershell
+### Automating IIS Feature Installation with Powershell
 
 https://weblog.west-wind.com/posts/2017/may/25/automating-iis-feature-installation-with-powershell
 
@@ -201,31 +232,31 @@ $AppPool.Recycle()
 
 
 
-Create a file in the current directory
+### Create a file in the current directory
 ~~~
 New-Item -Path . -Name "testfile1.txt" -ItemType "file" -Value "This is a text string."
 ~~~
 
-Create a directory
+### Create a directory
 
 ~~~
 New-Item -Path "c:\" -Name "logfiles" -ItemType "directory"
 ~~~
 
-Create a directory in a different directory
+### Create a directory in a different directory
 
 The name of the new directory item, "Scripts", is included in the value of Path parameter, instead of being specified in the value of Name. As indicated by the syntax, either command form is valid.
 ~~~
 New-Item -ItemType "directory" -Path "c:\ps-test\scripts"
 ~~~
 
-Remove a directory
+### Remove a directory
 ~~~
 Remove-Item 'D:\temp\Test Folder1'
 Remove-Item 'D:\temp\Test Folder' -Recurse
 ~~~
 
-Read and write web config file
+### Read and write web config file
 
 ~~~
 notepad (Get-WebConfigFile 'IIS:\Sites\Default Web Site')
@@ -254,7 +285,7 @@ foreach($connectionString in $appConfig.configuration.connectionStrings.add)
 $appConfig.Save($appConfigFile)
 ~~~
 
-Politicas de ejecucion de powershell
+### Politicas de ejecucion de powershell
 
 ~~~
  Set-ExecutionPolicy -Scope LocalMachine -ExecutionPolicy RemoteSigned -Force
@@ -264,7 +295,7 @@ Politicas de ejecucion de powershell
 Set-ExecutionPolicy Unrestricted
 ~~~
 
-Working with git from powershell
+### Working with git from powershell
 
 ~~~
 Install-Module -Name posh-git -Force

@@ -1,4 +1,29 @@
+---
+Titulo: "Apuntes WebPack"
+---
+
 # Apuntes Webpack
+
+- [Apuntes Webpack](#apuntes-webpack)
+    - [**A Guide to Managing Webpack Dependencies**](#a-guide-to-managing-webpack-dependencies)
+    - [**Resolve (documentacion oficial de webpack)**](#resolve-documentacion-oficial-de-webpack)
+    - [**ES6 Import Statement Without Relative Paths Using Webpack**](#es6-import-statement-without-relative-paths-using-webpack)
+    - [**Webpack aliases and relative paths**](#webpack-aliases-and-relative-paths)
+    - [**[Webpack] Resolve import/require path that refers to root directory by resolve.root**](#webpack-resolve-importrequire-path-that-refers-to-root-directory-by-resolveroot)
+    - [**Simplifying module resolution with Babel or webpack**](#simplifying-module-resolution-with-babel-or-webpack)
+    - [**GETTING STARTED WITH WEBPACK 3**](#getting-started-with-webpack-3)
+    - [**Vue.js and Webpack 4 From Scratch, Part 1**](#vuejs-and-webpack-4-from-scratch-part-1)
+    - [**Introducción a Webpack**](#introducción-a-webpack)
+    - [**Iniciando configuración con webpack y angular 2**](#iniciando-configuración-con-webpack-y-angular-2)
+    - [**Angular Build with Webpack from Scratch**](#angular-build-with-webpack-from-scratch)
+      - [**Angular Build with Webpack from Scratch – Part 2**](#angular-build-with-webpack-from-scratch--part-2)
+    - [**What's the difference between NgcLoader and awesome-typescript-loader?**](#whats-the-difference-between-ngcloader-and-awesome-typescript-loader)
+    - [**Webpack Tutorial: Understanding @ngtools/webpack**](#webpack-tutorial-understanding-ngtoolswebpack)
+    - [**Angular 2 AoT Compilation with webpack**](#angular-2-aot-compilation-with-webpack)
+    - [**Webpack 3 quickstarter: Configure webpack from scratch**](#webpack-3-quickstarter-configure-webpack-from-scratch)
+    - [**What is the difference between __dirname and ./ in node.js?**](#what-is-the-difference-between-__dirname-and--in-nodejs)
+    - [**Split your Webpack configuration for development and production**](#split-your-webpack-configuration-for-development-and-production)
+    - [**Managing Dev and Production Builds with Webpack**](#managing-dev-and-production-builds-with-webpack)
 
 ### **A Guide to Managing Webpack Dependencies**
 

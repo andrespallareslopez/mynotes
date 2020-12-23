@@ -1,4 +1,29 @@
-# Apunte MVC
+---
+Titulo: "Apuntes MVC I"
+---
+# Apunte MVC I
+
+- [Apunte MVC I](#apunte-mvc-i)
+    - [Usando los ActionLink](#usando-los-actionlink)
+    - [Inline and Custom HTML Helpers in ASP.NET MVC](#inline-and-custom-html-helpers-in-aspnet-mvc)
+    - [Formas de almacenar datos temporales en Asp.net MVC (ViewData, ViewBag, TempData y Session)](#formas-de-almacenar-datos-temporales-en-aspnet-mvc-viewdata-viewbag-tempdata-y-session)
+    - [Validacion en ASP.NET MVC](#validacion-en-aspnet-mvc)
+    - [**How To Use Partial View in MVC with Example**](#how-to-use-partial-view-in-mvc-with-example)
+    - [**ASP.NET MVC 5 From Scratch : Add JQuery Library Using NuGet**](#aspnet-mvc-5-from-scratch--add-jquery-library-using-nuget)
+    - [**ASP.NET MVC 5 From Scratch : _ViewStart.cshtml The Default Layout**](#aspnet-mvc-5-from-scratch--_viewstartcshtml-the-default-layout)
+    - [**ASP.NET MVC 5 From Scratch : Create an ASP.NET MVC 5 Empty Project**](#aspnet-mvc-5-from-scratch--create-an-aspnet-mvc-5-empty-project)
+    - [**Unobtrusive validation - Partial View**](#unobtrusive-validation---partial-view)
+    - [**How to enable Unobtrusive Client Validation using JQuery in ASP.NET 5**](#how-to-enable-unobtrusive-client-validation-using-jquery-in-aspnet-5)
+    - [**What is Unobtrusive Validation? - ASP.NET MVC Demystified**](#what-is-unobtrusive-validation---aspnet-mvc-demystified)
+    - [**Model Validation in ASP.NET Web API**](#model-validation-in-aspnet-web-api)
+    - [**Calling ASP.NET MVC actions using JQuery AJAX**](#calling-aspnet-mvc-actions-using-jquery-ajax)
+    - [**ASP.NET MVC – PartialView with Ajax**](#aspnet-mvc--partialview-with-ajax)
+    - [**Bundling and Minification**](#bundling-and-minification)
+    - [**How do I add BundleConfig.cs to my project?**](#how-do-i-add-bundleconfigcs-to-my-project)
+    - [**ASP.NET MVC 5 From Scratch : Adding BundleConfig**](#aspnet-mvc-5-from-scratch--adding-bundleconfig)
+
+
+
 
 ### Usando los ActionLink
 
@@ -29,7 +54,7 @@ https://www.tiracodigo.com/index.php/programacion/mvc/formas-de-almacenar-datos-
 
 
 
-## Validacion en ASP.NET MVC
+### Validacion en ASP.NET MVC
 ~~~~
 Bower: bower install jquery-validation
 NuGet: Install-Package jQuery.Validation

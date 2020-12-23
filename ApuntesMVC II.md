@@ -1,15 +1,27 @@
-# ***Apuntes MVC***
+---
+Titulo: "Apuntes MVC II"
+---
+# Apuntes MVC II
 
-## **Principal Concepts**
+- [Apuntes MVC II](#apuntes-mvc-ii)
+    - [**Principal Concepts**](#principal-concepts)
+    - [**Security**](#security)
+    - [***User.Identity in Global.ASAx***](#useridentity-in-globalasax)
+    - [System.Security.Principal in .NET](#systemsecurityprincipal-in-net)
+    - [Role-Based Security](#role-based-security)
+    - [Custom Authentication With ASP.NET MVC](#custom-authentication-with-aspnet-mvc)
+    - [How to implement a custom IPrincipal in ASP.NET MVC 4 internet project](#how-to-implement-a-custom-iprincipal-in-aspnet-mvc-4-internet-project)
+
+### **Principal Concepts**
 
 [Asp.Net Core - Complete Tutorial For Beginner](https://www.youtube.com/watch?v=PsNn-bl8hAc)
 
 
 
 
-## **Security**
+### **Security**
 ___
-***User.Identity in Global.ASAx***
+### ***User.Identity in Global.ASAx***
 
 La tecnica depende de si el administrador de roles (Role Manager) esta activo o no mediante el atributo<roleManager enabled="true"> en el archivo Web.config.
 
@@ -184,13 +196,13 @@ https://www.c-sharpcorner.com/forums/useridentity-in-globalasax
 ~~~
 ___
 
-***System.Security.Principal in .NET***
+### System.Security.Principal in .NET
 
 https://www.c-sharpcorner.com/UploadFile/puranindia/system-security-principal-in-net/
 
 Articulo que explica como utilizar GenericPRincipal GenericIdentity WindowsPRincipal ,... tanto imperativamente como declaratimente
 
-***Role-Based Security***
+### Role-Based Security
 
 http://www.diranieh.com/NETSecurity/RoleBasedSecurity.htm
 
@@ -220,7 +232,7 @@ PrincipalPermission obPP2 = new PrincipalPermission( "Yazan", "TeamLeader" );
 PrincipalPermission obPPUnion = ((PrincipalPermission)obPP1.Union(obPP2)).Demand();
 ~~~
 
-***Custom Authentication With ASP.NET MVC***
+### Custom Authentication With ASP.NET MVC
 
 https://www.c-sharpcorner.com/article/custom-authentication-with-asp-net-mvc/
 
@@ -266,7 +278,7 @@ Tambien hace un custom MemberShip Provider y de role provider.
 
 ___
 
-***How to implement a custom IPrincipal in ASP.NET MVC 4 internet project***
+### How to implement a custom IPrincipal in ASP.NET MVC 4 internet project
 
 https://www.codeproject.com/Tips/574576/How-to-implement-a-custom-IPrincipal-in-ASP-NET-MV
 

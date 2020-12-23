@@ -1,4 +1,20 @@
+---
+Titulo: "Apuntes JavaScript"
+---
+
 # Apuntes Javascript
+
+- [Apuntes Javascript](#apuntes-javascript)
+    - [**Number Formatting Using string.replace in JavaScript](#number-formatting-using-stringreplace-in-javascript)
+    - [**Javascript - Regex to validate date format [duplicate]**](#javascript---regex-to-validate-date-format-duplicate)
+    - [**JavaScript Decimal Place Restriction With RegEx**](#javascript-decimal-place-restriction-with-regex)
+    - [**Display two decimal places, no rounding**](#display-two-decimal-places-no-rounding)
+    - [How to use module path aliases in Visual Studio Code, TypeScript and JavaScript](#how-to-use-module-path-aliases-in-visual-studio-code-typescript-and-javascript)
+    - [Configuring aliases in webpack + VS Code + Typescript + Jest](#configuring-aliases-in-webpack--vs-code--typescript--jest)
+    - [Caporal (Crear CLI js)](#caporal-crear-cli-js)
+    - [Compile ES6 Code with Gulp and Babel, Part 2](#compile-es6-code-with-gulp-and-babel-part-2)
+    - [JavaScript - Pure Pagination Logic in Vanilla JS / TypeScript](#javascript---pure-pagination-logic-in-vanilla-js--typescript)
+    - [Squel.js](#squeljs)
 
 ### **Number Formatting Using string.replace in JavaScript
 
@@ -7,12 +23,14 @@ https://blog.tompawlak.org/number-currency-formatting-javascript
 ___
 
 - Peligros con el ámbito de las variables
-- Técnicas eficientes de programación orientada a        - objetos con JavaScript: constructores, prototipos,     - herencia, encapsulación, polimorfismo, espacios de       nombre, interfaces...
+- Técnicas eficientes de programación orientada a        
+- objetos con JavaScript: constructores, prototipos,     
+- herencia, encapsulación, polimorfismo, espacios de nombre, interfaces...
 - Clausuras y otros conceptos importantes
 - Controlando el valor de contexto
 - Reflexión e introspección
-- Trabajo con el DOM: jerarquías, recursión,               colecciones “vivas” y “estáticas”, localización de       elementos, modificación dinámica multi-navegador…
-- Manejo avanzado de eventos en páginas web: gestión       unificada y multi-navegador
+- Trabajo con el DOM: jerarquías, recursión, colecciones “vivas” y “estáticas”, localización de       elementos, modificación dinámica multi-navegador…
+- Manejo avanzado de eventos en páginas web: gestión unificada y multi-navegador
 - Subclasificación
 - Trabajo avanzado con funciones
 - Funciones anónimas
@@ -118,19 +136,19 @@ ___
 
 Se refiere a poner alias en los imports en vez de poner toda la ruta completa en el import
 
-How to use module path aliases in Visual Studio Code, TypeScript and JavaScript
+### How to use module path aliases in Visual Studio Code, TypeScript and JavaScript
 
 https://medium.com/@caludio/how-to-use-module-path-aliases-in-visual-studio-typescript-and-javascript-e7851df8eeaa
 
 ___
 
-Configuring aliases in webpack + VS Code + Typescript + Jest
+### Configuring aliases in webpack + VS Code + Typescript + Jest
 
 https://www.basefactor.com/configuring-aliases-in-webpack-vs-code-typescript-jest
 
 ___
 
-Caporal (Crear CLI js)
+### Caporal (Crear CLI js)
 
 https://github.com/mattallty/Caporal.js?files=1
 
@@ -138,19 +156,19 @@ Libreria para construir linea de comandos cli de javascript
 
 ___
 
-Compile ES6 Code with Gulp and Babel, Part 2
+### Compile ES6 Code with Gulp and Babel, Part 2
 
 https://cobwwweb.com/compile-es6-code-gulp-babel-part-2
 
 ___
 
-JavaScript - Pure Pagination Logic in Vanilla JS / TypeScript
+### JavaScript - Pure Pagination Logic in Vanilla JS / TypeScript
 
 https://jasonwatmore.com/post/2018/08/07/javascript-pure-pagination-logic-in-vanilla-js-typescript
 
 ___
 
-Squel.js
+### Squel.js
 
 - lightweight Javascript library for building SQL query strings.
 

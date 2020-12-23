@@ -1,23 +1,31 @@
+---
+Titulo: "Apuntes Consul"
+
+
+---
+
 # Apuntes Consul
 
+
+- [Apuntes Consul](#apuntes-consul)
+    - [Microservicios | Service Discovery con Hashicorp Consul y Javascript](#microservicios--service-discovery-con-hashicorp-consul-y-javascript)
+    - [How to self register a service with Consul](#how-to-self-register-a-service-with-consul)
+
+ 
+
+
 ___
 
 
-Microservicios | Service Discovery con Hashicorp Consul y Javascript
+### Microservicios | Service Discovery con Hashicorp Consul y Javascript
 
 https://www.youtube.com/watch?v=JOIFpo7XzDc&t=1159s
 
 
 ___
 
-Microservicios | Service Discovery con Hashicorp Consul y Javascript
 
-https://www.youtube.com/watch?v=JOIFpo7XzDc&t=1159s
-
-
-___
-
-How to self register a service with Consul
+### How to self register a service with Consul
 
 https://stackoverflow.com/questions/39467200/how-to-self-register-a-service-with-consul
 

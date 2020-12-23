@@ -1,4 +1,24 @@
+---
+Titulo: "Apuntes React js"
+---
+
 # **Apuntes React js**
+
+- [**Apuntes React js**](#apuntes-react-js)
+    - [**Introducing JSX**](#introducing-jsx)
+    - [**ReactJS - Environment Setup**](#reactjs---environment-setup)
+    - [**Creating a React App… From Scratch.**](#creating-a-react-app-from-scratch)
+- [React Hooks](#react-hooks)
+  - [useState](#usestate)
+    - [useEffect](#useeffect)
+    - [Pass Multiple Children to a React Component with Slots](#pass-multiple-children-to-a-react-component-with-slots)
+      - [Use Props as Named Slots](#use-props-as-named-slots)
+      - [Use Children to Pass Props Directly](#use-children-to-pass-props-directly)
+    - [React Formularios – Formik Parte 1](#react-formularios--formik-parte-1)
+    - [React Typescript Tutorial](#react-typescript-tutorial)
+    - [Using Typescript with modern React (i.e. hooks, context, suspense)](#using-typescript-with-modern-react-ie-hooks-context-suspense)
+    - [How to create custom Hooks in React](#how-to-create-custom-hooks-in-react)
+
 
 Tenemos dos librerias de administradores de estado, redux y mobX,  aunque tambien tenemos reack hooks context para manejar estados, habrá mas por supuesto.
 
@@ -144,7 +164,7 @@ export const useForm= initialValues => {
    ]
    
 ~~~
-## useEffect
+### useEffect
 
 ~~~
 import React,{useEffect} from "react";
@@ -303,20 +323,20 @@ const Nav = ({ user }) => (
 ~~~
 ___
 
-React Formularios – Formik Parte 1
+### React Formularios – Formik Parte 1
 
 https://www.youtube.com/watch?v=Dj-Kjj8ZIBU&list=PL33bS175Qm6fkEvRk7M8sTSZZyU7iLkAF&index=2
 
 ___
 
 
-React Typescript Tutorial
+### React Typescript Tutorial
 
 https://www.youtube.com/watch?v=Z5iWr6Srsj8
 
 ___
 
-Using Typescript with modern React (i.e. hooks, context, suspense)
+### Using Typescript with modern React (i.e. hooks, context, suspense)
 
 https://www.youtube.com/watch?v=BnIhk4igd8I&t=2371s
 
@@ -339,6 +359,154 @@ npm i @babel/core
       --save
 ~~~
 ___
+
+### How to create custom Hooks in React
+
+https://dev.to/damcosset/how-to-create-custom-hooks-in-react-44nd
+
+**Sin Custom Hooks**
+
+<pre>
+const LayoutComponent = () => {
+  const [onSmallScreen, setOnSmallScreen] = useState(false);
+
+  useEffect(() => {
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+  }, []);
+
+  let checkScreenSize = () => {
+    setOnSmallScreen(window.innerWidth < 768);
+  };
+
+  return (
+    <div className={`${onSmallScreen ? "small" : "large"}`}>
+      <h1>Hello World!</h1>
+    </div>
+  );
+};
+
+</pre>
+
+**Creacion de un custom Hook**
+useWindowWidth.js
+
+<pre>
+
+import { useState, useEffect } from "react";
+
+const useWindowsWidth = () => {
+  const [isScreenSmall, setIsScreenSmall] = useState(false);
+
+  let checkScreenSize = () => {
+    setIsScreenSmall(window.innerWidth < 600);
+  };
+  useEffect(() => {
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
+  return isScreenSmall;
+};
+
+export default useWindowsWidth;
+
+</pre>
+
+Luego lo podemos utilizar de la siguiente manera en el componente original:
+
+<pre>
+import React from 'react'
+import useWindowWidth from './useWindowWidth.js'
+
+const MyComponent = () => {
+  const onSmallScreen = useWindowWidth();
+
+  return (
+    // Return some elements
+  )
+}
+</pre>
+
+Otro ejemplo es que podemos tener el componente original de esta manera:
+
+<pre>
+const ArticleWithComments = (articleId) => {
+  const [comments, setComments] = useState([])
+  const [error, setError] = useState(null)
+
+  let handleCommentsSuccessFetch = (articleComments) => setComments(articleComments)
+
+  let handleError = error => setError(error)
+
+  useEffect(() => {
+    fetchComments(articleId, handleCommentsSuccessFetch, handleError)
+  }, [])
+
+  return (
+    // Do something in the DOM
+  )
+}
+
+const BlogPostWithComments = (blogPostId) => {
+  const [comments, setComments] = useState([])
+  const [error, setError] = useState(null)
+
+  let handleCommentsSuccessFetch = (blogPostComments) => setComments(blogPostComments)
+
+  let handleError = error => setError(error)
+
+  useEffect(() => {
+    fetchComments(blogPostId, handleCommentsSuccessFetch, handleError)
+  }, [])
+
+  return (
+    // Do something in the DOM
+  )
+}
+</pre>
+
+<pre>
+const useCommentsRetriever = (entityId) => {
+  const [comments, setComments] = useState([]);
+  const [error, setError] = useState(null);
+
+  let handleCommentsSuccessFetch = (comments) => setComments(comments);
+
+  let handleError = (error) => setError(error);
+
+  useEffect(() => {
+    fetchComments(entityId, handleCommentsSuccessFetch, handleError);
+  }, []);
+
+  return [comments, error];
+};
+</pre>
+
+<pre>
+import useCommentsRetriever from './useCommentsRetriever.js'
+
+const ArticleWithComments = (articleId) => {
+
+  const [comments, error] = useCommentsRetriever(articleId)
+
+  return (
+    // Do something in the DOM
+  )
+}
+
+const BlogPostWithComments = (blogPostId) => {
+
+  const [comments, error] = useCommentsRetriever(blogPostId)
+
+  return (
+    // Do something in the DOM
+  )
+}
+</pre>
+
 
 
 

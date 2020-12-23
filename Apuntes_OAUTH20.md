@@ -1,6 +1,23 @@
+---
+Titulo: "Apuntes OAUTH2.0"
+---
+
 # Apuntes OAUTH
 
-OAuth 2.0, OpenID Connect y JSON Web Tokens (JWT) ¿Qué es qué?
+- [Apuntes OAUTH](#apuntes-oauth)
+    - [OAuth 2.0, OpenID Connect y JSON Web Tokens (JWT) ¿Qué es qué?](#oauth-20-openid-connect-y-json-web-tokens-jwt-qué-es-qué)
+    - [Consentimiento (Consent)](#consentimiento-consent)
+    - [EndPoints](#endpoints)
+    - [Scopes](#scopes)
+    - [Tipos de Clientes](#tipos-de-clientes)
+    - [Diferentes formas de obtener un token de acceso](#diferentes-formas-de-obtener-un-token-de-acceso)
+    - [Authorization Code Flow](#authorization-code-flow)
+    - [Implicit Flow](#implicit-flow)
+
+
+
+
+### OAuth 2.0, OpenID Connect y JSON Web Tokens (JWT) ¿Qué es qué?
 
 https://www.returngis.net/2019/04/oauth-2-0-openid-connect-y-json-web-tokens-jwt-que-es-que/
 
@@ -27,13 +44,13 @@ La forma en la que estas 4 partes se relacionan entre si es la siguiente:
 
 Ahora que ha hemos visto la foto general, vamos a ver algunos detalles de este flujo.
 
-## Consentimiento (Consent)
+### Consentimiento (Consent)
 
 En el paso 2 comente que el usuario debe consentir lo que la aplicacion esta pidiendo de el. Seguro que lo has visto muchas veces en diferentes tipos de aplicacion.
 
 En OAUTH 2.0 te aseguras de que el usuario es consciente de para que tu aplicacion quiere tu permiso y que puede hacer con el.
 
-## EndPoints
+### EndPoints
 
 Para el paso 2 y paso 4, en OAUTH tenemos dos EndPoints o URLs en nuestro servidor de autorizacion:
 
@@ -42,11 +59,11 @@ Para el paso 2 y paso 4, en OAUTH tenemos dos EndPoints o URLs en nuestro servid
 
 Ambos usan TLS (Transport Segurity Layer) y estas URLs deben ser conocidas por la aplicacion cliente.
 
-## Scopes
+### Scopes
 
 Los scopes son los permisos para hacer algo dentro de un recurso protegido en nombre de un usuario. Estos scopes pueden variar dependiendo del entorno, es decir que son iguales en todos los sitios. Lo ideal es que se definan de manera inequivoca. Me explico: En lugar del scope read que sea un scope returngis_api.read, ya que refleja claramente que este es solo el acceso en modo lectura a una API en concreto.
 
-## Tipos de Clientes
+### Tipos de Clientes
 
 Oauth 2.0 reconoce dos tipos de clientes:
 
@@ -55,11 +72,11 @@ Oauth 2.0 reconoce dos tipos de clientes:
 
 Dependiendo del tipo de cliente que tengamos valoraremos una forma u otra de obtener un token de acceso.
 
-## Diferentes formas de obtener un token de acceso
+### Diferentes formas de obtener un token de acceso
 
 Debido a existen diferentes tipos de aplicaciones y necesidades, existen diferentes formas de obtener un token de acceso. Estas formas en OAUTH 2.0 se llaman Flows y deberas utilizar una y otra dependiendo del tipo de aplicacion cliente que tengas.
 
-## Authorization Code Flow
+### Authorization Code Flow
 
 Este es el flujo que te he mostrado a traves de la imagen, y es el mas completo, y por lo tanto el mas seguro. Se utiliza con lo que se llaman con que se llaman confidential clients, que son aplicaciones que pueden guardar una contraseña (secreto). Este screto deber ser guardado en un sitio donde no pueda ser accedido a traves del cliente. Es decir, este secreto no se puede guardar en una aplicacion hecha en javascript, donde el usuario podría navegar a traves del codigo y encontrarlo. Este escenario aplica perfectamente para websites que tienen un back end seguro.
 
@@ -121,7 +138,7 @@ Content-Type: application/json
 }
 </pre>
 
-## Implicit Flow
+### Implicit Flow
 
 
 

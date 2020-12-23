@@ -1,3 +1,7 @@
+---
+Titulo: "How to register multiple implementations of the same interface in Asp.Net Core?"
+---
+
 # Inyeccion de dependencias en Asp.net Core
 
 How to register multiple implementations of the same interface in Asp.Net Core?

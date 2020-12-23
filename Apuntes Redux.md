@@ -1,5 +1,17 @@
+---
+Titulo: "Apuntes Redux"
+---
+
+
 # Apuntes Redux
 
+- [Apuntes Redux](#apuntes-redux)
+    - [React Redux Parte 1: Introducción desde cero](#react-redux-parte-1-introducción-desde-cero)
+    - [React Redux Parte 2 - reducers, actions y mapStateToProps](#react-redux-parte-2---reducers-actions-y-mapstatetoprops)
+    - [React Redux Parte 3 - mapDispatchToProps](#react-redux-parte-3---mapdispatchtoprops)
+    - [Redux For Beginners | React Redux Tutorial](#redux-for-beginners--react-redux-tutorial)
+    - [How to use useReducer in React Hooks for performance optimization](#how-to-use-usereducer-in-react-hooks-for-performance-optimization)
+  
 ### React Redux Parte 1: Introducción desde cero
 https://www.youtube.com/watch?v=OXWn4XiDUmw&list=PL33bS175Qm6dRwGuzW6AX7Ru7OpubipSw
 
@@ -355,7 +367,7 @@ AutoComplete.js
 
 ___
 
-Redux For Beginners | React Redux Tutorial
+### Redux For Beginners | React Redux Tutorial
 
 https://www.youtube.com/watch?v=CVpUuw9XSjY&t=1564s
 
@@ -478,7 +490,7 @@ function App(){
 ~~~
 
 ___
-How to use useReducer in React Hooks for performance optimization
+### How to use useReducer in React Hooks for performance optimization
 
 https://medium.com/crowdbotics/how-to-use-usereducer-in-react-hooks-for-performance-optimization-ecafca9e7bf5
 

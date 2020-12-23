@@ -1,4 +1,8 @@
-#Apuntes Git
+---
+Titulo: "Apuntes Git"
+---
+
+# Apuntes Git
 ___
 Pasos para crear una nueva rama
 
