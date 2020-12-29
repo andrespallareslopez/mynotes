@@ -5,10 +5,9 @@ Titulo: "Apuntes React Hooks"
 # React Hooks
 
 - [React Hooks](#react-hooks)
-  - [### useEffect](#-useeffect)
-  - [~~~](#)
-    - [useState](#usestate)
     - [useEffect](#useeffect)
+    - [useState](#usestate)
+    - [useEffect](#useeffect-1)
     - [useRef](#useref)
     - [useLayoutEffect](#uselayouteffect)
     - [useCallback](#usecallback)
@@ -18,12 +17,13 @@ Titulo: "Apuntes React Hooks"
 
 
 ### useEffect
----
+
 Descripcion: Usando el Hook de efecto
 
 Link :https://es.reactjs.org/docs/hooks-effect.html
 
 Ejemplo:
+
 ~~~
 import React, { useState, useEffect } from 'react';
 
@@ -46,7 +46,7 @@ function Example() {
   );
 }
 ~~~
----
+
 ___
 
 Descripcion: como usar react refs? string refs, callback refs, create ref, use ref

@@ -1022,6 +1022,10 @@ Aplicar modelos y applyBindigns por Id elements:
   ko.applyBindings(viewModelB, document.getElementById("two"));
 </script>
 ~~~
+### ¡CREA un Calendario 📆 con SÓLO 3 LÍNEAS de CSS!
+
+https://www.youtube.com/watch?v=Bpyl59_fjvU
+
 
 
 
