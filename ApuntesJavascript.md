@@ -5,7 +5,7 @@ Titulo: "Apuntes JavaScript"
 # Apuntes Javascript
 
 - [Apuntes Javascript](#apuntes-javascript)
-    - [**Number Formatting Using string.replace in JavaScript](#number-formatting-using-stringreplace-in-javascript)
+    - [Number Formatting Using string.replace in JavaScript](#number-formatting-using-stringreplace-in-javascript)
     - [**Javascript - Regex to validate date format [duplicate]**](#javascript---regex-to-validate-date-format-duplicate)
     - [**JavaScript Decimal Place Restriction With RegEx**](#javascript-decimal-place-restriction-with-regex)
     - [**Display two decimal places, no rounding**](#display-two-decimal-places-no-rounding)
@@ -15,8 +15,9 @@ Titulo: "Apuntes JavaScript"
     - [Compile ES6 Code with Gulp and Babel, Part 2](#compile-es6-code-with-gulp-and-babel-part-2)
     - [JavaScript - Pure Pagination Logic in Vanilla JS / TypeScript](#javascript---pure-pagination-logic-in-vanilla-js--typescript)
     - [Squel.js](#squeljs)
+    - [Programación Reactiva en JavaScript](#programación-reactiva-en-javascript)
 
-### **Number Formatting Using string.replace in JavaScript
+### Number Formatting Using string.replace in JavaScript
 
 https://blog.tompawlak.org/number-currency-formatting-javascript
 
@@ -177,4 +178,11 @@ ___
 - well tested.
 
 http://hiddentao.github.io/squel/
+
+
+___
+
+### Programación Reactiva en JavaScript
+
+https://medium.com/@osmancea/programaci%C3%B3n-reactiva-en-javascript-997478d45bfb
 

@@ -30,6 +30,16 @@ Titulo: "Apuntes React js"
 
 Tenemos dos librerias de administradores de estado, redux y mobX,  aunque tambien tenemos reack hooks context para manejar estados, habrá mas por supuesto.
 
+Para hacer imports amigagles y limpios usando baseUrl con un fichero jsconfig.json con :
+~~~
+{
+  "compilerOptions":{
+    "baseUrl": "src"
+  }
+}
+~~~
+
+
 ### Introducing JSX
 
 https://reactjs.org/docs/introducing-jsx.html
@@ -1679,6 +1689,104 @@ export  SearchResults ({params}){
 export default React.memo(SearchResults)
 
 ~~~
+
+React & Typescript, Ejemplo Práctico sencillo
+
+https://www.youtube.com/watch?v=IbJFERe9F9w&t=801s
+
+Comenzar un proyecto con react typescrip
+~~~
+npx create-react-app react-tasks-app --template typescript
+
+~~~
+
+~~~
+import React,{Fragment,useState} from 'react'
+
+type FormElement = React.FormEvent<HTMLFormElement>
+
+function App(): JSX.Element {
+  const [newTask,setNewTask] = useState<string>('')
+
+  const handleSubmit = (e: FormElement) => {
+    e.preventDefault()
+    addTask(newTask);
+    console.log(newTask)
+  }
+  
+  const AddTask=(name:string) => {
+    const newTasks: ITask[] = [...tasks,{name,done: false}]
+    setTasks(newTasks)
+  }
+  
+  return (
+     <Fragment>   
+        <form onSubmit={handleSubmit} >
+            <input type="text" onChange={e => setNewTask(e.target.value)} />
+            <button>
+              Save
+            </button>
+        </form> 
+     </Fragment>
+  )
+}
+
+
+~~~
+
+~~~
+
+~~~
+
+~~~
+
+~~~
+
+~~~
+
+~~~
+
+~~~
+
+~~~
+
+~~~
+
+___
+
+Webpack - TypeScript - React boilerplate from Scratch!
+
+https://www.youtube.com/watch?v=3APDDtxohBU
+
+~~~
+npm install --save-dev webpack webpack-cli webpack-dev-server html-webpack-plugin babel-loader
+~~~
+
+
+~~~
+npm install --save-dev @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript 
+~~~
+
+~~~
+npm install --save-dev typescript @types/react @types/react-dom
+~~~
+
+~~~
+npm install --save react react-dom
+~~~
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

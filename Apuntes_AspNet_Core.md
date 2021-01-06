@@ -13,6 +13,7 @@ Titulo: "Apuntes Asp.Net Core"
     - [Haciendo fácil el acceso a datos con Entity Framework Core (Parte 2)](#haciendo-fácil-el-acceso-a-datos-con-entity-framework-core-parte-2)
   - [Entity Framework Core «Code First» en Visual Studio](#entity-framework-core-code-first-en-visual-studio)
   - [Entity Framework Core «Code First» en DotNet CLI](#entity-framework-core-code-first-en-dotnet-cli)
+  - [Logging in ASP.NET Core](#logging-in-aspnet-core)
 
 ### NET CORE 3.1 Cookie Authentication
 
@@ -43,7 +44,7 @@ https://www.learnentityframeworkcore.com/walkthroughs/aspnetcore-application
 
 para crear una aplicacion ASP.NET core necesitamos desde la linea de comandos los siguiente:
 
-<pre>
+~~~
      dotnet new mvc
      
      dotnet add package Microsoft.EntityFrameworkCore.SqlServer
@@ -53,11 +54,11 @@ para crear una aplicacion ASP.NET core necesitamos desde la linea de comandos lo
      dotnet restore
 
      dotnet run
-</pre>
+~~~
 
 Si abrimos desde visual studio .csproj incluye la siguiente seccion:
 
-<pre>
+~~~
     
    <ItemGroup>
     <DotNetCliToolReference
@@ -65,7 +66,7 @@ Si abrimos desde visual studio .csproj incluye la siguiente seccion:
         Version="1.0.0-msbuild3-final" />
    </ItemGroup>
     
-</pre>
+~~~
     
 
 Una vez que tenemos las herramientas de linea de comandos para entityframework podemos consultar lo siguiente:
@@ -81,7 +82,7 @@ Una vez que en el proyecto lo tenemos añadido, tenemos que crear un folder llam
 
 Creamos el fichero EFCoreWebDemoContext.cs y tambien las clases modelos:
 
-<pre>
+~~~
 using Microsoft.EntityFrameworkCore;
 namespace EFCoreWebDemo
 {
@@ -95,32 +96,32 @@ namespace EFCoreWebDemo
         }
     }
 }
-</pre>
+~~~
 
 Añadiendo una migracion:
-<pre>
+~~~
    dotnet ef migrations add CreateDatabase
-</pre>
+~~~
 Este comando añadira una carpeta migracions con unos archivos para llevar a cabo la migracion a la base de datos.
 
 Despues para que se aplique la migracion a la base de datos, tenemos que lanzar el suguiente comando:
 
-<pre>
+~~~
    dotnet ef database update
-</pre>
+~~~
 
 Podemos modicar la base de datos y hacer cambiar y aplicarlo a la base de datos con migraciones.
 
 Por ejemplo añadimos lo siguiente a las clases correspondientes Author.cs y Book.cs
 
-<pre>
+~~~
     using System.ComponentModel.DataAnnotations;
-</pre>
+~~~
 
 Luego tenemos las clases modelo mencionadas:
 
 
-<pre>
+~~~
 public class Book
 {
     public int BookId { get; set; }
@@ -129,9 +130,9 @@ public class Book
     public int AuthorId { get; set; }
     public Author Author { get; set; }
 }
-</pre>
+~~~
 
-<pre>
+~~~
 public class Author
 {
     public int AuthorId { get; set; }
@@ -141,21 +142,21 @@ public class Author
     public string LastName { get; set; }
     public ICollection<Book> Books { get; set; } = new List<Book>();
 }
-</pre>
+~~~
 
 Luego volvemos a lanzar los comandos de migraciones:
 
-<pre>
+~~~
     dotnet ef migrations add LimitStrings
-</pre>
+~~~
 
-<pre>
+~~~
     dotnet ef database update
-</pre>
+~~~
 
 Luego en los controladores para trabajar con esos datos, podemos hacer lo siguiente:
 
-<pre>
+~~~
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -188,10 +189,10 @@ namespace EFCoreWebDemo.Controllers
             }
         }
     }
-</pre>
+~~~
 
 Luego tenemos el apartado de la vistas:
-<pre>
+~~~
 @model IEnumerable<Author>
 @{
     ViewBag.Title = "Authors";
@@ -224,21 +225,21 @@ Luego tenemos el apartado de la vistas:
   </div>
   <button type="submit" class="btn btn-default">Submit</button>
 }
-</pre>
+~~~
 
 luego para ver que todo ha ido bien podemos hacer los siguiente:
 
-<pre>
+~~~
     dotnet build
-</pre>
+~~~
 
-<pre>
+~~~
     dotnet run
-</pre>
+~~~
 
 Luego podemos añadir los formularios para ir añadiendo datos a la base de datos:
 
-<pre>
+~~~
 using System.Threading.Tasks;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
@@ -283,11 +284,11 @@ namespace EFCoreWebDemo.Controllers
     }
 }
 
-</pre>
+~~~
 
 Y luego tenemos las vistas asociadas:
 
-<pre>
+~~~
 @model IEnumerable<Author>
 @{
     ViewBag.Title = "Authors and their books";
@@ -307,10 +308,10 @@ Y luego tenemos las vistas asociadas:
     </ul>
 }
 <div>@Html.ActionLink("New", "create")
-</pre>
+~~~
 
 
-<pre>
+~~~
 @model Book
 @{
     ViewBag.Title = "New Book";
@@ -327,7 +328,7 @@ Y luego tenemos las vistas asociadas:
   </div>
   <button type="submit" class="btn btn-default">Submit</button>
 }
-</pre>
+~~~
 
 
 
@@ -342,9 +343,9 @@ Esta para la version ASP.NET core 5.0, tal vez sera valido para ASP.NET 3.1
 
 Tenemos la configuracion de la pagina maesta layout.cshtml en:
 
-<pre>
+~~~
     Views/Shared/_Layout.cshtml
-</pre>
+~~~
 
 Paquetes Nuget de EF Core:
 
@@ -352,15 +353,15 @@ Paquetes Nuget de EF Core:
 
 Con Powershell podemos añadirlo de la siguiente manera:
 
-<pre>
+~~~
 Install-Package Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore
 Install-Package Microsoft.EntityFrameworkCore.SqlServer
 
-</pre>
+~~~
 
 Aparte de crear los modelos y la base de datos tenemos que crear el contexto de EF:
 
-<pre>
+~~~
 using ContosoUniversity.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -387,11 +388,11 @@ namespace ContosoUniversity.Data
     }
 }
 
-</pre>
+~~~
 
 Luego tenemos que registrar el Contexto de EF en el pipeline de ASP.NET core mediante inyeccion de dependencias:
 
-<pre>
+~~~
 using ContosoUniversity.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Builder;
@@ -418,12 +419,12 @@ namespace ContosoUniversity
 
             services.AddControllersWithViews();
         }
-</pre>
+~~~
 
 
 y en el archivo appsettings.json añadimos lo siguiente:
 
-<pre>
+~~~
 {
   "ConnectionStrings": {
     "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=ContosoUniversity1;Trusted_Connection=True;MultipleActiveResultSets=true"
@@ -437,11 +438,11 @@ y en el archivo appsettings.json añadimos lo siguiente:
   },
   "AllowedHosts": "*"
 }
-</pre>
+~~~
 
 Añadimos unos filtros de excepcion de la base de datos llamado AddDatabaseDeveloperPageExceptionFilter proporciona informacion util en el entorno de desarrollo.
 
-<pre>
+~~~
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddDbContext<SchoolContext>(options =>
@@ -451,13 +452,13 @@ public void ConfigureServices(IServiceCollection services)
 
     services.AddControllersWithViews();
 }
-</pre>
+~~~
 
 Aparte de con migraciones podemos crear la base de datos imperativamente con EnsureCreated de la siguiente manera (context.Database.EnsureCreated())
 
 
 Vamos a crear una carpeta Data y ahi vamos a crear archivo y clase llamada DbInitializer.cs con el codigo siguiente:
-<pre>
+~~~
 using ContosoUniversity.Models;
 using System;
 using System.Linq;
@@ -532,11 +533,11 @@ namespace ContosoUniversity.Data
         }
     }
 }
-</pre>
+~~~
 
 Y en el program.cs tenemos lo siguiente:
 
-<pre>
+~~~
 using ContosoUniversity.Data;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Hosting;
@@ -583,7 +584,7 @@ namespace ContosoUniversity
                 });
     }
 }
-</pre>
+~~~
 
 Tenemos disponible desde program con el 
 
@@ -594,7 +595,7 @@ acceso al servicio de injeccion de dependencias y solicitar una instancia del co
 
 Luego en los controladores podemos hacer lo siguiente:
 
-<pre>
+~~~
    namespace ContosoUniversity.Controllers
 {
     public class StudentsController : Controller
@@ -605,13 +606,13 @@ Luego en los controladores podemos hacer lo siguiente:
         {
             _context = context;
         }
-</pre>
+
 
 public async Task<IActionResult> Index()
 {
     return View(await _context.Students.ToListAsync());
 }
-
+~~~
 Luego creamos las vistas:
 
 ____
@@ -627,28 +628,28 @@ Podemos verlo como creando la solucion desde Visual Studio con powershell, o cre
 Instala dos paquetes:
  
 Con powershell desde visual studio
-<pre>
+~~~
 Install-Package Microsoft.EntityFrameworkCore -Version 2.1.3
 
 Install-Package Microsoft.EntityFrameworkCore.Tools -Version 2.1.3
 
 Install-Package Pomelo.EntityFrameworkCore.MySql -Version 2.1.2
 
-</pre>
+~~~
 
 
 y con DotNet cli 
 
-<pre>
+~~~
 - dotnet new console
 – dotnet add package Microsoft.EntityFrameworkCore -v 2.1.3
 – dotnet add package Microsoft.EntityFrameworkCore.Tools -v 2.1.3
 – dotnet add package Pomelo.EntityFrameworkCore.MySql -v 2.1.2
-</pre>
+~~~
 
 Luego tenemos que generar el contexto y los modelos y podemos verlo con las siguientes clases:
 
-<pre>
+~~~
 //Alumnos.cs
 using System;
 using System.ComponentModel.DataAnnotations;
@@ -753,7 +754,7 @@ namespace PostCore.Data
     }
 }
 
-</pre>
+~~~
 
 ## Entity Framework Core «Code First» en Visual Studio
 
@@ -776,22 +777,76 @@ Ahora vamos a ver Entity framework core Code First en visual studio con powershe
 
 Y para empezar a utilizar las migraciones, lanzamos el siguiente comando:
 
-<pre>
+~~~
 add-migration init -Context PostDbContext
-</pre>
+~~~
 
 Esto genera una carpeta «Migrations» donde va a ir guardando cada una de las migraciones. Conviene no borrar el contenido, ya que almacena las «versiones» del contexto de datos, de modo que podemos revertir los cambios en la base de datos. Ademas, el hecho de almacenar estas migraciones, permite al sistema aplicar cambios de manera incremental en las próximas migraciones, y es requisito para poder aplicar cambios a la base de datos sin que se produzcan errores por tablas ya existentes.
 
 Con eso, ejecutamos:
 
-<pre>
+~~~
   update-database -Context PostDbContext
-</pre>
+~~~
 
 ## Entity Framework Core «Code First» en DotNet CLI
 
-
-
-
-
 ____
+
+## Logging in ASP.NET Core
+
+https://www.tutorialsteacher.com/core/aspnet-core-logging
+
+
+~~~
+Microsoft.Extensions.Logging.Console
+Microsoft.Extensions.Logging.Debug
+Microsoft.Extensions.Logging.EventSource
+Microsoft.Extensions.Logging.TraceSource
+~~~
+
+Tenemos en program el siguiente codigo:
+~~~
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        CreateWebHostBuilder(args).Build().Run();
+    }
+
+    public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
+        WebHost.CreateDefaultBuilder(args)
+               .UseStartup<Startup>();
+}
+~~~
+Por defecto tenemos el siguiente codigo en el metodo WebHost.CreateDefaultBuilder() relacionado con tracear el codigo de la aplicacion, y esta porcion de codigo por defecto la podemos ver en github
+~~~
+.ConfigureLogging((hostingContext, logging) =>
+    {
+        logging.AddConfiguration(hostingContext.Configuration.GetSection("Logging"));
+        logging.AddConsole();
+        logging.AddDebug();
+        logging.AddEventSourceLogger();
+    }).
+~~~
+
+
+
+
+~~~
+
+~~~
+
+___
+
+
+
+
+
+
+
+
+
+
+
+

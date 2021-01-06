@@ -5,33 +5,33 @@ Titulo: "Apuntes Seguridad ASP.NET"
 
 - [Apuntes Seguridad ASP.NET](#apuntes-seguridad-aspnet)
     - [Paquetes nugets para OWIN](#paquetes-nugets-para-owin)
-    - [**ASP.NET authentication and authorization**](#aspnet-authentication-and-authorization)
-    - [**ASP.NET authentication and authorization**](#aspnet-authentication-and-authorization-1)
-    - [**ASP.NET Identity Tutorial – Basics**](#aspnet-identity-tutorial--basics)
-    - [**Custom Authentication and Authorization in ASP.NET MVC**](#custom-authentication-and-authorization-in-aspnet-mvc)
-    - [**Custom Authentication and Authorization in MVC 5**](#custom-authentication-and-authorization-in-mvc-5)
-    - [**ASP.NET Web Api: Understanding OWIN/Katana Authentication/Authorization Part I: Concepts**](#aspnet-web-api-understanding-owinkatana-authenticationauthorization-part-i-concepts)
-    - [**Token Based Authentication using ASP.NET Web API 2, Owin, and Identity**](#token-based-authentication-using-aspnet-web-api-2-owin-and-identity)
-    - [**OAuth 2 Simplified**](#oauth-2-simplified)
-    - [**JSON Web Token in ASP.NET Web API 2 using Owin**](#json-web-token-in-aspnet-web-api-2-using-owin)
-    - [**ASP.NET Web Api and Identity 2.0 – Customizing Identity Models and Implementing Role-Based Authorization**](#aspnet-web-api-and-identity-20--customizing-identity-models-and-implementing-role-based-authorization)
-    - [**ASP.NET MVC and Identity 2.0: Understanding the Basics**](#aspnet-mvc-and-identity-20-understanding-the-basics)
-    - [**ASP.NET MVC Web API Identity (OWIN Security): Auto Login after Register + Custom Login Service Endpoint**](#aspnet-mvc-web-api-identity-owin-security-auto-login-after-register--custom-login-service-endpoint)
-    - [**Autenticación con Membership ASP.NET Identity**](#autenticación-con-membership-aspnet-identity)
-    - [**[ASP.NET IDENTITY] Configuracion inicial**](#aspnet-identity-configuracion-inicial)
-    - [**[ASP.NET IDENTITY] DBContext y clases de gestion de usuarios**](#aspnet-identity-dbcontext-y-clases-de-gestion-de-usuarios)
-    - [**[ASP.NET IDENTITY] Listado de usuarios registrados**](#aspnet-identity-listado-de-usuarios-registrados)
-    - [**Securing ASP.NET MVC Applications with ASP.NET Identity**](#securing-aspnet-mvc-applications-with-aspnet-identity)
-    - [**Authentication and Authorization in ASP.NET Web API**](#authentication-and-authorization-in-aspnet-web-api)
-    - [**ASP.NET Identity 2.1 Roles Based Authorization with ASP.NET Web API**](#aspnet-identity-21-roles-based-authorization-with-aspnet-web-api)
-    - [**Understanding, Using and Customizing ASP.NET Identity System for Authentication and Authorization**](#understanding-using-and-customizing-aspnet-identity-system-for-authentication-and-authorization)
-    - [**Securing ASP.NET Web API using Token Based Authentication and using it in Angular.js application**](#securing-aspnet-web-api-using-token-based-authentication-and-using-it-in-angularjs-application)
-    - [**RESTful Day #5: Security in Web APIs-Basic Authentication and Token based custom Authorization in Web APIs using Action Filters**](#restful-day-5-security-in-web-apis-basic-authentication-and-token-based-custom-authorization-in-web-apis-using-action-filters)
-    - [**OWIN OAuth 2.0 Authorization Server**](#owin-oauth-20-authorization-server)
-  - [**Implement an OAuth 2.0 Authorization Server using OWIN OAuth middleware on ASP.NET web API.**](#implement-an-oauth-20-authorization-server-using-owin-oauth-middleware-on-aspnet-web-api)
-    - [**ASP.NET Web Api: Understanding OWIN/Katana Authentication/Authorization Part I: Concepts**](#aspnet-web-api-understanding-owinkatana-authenticationauthorization-part-i-concepts-1)
-    - [**OAuth “Implicit Grant” flow with OWIN/Katana**](#oauth-implicit-grant-flow-with-owinkatana)
-    - [**OWIN Authorization Code Grant (SSO)**](#owin-authorization-code-grant-sso)
+    - [ASP.NET authentication and authorization](#aspnet-authentication-and-authorization)
+    - [ASP.NET authentication and authorization](#aspnet-authentication-and-authorization-1)
+    - [ASP.NET Identity Tutorial – Basics](#aspnet-identity-tutorial--basics)
+    - [Custom Authentication and Authorization in ASP.NET MVC](#custom-authentication-and-authorization-in-aspnet-mvc)
+    - [Custom Authentication and Authorization in MVC 5](#custom-authentication-and-authorization-in-mvc-5)
+    - [ASP.NET Web Api: Understanding OWIN/Katana Authentication/Authorization Part I: Concepts](#aspnet-web-api-understanding-owinkatana-authenticationauthorization-part-i-concepts)
+    - [Token Based Authentication using ASP.NET Web API 2, Owin, and Identity](#token-based-authentication-using-aspnet-web-api-2-owin-and-identity)
+    - [OAuth 2 Simplified](#oauth-2-simplified)
+    - [JSON Web Token in ASP.NET Web API 2 using Owin](#json-web-token-in-aspnet-web-api-2-using-owin)
+    - [ASP.NET Web Api and Identity 2.0 – Customizing Identity Models and Implementing Role-Based Authorization](#aspnet-web-api-and-identity-20--customizing-identity-models-and-implementing-role-based-authorization)
+    - [ASP.NET MVC and Identity 2.0: Understanding the Basics](#aspnet-mvc-and-identity-20-understanding-the-basics)
+    - [ASP.NET MVC Web API Identity (OWIN Security): Auto Login after Register + Custom Login Service Endpoint](#aspnet-mvc-web-api-identity-owin-security-auto-login-after-register--custom-login-service-endpoint)
+    - [Autenticación con Membership ASP.NET Identity](#autenticación-con-membership-aspnet-identity)
+    - [[ASP.NET IDENTITY] Configuracion inicial](#aspnet-identity-configuracion-inicial)
+    - [[ASP.NET IDENTITY] DBContext y clases de gestion de usuarios](#aspnet-identity-dbcontext-y-clases-de-gestion-de-usuarios)
+    - [[ASP.NET IDENTITY] Listado de usuarios registrados](#aspnet-identity-listado-de-usuarios-registrados)
+    - [Securing ASP.NET MVC Applications with ASP.NET Identity](#securing-aspnet-mvc-applications-with-aspnet-identity)
+    - [Authentication and Authorization in ASP.NET Web API](#authentication-and-authorization-in-aspnet-web-api)
+    - [ASP.NET Identity 2.1 Roles Based Authorization with ASP.NET Web API](#aspnet-identity-21-roles-based-authorization-with-aspnet-web-api)
+    - [Understanding, Using and Customizing ASP.NET Identity System for Authentication and Authorization](#understanding-using-and-customizing-aspnet-identity-system-for-authentication-and-authorization)
+    - [Securing ASP.NET Web API using Token Based Authentication and using it in Angular.js application](#securing-aspnet-web-api-using-token-based-authentication-and-using-it-in-angularjs-application)
+    - [RESTful Day #5: Security in Web APIs-Basic Authentication and Token based custom Authorization in Web APIs using Action Filters](#restful-day-5-security-in-web-apis-basic-authentication-and-token-based-custom-authorization-in-web-apis-using-action-filters)
+    - [OWIN OAuth 2.0 Authorization Server](#owin-oauth-20-authorization-server)
+  - [Implement an OAuth 2.0 Authorization Server using OWIN OAuth middleware on ASP.NET web API.](#implement-an-oauth-20-authorization-server-using-owin-oauth-middleware-on-aspnet-web-api)
+    - [ASP.NET Web Api: Understanding OWIN/Katana Authentication/Authorization Part I: Concepts](#aspnet-web-api-understanding-owinkatana-authenticationauthorization-part-i-concepts-1)
+    - [OAuth “Implicit Grant” flow with OWIN/Katana](#oauth-implicit-grant-flow-with-owinkatana)
+    - [OWIN Authorization Code Grant (SSO)](#owin-authorization-code-grant-sso)
 
 
 ### Paquetes nugets para OWIN
@@ -51,7 +51,7 @@ Install-Package Microsoft.Owin.Cors -Version 3.0.0
 
 
 
-### **ASP.NET authentication and authorization**
+### ASP.NET authentication and authorization
 ___
 
 - Autenticacion
@@ -65,7 +65,7 @@ Principal
                 --->Autehnticacion Type
 ~~~
 
-### **ASP.NET authentication and authorization**
+### ASP.NET authentication and authorization
 
 
 
@@ -82,108 +82,108 @@ http://www.codeguru.com/csharp/.net/net_asp/mvc/securing-asp.net-mvc-application
 
 ___
 
-### **ASP.NET Identity Tutorial – Basics**
+### ASP.NET Identity Tutorial – Basics
 
 >Conjunto de tutoriales de Asp.Net Identity desde cero, este enlace es uno de los tutoriales, pero son realmente tres enlaces, al principio de la pagina veremos los enlaces, desde explicacion basica hasta mas avanzada
 
 https://www.tektutorialshub.com/asp-net-identity-tutorial-basics/
 
-### **Custom Authentication and Authorization in ASP.NET MVC**
+### Custom Authentication and Authorization in ASP.NET MVC
 
 http://www.dotnettricks.com/learn/mvc/custom-authentication-and-authorization-in-aspnet-mvc
 
 ___
 
-### **Custom Authentication and Authorization in MVC 5**
+### Custom Authentication and Authorization in MVC 5
 
 https://www.codeproject.com/Articles/1111522/Custom-Authentication-and-Authorization-in-MVC
 
 ___
-### **ASP.NET Web Api: Understanding OWIN/Katana Authentication/Authorization Part I: Concepts**
+### ASP.NET Web Api: Understanding OWIN/Katana Authentication/Authorization Part I: Concepts
 
 http://johnatten.com/2015/01/19/asp-net-web-api-understanding-owinkatana-authenticationauthorization-part-i-concepts/
 
 ___
 
-### **Token Based Authentication using ASP.NET Web API 2, Owin, and Identity**
+### Token Based Authentication using ASP.NET Web API 2, Owin, and Identity
 
 http://bitoftech.net/2014/06/01/token-based-authentication-asp-net-web-api-2-owin-asp-net-identity/
 
 ___
 
-### **OAuth 2 Simplified**
+### OAuth 2 Simplified
 
 https://aaronparecki.com/oauth-2-simplified/
 
 ___
 
-### **JSON Web Token in ASP.NET Web API 2 using Owin**
+### JSON Web Token in ASP.NET Web API 2 using Owin
 
 http://bitoftech.net/2014/10/27/json-web-token-asp-net-web-api-2-jwt-owin-authorization-server/
 
 ___
 
-### **ASP.NET Web Api and Identity 2.0 – Customizing Identity Models and Implementing Role-Based Authorization**
+### ASP.NET Web Api and Identity 2.0 – Customizing Identity Models and Implementing Role-Based Authorization
 
 http://johnatten.com/2014/10/26/asp-net-web-api-and-identity-2-0-customizing-identity-models-and-implementing-role-based-authorization/
 
 ___
 
-### **ASP.NET MVC and Identity 2.0: Understanding the Basics**
+### ASP.NET MVC and Identity 2.0: Understanding the Basics
 
 http://johnatten.com/2014/04/20/asp-net-mvc-and-identity-2-0-understanding-the-basics/
 
 ___
 
-### **ASP.NET MVC Web API Identity (OWIN Security): Auto Login after Register + Custom Login Service Endpoint**
+### ASP.NET MVC Web API Identity (OWIN Security): Auto Login after Register + Custom Login Service Endpoint
 
 http://www.nakov.com/blog/2014/12/22/webapi-owin-identity-custom-login-service/
 
 ___
 
-### **Autenticación con Membership ASP.NET Identity**
+### Autenticación con Membership ASP.NET Identity
 
 https://rublenx.wordpress.com/2013/12/24/autenticacin-con-membership-asp-net-identity/
 
 ___
 
-### **[ASP.NET IDENTITY] Configuracion inicial**
+### [ASP.NET IDENTITY] Configuracion inicial
 
 http://www.programmingapps.net/2014/09/asp-net-identity-configuracion-inicial/
 
 ___
 
-### **[ASP.NET IDENTITY] DBContext y clases de gestion de usuarios**
+### [ASP.NET IDENTITY] DBContext y clases de gestion de usuarios
 
 http://www.programmingapps.net/2014/09/asp-net-identity-dbcontext-y-clases-de-gestion-de-usuarios/
 
 ____
 
-### **[ASP.NET IDENTITY] Listado de usuarios registrados**
+### [ASP.NET IDENTITY] Listado de usuarios registrados
 
 http://www.programmingapps.net/2014/10/asp-net-identity-listado-de-usuarios-registrados/
 
 ___
 
-### **Securing ASP.NET MVC Applications with ASP.NET Identity**
+### Securing ASP.NET MVC Applications with ASP.NET Identity
 
 http://www.codeguru.com/csharp/.net/net_asp/mvc/securing-asp.net-mvc-applications-with-asp.net-identity.htm
 
 ___
 
-### **Authentication and Authorization in ASP.NET Web API**
+### Authentication and Authorization in ASP.NET Web API
 
 https://docs.microsoft.com/en-us/aspnet/web-api/overview/security/authentication-and-authorization-in-aspnet-web-api
 
 ___
 
-### **ASP.NET Identity 2.1 Roles Based Authorization with ASP.NET Web API**
+### ASP.NET Identity 2.1 Roles Based Authorization with ASP.NET Web API
 
 http://bitoftech.net/2015/03/11/asp-net-identity-2-1-roles-based-authorization-authentication-asp-net-web-api/
 
 ___
 
-### **Understanding, Using and Customizing ASP.NET Identity System for Authentication and Authorization**
+### Understanding, Using and Customizing ASP.NET Identity System for Authentication and Authorization
 
 https://www.codeproject.com/Articles/796940/Understanding-Using-and-Customizing-ASP-NET-Identi
 
@@ -233,7 +233,7 @@ public class CustomUserStore : IUserStore<dummyuser>, IUserPasswordStore<dummyus
 ~~~
 ___
 
-### **Securing ASP.NET Web API using Token Based Authentication and using it in Angular.js application**
+### Securing ASP.NET Web API using Token Based Authentication and using it in Angular.js application
 
 http://www.dotnetcurry.com/aspnet/1223/secure-aspnet-web-api-using-tokens-owin-angularjs
 
@@ -378,7 +378,7 @@ app.service('empservice', function ($http) {
 
 ___
 
-### **RESTful Day #5: Security in Web APIs-Basic Authentication and Token based custom Authorization in Web APIs using Action Filters**
+### RESTful Day #5: Security in Web APIs-Basic Authentication and Token based custom Authorization in Web APIs using Action Filters
 
 
 WebAPI with Basic Authentication and Token Based Authorization
@@ -417,13 +417,13 @@ public class UserServices : IUserServices
 ~~~
 ___
 
-### **OWIN OAuth 2.0 Authorization Server**
+### OWIN OAuth 2.0 Authorization Server
 
 https://docs.microsoft.com/en-us/aspnet/aspnet/overview/owin-and-katana/owin-oauth-20-authorization-server
 
 ___
 
-## **Implement an OAuth 2.0 Authorization Server using OWIN OAuth middleware on ASP.NET web API.**
+## Implement an OAuth 2.0 Authorization Server using OWIN OAuth middleware on ASP.NET web API.
 
 https://olepetterdahlmann.com/2016/08/08/implement-an-oauth-2-0-authorization-server-using-owin-oauth-middleware-on-asp-net-web-api/
 
@@ -536,19 +536,19 @@ public static class OwinContextExtensions
 
 
 ___
-### **ASP.NET Web Api: Understanding OWIN/Katana Authentication/Authorization Part I: Concepts**
+### ASP.NET Web Api: Understanding OWIN/Katana Authentication/Authorization Part I: Concepts
 
 https://www.codeproject.com/Articles/876867/ASP-NET-Web-Api-Understanding-OWIN-Katana-Authenti
 
 ___
 
-### **OAuth “Implicit Grant” flow with OWIN/Katana**
+### OAuth “Implicit Grant” flow with OWIN/Katana
 
 https://gkulshrestha.wordpress.com/2014/01/19/oauth-implicit-grant-flow-with-owinkatana/
 
 ___
 
-### **OWIN Authorization Code Grant (SSO)**
+### OWIN Authorization Code Grant (SSO)
 
 https://long2know.com/2015/04/owin-authorization-code-grant-sso/
 
