@@ -13,6 +13,7 @@ Titulo: "Apuntes React Hooks"
     - [useCallback](#usecallback)
     - [useReducer](#usereducer)
     - [useContext](#usecontext)
+  - [React Controlled Components, the Hooks Way](#react-controlled-components-the-hooks-way)
 
 
 
@@ -125,6 +126,120 @@ ___
 React Hooks useContext Tutorial (Storing a User)
 
 ___
+
+## React Controlled Components, the Hooks Way
+
+https://dmitripavlutin.com/controlled-inputs-using-react-hooks/
+
+Hay como tres pasos:
+
+1. const [value, setValue] = useState('')
+
+2. const onChange = event => setValue(event.target.value);
+
+3. <input type="text" value={value} onChange={onChange} />
+
+
+
+~~~
+import { useState } from 'react';
+
+function MyControlledInput({ }) {
+  const [value, setValue] = useState('');
+
+  const onChange = (event) => {
+    setValue(event.target.value);
+  };
+
+  return (
+    <>
+      <div>Input value: {value}</div>
+      <input value={value} onChange={onChange} />
+    </>
+  );
+}
+
+~~~
+
+Un ejemplo mas completo 
+
+~~~
+function FilteredEmployeesList({ employees }) {
+  const [query, setQuery] = useState('');
+  
+  const onChange = event => setQuery(event.target.value);
+
+  const filteredEmployees = employees.filter(name => {
+    return name.toLowerCase().includes(query.toLowerCase());
+  });
+
+  return (
+    <div>
+      <h2>Employees List</h2>
+      <input 
+        type="text" 
+        value={query} 
+        onChange={onChange}
+      />
+      <div className="list">
+        {filteredEmployees.map(name => <div>{name}</div>)}
+      </div>
+    </div>
+  );
+~~~
+
+
+Adaptando la entra del input al Debouncing
+
+Creamos la funcion debounce, creando como un custom react hook con el useEffect y marcando o haciendo como una especie de observador que se aplique el useEffect al cambio de variable
+
+~~~
+export function useDebouncedValue(value, wait) {
+  const [debouncedValue, setDebouncedValue] = useState(value);
+
+  useEffect(() => {
+    const id = setTimeout(() => setDebouncedValue(value), wait);
+    return () => clearTimeout(id);
+  }, [value]);
+
+  return debouncedValue;
+}
+~~~
+
+Y luego la usamos desde el componente
+
+~~~
+import { useDebouncedValue } from './useDebouncedValue';
+
+function FilteredEmployeesList({ employees }) {
+  const [query, setQuery] = useState('');
+  const debouncedQuery = useDebouncedValue(query, 400);
+  
+  const onChange = event => setQuery(event.target.value);
+
+  const filteredEmployees = employees.filter(name => {
+    return name.toLowerCase().includes(debouncedQuery.toLowerCase());
+  });
+
+  return (
+    <div>
+      <h2>Employees List</h2>
+      <input 
+        type="text" 
+        value={query} 
+        onChange={onChange}
+      />
+      <div className="list">
+        {filteredEmployees.map(name => <div>{name}</div>)}
+      </div>
+    </div>
+  );
+}
+
+~~~
+
+
+
 
 
 

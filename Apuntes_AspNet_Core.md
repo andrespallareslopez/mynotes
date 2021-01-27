@@ -14,6 +14,7 @@ Titulo: "Apuntes Asp.Net Core"
   - [Entity Framework Core «Code First» en Visual Studio](#entity-framework-core-code-first-en-visual-studio)
   - [Entity Framework Core «Code First» en DotNet CLI](#entity-framework-core-code-first-en-dotnet-cli)
   - [Logging in ASP.NET Core](#logging-in-aspnet-core)
+  - [CRUD FullStack React JS, ASP.NET Core y SQL Server || Tutorial en Español || Parte 1](#crud-fullstack-react-js-aspnet-core-y-sql-server--tutorial-en-español--parte-1)
 
 ### NET CORE 3.1 Cookie Authentication
 
@@ -839,6 +840,259 @@ Por defecto tenemos el siguiente codigo en el metodo WebHost.CreateDefaultBuilde
 
 ___
 
+## CRUD FullStack React JS, ASP.NET Core y SQL Server || Tutorial en Español || Parte 1
+
+https://www.youtube.com/watch?v=Usj0J4rUumI&list=PLqC1FgzJhTiw4HaSmkN8_mMgKlZayIQHe
+
+Creamos un proyecto asp.net core Web api en visual studio
+
+
+Agregamos el siguiente paquete nuget 
+~~~
+Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 3.1.7
+~~~
+
+
+- Generamos las clases POCO, con ciertos atributos
+- Generamos el fichero AppDbContext
+- Agregamos una cadena de conexion al fichero AppSettings.json
+
+
+Cadena de conexion en AppSettings.json
+~~~
+   .
+   .
+   .
+"ConnectionStrings": {
+    "conexion" : "data source=(LocalDb)\\MSSQLLocalDB; initial catalog=prueba; user id=sa; password=Admin;MultipleActiveResulsets=true"
+} 
+   .
+   .
+   .
+~~~
+
+
+
+Archivo AppDbContext.cs
+~~~
+public class AppDbContext : DbContext
+{
+     public AppDbContext(DbContextOptions<AppContext> options)
+     {
+
+     }
+     public DbSet<Gestores_Bd> gestores_bd {get;set;}
+     
+}
+
+
+~~~
+Luego en el fichero StartUp.cs tenemos que añadir en el metodo ConfigureServices lo siguiente:
+
+Tenemos que habilitar CORS para que puedan hacer llamadas desde la parte frontal
+~~~
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddCors();
+    services.AddControllers();
+    
+    services.AddBdContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Conexion")));
+}
+
+public void Configure(IApplicationBuilder app,IwebHostEnvironment env)
+{
+    app.UseCors(options => 
+    {
+        options.WithOrigins("http://localhost:3000");
+        options.AllowAnyMethod();
+        options.AllowAnyHeader();
+    });
+}
+
+~~~
+Clase controlador de API
+
+~~~
+    .
+    .
+    .
+private readonly AppDbContext context;
+
+//Constructor del controller
+public GestoresController()
+{
+   this.context = context;  
+}
+   .
+   .
+   .
+~~~
+En  un action de tipo get escribimos los siguiente:
+~~~
+
+[HttpGet]
+public ActionResult Get()
+{
+    try
+    {
+        return Ok(context.gestores_bd.ToList());
+    }catch(Exception ex)
+    {
+        return BadRequest(ex.Message);
+    }
+}
+
+[HttpGet("{id}",Name="GetGestor")]
+public ActionResult Get(int id)
+{
+    try
+    {
+    var gestor = context.gestores_bd.FirstOrDefault(g =>g.id == id);
+    return Ok(gestor);
+    }catch(Exception ex)
+    {
+        return BadRequest(ex.Message);
+    }
+}
+
+~~~
+Creamos otro actions  para peticiones tipo POST hacemos lo siguiente;
+~~~
+[HttpPost]
+public ActionResult Post([FromBody]Gestores_Bd gestor)
+{
+    try
+    {
+       context.gestores_bd.Add(gestor);
+       context.SaveChanges();
+       return CreateAtRoute("GetGestor", new { id = gestor.id}, gestor); 
+    }catch(Exception ex)
+    {
+        return BadRequest(ex.Message);
+    }
+}
+
+~~~
+Create otro Action para peticiones PUT de actualizacion:
+
+~~~
+[HttpPut("{id}")]
+public ActionResult Put(int id, [FromBody]Gestores_Bd gestor)
+{
+    try
+    {
+       if (gestor.id == id)
+       {
+           context.Entry(gestor).State = EntityState.Modified;
+           context.SaveChanges();ç
+           return CreatedAtRoute("GetGestor", new {id = gestor.id}, gestor);
+       }
+       else
+       {
+           return BadRequest();
+       }
+    }catch (Exception ex)
+    {
+        return BadRequest();
+    }
+}
+~~~
+Crear otra action para borrar un registro
+~~~
+[HttpDelete("{id}")]
+public ActionResult Delete(int id)
+{
+    try
+    {
+        var gestor = context.gestores_bd.FirstOrDefault(g => g.id == id); 
+        if (gestor != null)
+        {
+            context.gestores_bd.Remove(gestor);
+            context.SaveChanges();
+            return Ok(id);
+        }
+    }catch(Exception ex)
+    {
+        return BadRequest(ex.Message);
+    }
+}
+
+~~~
+Luego vamos a utilizar react en la parte frontal con visual studio code.
+
+Instalamos las siguientes librerias
+~~~
+npm i bootstrap reactstrap axios
+~~~
+
+
+Y creamos el App.js
+~~~
+import React,{useState,useEffect} from 'react';
+import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import axios from 'axios';
+import {Modal,ModalBody,ModalFooter,ModalHeader} from 'reactstrap';
+
+function App() {
+    const baseUrl = "https://-...."
+    const [data,setData] = useState([]);
+    
+    const peticionGet = async() => {
+         await axios.get(baseUrl).then(response => {
+             setData(response.data);
+
+         }).catch(error => {
+             console.log(error)
+         })
+    }
+    
+    useEffect(()=>{
+        peticionGet();
+    },[])
+    
+     
+    return (
+        <div className="App" >
+           <table className="table table-bordered" >
+               <thead>
+                  <tr>
+                     <th>ID</th>
+                     <th>Nombre</th>
+                     <th>Lanzamiento</th>
+                     <th>Desarrollador</th>
+                     <th>Acciones</th>
+                  </tr>
+               <thead>
+               <tbody>
+                {data.map(gestor =>(
+                 <tr key={gestor.id} >
+                    <td>{gestor.id}</td>
+                    <td>{gestor.nombre}</td>
+                    <td>{gestor.lanzamiento}</td>
+                    <td>{gestor.desarrollador}</td>
+                    <td>
+                        <button className="btn btn-primary">Editar</button> {"  "}
+                        <button className="btn btn-danger">Eliminar</button>
+                    </td>
+                 </tr>
+                ))}    
+               </tbody>     
+           </table>  
+        </div>
+    )
+}
+
+export default App;
+~~~
+
+
+
+~~~
+
+~~~
+
+___
 
 
 

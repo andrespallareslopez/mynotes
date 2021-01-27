@@ -69,12 +69,12 @@ dotnet new winforms
 
 Tenemos en la pagina de microsoft explicando todos los comandos:<br>
 
-[dotnet new](https://docs.microsoft.com/es-es/dotnet/core/tools/dotnet-new?tabs=netcore22)
+### [dotnet new](https://docs.microsoft.com/es-es/dotnet/core/tools/dotnet-new?tabs=netcore22)
 
 
 
 
-[Tutorial EF de todas las versiones](https://www.entityframeworktutorial.net/) muy bueno.
+### [Tutorial EF de todas las versiones](https://www.entityframeworktutorial.net/) muy bueno.
 
 A webApp program scaffolding example in .Net Core 2.0:
 <pre>

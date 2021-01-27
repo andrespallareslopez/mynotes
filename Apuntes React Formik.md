@@ -15,7 +15,7 @@ backdrop-filter: blur(4px);
 ReactDom.createPortal(...) injectar en tiempo de ejecuion un componente en un div con un id o className, como el mutateObserver.
 
 
-
+¿modulos css?
 
 
 ~~~
@@ -45,4 +45,11 @@ ReactDom.createPortal(...) injectar en tiempo de ejecuion un componente en un di
 
 
 ___
+
+
+
+
+
+
+
 

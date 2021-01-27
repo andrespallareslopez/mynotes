@@ -24,13 +24,34 @@ Titulo: "Apuntes React js"
 - [React Has Built-In Dependency Injection](#react-has-built-in-dependency-injection)
     - [Verificación de tipos con PropTypes](#verificación-de-tipos-con-proptypes)
     - [React Default Props: a complete guide](#react-default-props-a-complete-guide)
-- [Crea una app con React usando create-react-app](#crea-una-app-con-react-usando-create-react-app)
-- [Creando Custom Hooks y usando Context para conseguir un estado global en ReactJS](#creando-custom-hooks-y-usando-context-para-conseguir-un-estado-global-en-reactjs)
+- [MiduDev:Crea una app con React usando create-react-app](#midudevcrea-una-app-con-react-usando-create-react-app)
+  - [MiduDev:CSS Grid, Infinite Scroll y Tests en nuestra app de React](#midudevcss-grid-infinite-scroll-y-tests-en-nuestra-app-de-react)
+- [MiduDev:Creando Custom Hooks y usando Context para conseguir un estado global en ReactJS](#midudevcreando-custom-hooks-y-usando-context-para-conseguir-un-estado-global-en-reactjs)
+  - [React & Typescript, Ejemplo Práctico sencillo](#react--typescript-ejemplo-práctico-sencillo)
+  - [Webpack - TypeScript - React boilerplate from Scratch!](#webpack---typescript---react-boilerplate-from-scratch)
+  - [Lazy Load, Suspense y paginación con React](#lazy-load-suspense-y-paginación-con-react)
+  - [CRUD FullStack React JS, ASP.NET Core y SQL Server || Tutorial en Español || Parte 1](#crud-fullstack-react-js-aspnet-core-y-sql-server--tutorial-en-español--parte-1)
+  - [React Lazy Loading & Code splitting](#react-lazy-loading--code-splitting)
+  - [React Formularios – Formik Parte 1](#react-formularios--formik-parte-1-1)
+  - [Build a website with React, React-Bootstrap, React-Router and Styled-Components](#build-a-website-with-react-react-bootstrap-react-router-and-styled-components)
+  - [5 top React Hooks libraries compared](#5-top-react-hooks-libraries-compared)
+    - [React Hooks Lib](#react-hooks-lib)
+    - [react-hanger](#react-hanger)
+    - [React hookedUp](#react-hookedup)
+    - [react-use](#react-use)
+  - [React Spinners](#react-spinners)
+  - [react-loader-spinner](#react-loader-spinner)
+
+
+Para instalar el entorno de desarrollo para react
+~~~
+npm i create-react-app giffy
+~~~
 
 
 Tenemos dos librerias de administradores de estado, redux y mobX,  aunque tambien tenemos reack hooks context para manejar estados, habrá mas por supuesto.
 
-Para hacer imports amigagles y limpios usando baseUrl con un fichero jsconfig.json con :
+Para hacer imports amigables y limpios usando baseUrl con un fichero jsconfig.json con :
 ~~~
 {
   "compilerOptions":{
@@ -1280,10 +1301,12 @@ ThemedButton = withDefaultProps(ThemedButton);
 ~~~
 ___
 
-# Crea una app con React usando create-react-app
+# MiduDev:Crea una app con React usando create-react-app
+
 
 https://www.youtube.com/watch?v=QBLbXgeXMU8
 
+Autor:MiduDev
 
 Para instalar el entorno de desarrollo para react
 ~~~
@@ -1481,7 +1504,163 @@ export default App;
 
 ~~~
 ___
-# Creando Custom Hooks y usando Context para conseguir un estado global en ReactJS
+
+## MiduDev:CSS Grid, Infinite Scroll y Tests en nuestra app de React
+
+https://www.youtube.com/watch?v=oCHdFiCgOSE&list=PLV8x_i1fqBw0B008sQn79YxCjkHJU84pC&index=5
+
+css grid
+Aqui importante es grid-template-columns con la unidad de medida fraccion (fr) en este caso decimos 4 columnas
+~~~
+   .
+   .
+   .
+
+.ListOfGifs{
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  
+}
+   .
+   .
+   .
+~~~
+Tambien podemos ponerlo asi el grid-template-colums con el atribute repeat para las fracciones
+~~~
+   .
+   .
+   .
+
+.ListOfGifs{
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: repeat(4,1fr);
+  
+}
+   .
+   .
+   .
+~~~
+tambien podemos añadir un gap entre columnas tanto horizontal como vertical (0 16px)
+
+~~~
+    .
+    .
+    .
+
+.ListOfGifs{
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 0 16px ; 
+}
+   .
+   .
+   .
+
+~~~
+ahora las columnas en vez de decirle 4 columnas, le decimos que lo calcule, que se auto ajuste:
+le pondemos el valor auto-fit en vez de cuatro columnas y el va ajustando automaticamente, conforme vamos cambiando de tamaño la ventana, el ira ajustando el numero de columnas posibles para el tamaño de la ventana
+~~~
+    .
+    .
+    .
+
+.ListOfGifs{
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: repeat(auto-fit,1fr);
+  grid-gap: 0 16px ; 
+}
+   .
+   .
+
+~~~
+
+Esto tiene un problema y es que se queda por los lados espacios vacios, tenemos que echar mano de minmax en css
+
+~~~
+    .
+    .
+    .
+.ListOfGifs{
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: repeat(auto-fit,minmax(300px , 1fr));
+  grid-gap: 0 16px ; 
+}
+   .
+   .
+
+~~~
+Tambien en vez de poner auto-fit podriamos poner auto-fill
+
+~~~
+    
+    .
+    .
+
+.ListOfGifs{
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: repeat(auto-fill,minmax(300px , 1fr));
+  grid-gap: 0 16px ; 
+}
+
+   .
+   .
+~~~
+Podemos centrar los elementos entre cada fila con align-items: center
+
+~~~
+   
+    .
+    .
+.ListOfGifs{
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: repeat(auto-fill,minmax(300px , 1fr));
+  align-items: center; 
+}
+   .
+   .
+
+~~~
+tambien le podemos poner una altura maxima con max-height
+~~~
+.Gif-link{
+  color: #000;
+  display: block;
+  text-decoration: none;
+  position: relative;
+  width: 100%;
+  max-height:300px;
+  overflow: hidden;
+}
+
+~~~
+
+~~~
+
+~~~
+
+~~~
+
+~~~
+
+~~~
+
+~~~
+
+
+
+
+
+
+___
+
+# MiduDev:Creando Custom Hooks y usando Context para conseguir un estado global en ReactJS
 
 https://www.youtube.com/watch?v=2qgs7buSnHQ
 
@@ -1689,8 +1868,8 @@ export  SearchResults ({params}){
 export default React.memo(SearchResults)
 
 ~~~
-
-React & Typescript, Ejemplo Práctico sencillo
+___
+## React & Typescript, Ejemplo Práctico sencillo
 
 https://www.youtube.com/watch?v=IbJFERe9F9w&t=801s
 
@@ -1734,27 +1913,11 @@ function App(): JSX.Element {
 
 ~~~
 
-~~~
 
-~~~
-
-~~~
-
-~~~
-
-~~~
-
-~~~
-
-~~~
-
-~~~
-
-~~~
 
 ___
 
-Webpack - TypeScript - React boilerplate from Scratch!
+## Webpack - TypeScript - React boilerplate from Scratch!
 
 https://www.youtube.com/watch?v=3APDDtxohBU
 
@@ -1775,21 +1938,756 @@ npm install --save-dev typescript @types/react @types/react-dom
 npm install --save react react-dom
 ~~~
 
+___
+
+
+## Lazy Load, Suspense y paginación con React
+
+https://www.youtube.com/watch?v=VcxXipZg1-0&list=PLV8x_i1fqBw0B008sQn79YxCjkHJU84pC&index=4
+
+~~~
+import React,{Suspense} from 'react'
+import useNearScreen from 'hooks/useNearScreen'
+
+/* Carga dinamica de un control */
+const TrendingSearches = React.Lazy(
+   () => import('./TrendingSearches')
+)
+
+export default function LazyTrending() {
+
+  const {isNearScreen,fromRef} = useNearScreen({
+    distante:'200px'
+  })
+  
+  return <div ref={fromRef}>
+            <Suspense fallback={null}>
+              {isNearScreen ? <TrendingSearches /> : null}
+            </Suspense>  
+         </div>
+}
+
+~~~
+
+
+
+___
+
+## CRUD FullStack React JS, ASP.NET Core y SQL Server || Tutorial en Español || Parte 1
+
+https://www.youtube.com/watch?v=Usj0J4rUumI&list=PLqC1FgzJhTiw4HaSmkN8_mMgKlZayIQHe
+
+___
+
+## React Lazy Loading & Code splitting
+
+https://www.youtube.com/watch?v=tV9gvls8IP8
+
+
+
+___
+
+## React Formularios – Formik Parte 1
+
+https://www.youtube.com/watch?v=Dj-Kjj8ZIBU&t=1595s
+
+___
+
+React Bootstrap Tutorial
+
+https://www.youtube.com/watch?v=8pKjULHzs0s
+
+~~~
+
+~~~
+
+
+
+
+___
+
+## Build a website with React, React-Bootstrap, React-Router and Styled-Components
+
+https://www.youtube.com/watch?v=tOK9l5uP06U
+
+
+App.js
+~~~
+import React,{Component} from 'react'
+import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
+import {Home} from './Home'
+import {About} from './About'
+import {Layout} from './Layout'
+import {NavigationBar} '.NavigationBar'
+
+class App extends Component{
+render() {
+  return (
+    <React.Fragment>
+      <NavigationBar />
+      <Layout>
+       <Router> 
+         <Switch>
+             <Route exact path="/" component={Home} />
+             <Route path="/about" component={About} />
+             <Route path="/contact" component={Contact} />
+             <Route component={NoMatch} />
+         </Switch>
+       </Router>
+      </Layout>
+    </React.Fragment>
+  )
+}
+
+}
+
+export default App
+~~~
+
+
+Home.js
+~~~
+import React from 'react'
+
+export const Home = () => (
+    <div>
+      <h2>Hello word</h2>
+      <p>....</p>
+      <p>....</p>
+      <p>....</p>
+      
+       
+    </div>
+)
+~~~
+
+Layout.js
+~~~
+import React from 'react'
+import {Container} from 'react-bootstrap'
+
+export const Layout = (props) => (
+    <Container>
+       {props.children}
+    </Container>
+)
+
+
+~~~
+
+
+
+NavigationBar.js
+~~~
+import React from 'react'
+import {Nav,Navbar} from 'react-bootstrap'
+import styled from 'styled-components'
+
+const Styles = styled.div`
+.navbar {
+   background-color: #222;
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+  color: #bbb;
+
+  &:hover {
+    color: white;
+  }
+}
+
+`
+
+export const NavigationBar= () => (
+   <Styles>
+     <Navbar expand="lg" >  
+        <Navbar.Brand href="/" >Code Life</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav" >
+           <Nav className="ml-auto" >
+              <Nav.Item><Nav.Link href="/" >Home </Nav.Link></Nav.Item>
+              <Nav.Item><Nav.Link href="/about" >About</Nav.Link></Nav.Item>
+              <Nav.Item><Nav.Link href="/contact">Contact</Nav.Link></Nav.Item>
+           </Nav>
+     </Navbar> 
+   </Styles>
+)
+
+~~~
 
 
 
 
 
+~~~
+
+~~~
+
+
+___
+
+## 5 top React Hooks libraries compared
+
+https://blog.logrocket.com/5-top-react-hooks-libraries-compared/
+
+Librerias de tipo Hook para react
+
+
+### React Hooks Lib
+
+
+~~~
+npm i react-hooks-lib --save
+~~~
+
+
+
+~~~
+import React from "react";
+import { useDidMount } from "react-hooks-lib";
+
+export default function App() {
+  useDidMount(() => {
+    console.log("did mount");
+  });
+
+  return (
+    <div className="App">
+      <h1>Hello world</h1>
+    </div>
+  );
+}
+~~~
+
+
+~~~
+import React from "react";
+import { useCounter } from "react-hooks-lib";
+
+export default function App() {
+  const { count, inc, dec, reset } = useCounter(0);
+  return (
+    <div>
+      {count}
+      <button onClick={() => inc(1)}>increment</button>
+      <button onClick={() => dec(1)}>decrement</button>
+      <button onClick={reset}>reset</button>
+    </div>
+  );
+}
+~~~
+
+
+
+~~~
+import React from "react";
+import { useField } from "react-hooks-lib";
+
+export default function App() {
+  const { value, bind } = useField("text");
+
+  return (
+    <div>
+      <input type="text" {...bind} />
+      <p>{value}</p>
+    </div>
+  );
+}
+~~~
+
+
+
+
+~~~
+import React from "react";
+import { useField } from "react-hooks-lib";
+
+export default function App() {
+  const { value, bind } = useField("text");
+
+  return (
+    <div>
+      <select {...bind}>
+        <option value="apple">apple</option>
+        <option value="orange">orange</option>
+      </select>
+      <p>{value}</p>
+    </div>
+  );
+}
+~~~
+
+
+### react-hanger
+
+- useInput
+- useBoolean
+- useNumber
+- useArray
+- useOnMount
+- useStateful
+
+
+
+~~~
+import React from "react";
+import { useInput } from "react-hanger";
+
+export default function App() {
+  const input = useInput("");
+
+  return (
+    <div>
+      <input type="text" value={input.value} onChange={input.onChange} />
+      <p>{input.value}</p>
+    </div>
+  );
+}
+~~~
+
+
+
+~~~
+import React from "react";
+import { useNumber } from "react-hanger";
+
+export default function App() {
+  const counter = useNumber(3, { lowerLimit: 0, upperLimit: 5 });
+
+  return (
+    <div>
+      <p> {counter.value} </p>
+      <button onClick={() => counter.increase()}> increase </button>
+      <button onClick={() => counter.decrease()}> decrease </button>
+    </div>
+  );
+}
+~~~
+
+
+~~~
+import React from "react";
+import { useStateful } from "react-hanger";
+
+export default function App() {
+  const username = useStateful("tom");
+
+  return (
+    <div>
+      <p> {username.value} </p>
+      <button onClick={() => username.setValue("tom")}> tom </button>
+      <button onClick={() => username.setValue("jerry")}> jerry </button>
+    </div>
+  );
+}
+~~~
+
+### React hookedUp
+
+
+
+
+~~~
+import React from "react";
+import { useHover } from "react-hookedup";
+
+export default function App() {
+  const { hovered, bind } = useHover();
+
+  return (
+    <div>
+      <p>{hovered ? "hovered" : "not hovered"}</p>
+      <input {...bind} />
+    </div>
+  );
+}
+~~~
+
+
+
+~~~
+import React from "react";
+import { useOnMount } from "react-hookedup";
+
+export default function App() {
+  useOnMount(() => console.log("mounted"));
+  return <div> hello world </div>;
+}
+~~~
+
+
+
+
+~~~
+import React, { useState } from "react";
+import { useInterval } from "react-hookedup";
+
+export default function App() {
+  const [time, setTime] = useState(new Date().toString());
+
+  useInterval(() => setTime(new Date().toString()), 1000);
+
+  return <p>{time}</p>;
+}
+~~~
+
+
+
+~~~
+import React from "react";
+import { useTimeout } from "react-hookedup";
+
+export default function App() {
+  useTimeout(() => alert("hello world"), 1500);
+
+  return <h1>hello world</h1>;
+}
+~~~
+
+
+~~~
+import React from "react";
+import { useOnlineStatus } from "react-hookedup";
+
+export default function App() {
+  const { online } = useOnlineStatus();
+
+  return <h1>{online ? "online" : "offline"}</h1>;
+}
+~~~
+
+### react-use
+
+~~~
+import React from "react";
+import { useMouse } from "react-use";
+
+export default function App() {
+  const ref = React.useRef(null);
+  const { docX, docY, posX, posY, elX, elY, elW, elH } = useMouse(ref);
+
+  return (
+    <div ref={ref}>
+      <div>
+        Mouse position in document - ({docX}, {docY})
+      </div>
+      <div>
+        Mouse position in element - ({elX}, {elY})
+      </div>
+      <div>
+        Element position- ({posX} , {posY})
+      </div>
+      <div>
+        Element dimensions - {elW}x{elH}
+      </div>
+    </div>
+  );
+}
+~~~
+
+
+~~~
+import React from "react";
+import { useScroll } from "react-use";
+
+export default function App() {
+  const scrollRef = React.useRef(null);
+  const { x, y } = useScroll(scrollRef);
+
+  return (
+    <div ref={scrollRef} style={{ height: 300, overflowY: "scroll" }}>
+      <div style={{ position: "fixed" }}>
+        <div>x: {x}</div>
+        <div>y: {y}</div>
+      </div>
+      {Array(100)
+        .fill()
+        .map((_, i) => (
+          <p key={i}>{i}</p>
+        ))}
+    </div>
+  );
+}
+~~~
+
+
+
+~~~
+import React, { useState } from "react";
+import useSpring from "react-use/lib/useSpring";
+
+export default function App() {
+  const [target, setTarget] = useState(50);
+  const value = useSpring(target);
+
+  return (
+    <div>
+      {value}
+      <br />
+      <button onClick={() => setTarget(0)}>Set 0</button>
+      <button onClick={() => setTarget(200)}>Set 100</button>
+    </div>
+  );
+}
+~~~
+
+
+
+~~~
+import React, { useState } from "react";
+import useCopyToClipboard from "react-use/lib/useCopyToClipboard";
+
+export default function App() {
+  const [text, setText] = useState("");
+  const [state, copyToClipboard] = useCopyToClipboard();
+
+  return (
+    <div>
+      <input value={text} onChange={(e) => setText(e.target.value)} />
+      <button type="button" onClick={() => copyToClipboard(text)}>
+        copy text
+      </button>
+      {state.error ? (
+        <p>error: {state.error.message}</p>
+      ) : (
+        state.value && <p>Copied {state.value}</p>
+      )}
+    </div>
+  );
+~~~
+
+
+
+
+~~~
+import React from "react";
+import useLocalStorage from "react-use/lib/useLocalStorage";
+
+export default function App() {
+  const [value, setValue, remove] = useLocalStorage("key", "foo");
+
+  return (
+    <div>
+      <div>Value: {value}</div>
+      <button onClick={() => setValue("bar")}>bar</button>
+      <button onClick={() => setValue("baz")}>baz</button>
+      <button onClick={() => remove()}>Remove</button>
+    </div>
+  );
+}
+~~~
+
+
+
+
+___
+
+Libreria Hook para cargar api rest en react
+
+SWR, React Hooks for Remote Data fetching
 
 
 
 
 
+~~~
+npm install swr
+~~~
+
+
+~~~
+const { data, error, isValidating, mutate } = useSWR(key, fetcher, options)
+~~~
+
+
+~~~
+import fetch from 'unfetch'
+
+const fetcher = url => fetch(url).then(r => r.json())
+
+function App() {
+  const { data } = useSWR('/api/data', fetcher)
+  // ...
+}
+~~~
+
+~~~
+import { request } from 'graphql-request'
+
+const fetcher = query => request('/api/graphql', query)
+
+function App() {
+  const { data, error } = useSWR(
+    `{
+      Movie(title: "Inception") {
+        releaseDate
+        actors {
+          name
+        }
+      }
+    }`,
+    fetcher
+  )
+  // ...
+}
+~~~
+
+
+Conditional Fetching
+
+~~~
+// conditionally fetch
+const { data } = useSWR(shouldFetch ? '/api/data' : null, fetcher)
+
+// ...or return a falsy value
+const { data } = useSWR(() => shouldFetch ? '/api/data' : null, fetcher)
+
+// ... or throw an error when user.id is not defined
+const { data } = useSWR(() => '/api/data?uid=' + user.id, fetcher)
+~~~
+
+
+Dependent Fetching
+
+
+~~~
+function MyProjects() {
+  const { data: user } = useSWR('/api/user')
+  const { data: projects } = useSWR(() => '/api/projects?uid=' + user.id)
+  // When passing a function, SWR will use the return
+  // value as `key`. If the function throws or returns
+  // falsy, SWR will know that some dependencies are not
+  // ready. In this case `user.id` throws when `user`
+  // isn't loaded.
+
+  if (!projects) return 'loading...'
+  return 'You have ' + projects.length + ' projects'
+}
+~~~
+
+Multiple Arguments
+
+~~~
+useSWR('/api/user', url => fetchWithToken(url, token))
+~~~
+
+
+
+~~~
+const { data: user } = useSWR(['/api/user', token], fetchWithToken)
+
+// ...and pass it as an argument to another query
+const { data: orders } = useSWR(user ? ['/api/orders', user] : null, fetchWithUser)
+~~~
+
+
+
+~~~
+// Don’t do this! Deps will be changed on every render.
+useSWR(['/api/user', { id }], query)
+
+// Instead, you should only pass “stable” values.
+useSWR(['/api/user', id], (url, id) => query(url, { id }))
+~~~
+
+
+Mutation and Post Request
+
+
+~~~
+
+~~~
+
+
+
+~~~
+
+~~~
+
+~~~
+
+~~~
+
+~~~
+
+~~~
+
+
+___
+
+## React Spinners
+
+Coleccion de spinner para react
+
+
+http://yuanyan.github.io/halogen/
+
+
+~~~
+import { useState } from "react";
+import { css } from "@emotion/core";
+import ClipLoader from "react-spinners/ClipLoader";
+
+// Can be a string as well. Need to ensure each key-value pair ends with ;
+const override = css`
+  display: block;
+  margin: 0 auto;
+  border-color: red;
+`;
+
+function App() {
+  let [loading, setLoading] = useState(true);
+  let [color, setColor] = useState("#ffffff");
+
+  return (
+    <div className="sweet-loading">
+      <button onClick={() => setLoading(!loading)}>Toggle Loader</button>
+      <input
+        value={color}
+        onChange={(input) => setColor(input.target.value)}
+        placeholder="Color of the loader"
+      />
+
+      <ClipLoader color={color} loading={loading} css={override} size={150} />
+    </div>
+  );
+}
+
+~~~
+___
+
+
+## react-loader-spinner
+
+https://www.npmjs.com/package/react-loader-spinner
 
 
 
 
+___
+~~~
 
+~~~
+
+~~~
+
+~~~
+
+~~~
+
+~~~
+
+~~~
+
+~~~
+
+~~~
+
+~~~
+
+~~~
+
+~~~
 
 
 
