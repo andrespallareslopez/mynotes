@@ -41,6 +41,12 @@ Titulo: "Apuntes React js"
     - [react-use](#react-use)
   - [React Spinners](#react-spinners)
   - [react-loader-spinner](#react-loader-spinner)
+  - [midudev:Cómo usar React.memo, mejorar el rendimiento y hacer deploy con Vercel de nuestra app de React](#midudevcómo-usar-reactmemo-mejorar-el-rendimiento-y-hacer-deploy-con-vercel-de-nuestra-app-de-react)
+  - [midudev:useReducer y tests de hooks con react-hooks-testing-library](#midudevusereducer-y-tests-de-hooks-con-react-hooks-testing-library)
+
+
+
+
 
 
 Para instalar el entorno de desarrollo para react
@@ -2660,6 +2666,24 @@ ___
 ## react-loader-spinner
 
 https://www.npmjs.com/package/react-loader-spinner
+
+
+
+
+___
+
+## midudev:Cómo usar React.memo, mejorar el rendimiento y hacer deploy con Vercel de nuestra app de React
+
+https://www.youtube.com/watch?v=Wo7_OVtu1ls
+
+
+
+
+___
+
+## midudev:useReducer y tests de hooks con react-hooks-testing-library
+
+https://www.youtube.com/watch?v=Wjy_nlYXTik&t=2243s
 
 
 
