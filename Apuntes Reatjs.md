@@ -2689,9 +2689,16 @@ https://www.youtube.com/watch?v=Wjy_nlYXTik&t=2243s
 
 
 ___
+
+CRUD FullStack React JS, ASP.NET Core y SQL Server || Tutorial en Español || Parte 1
+
+https://www.youtube.com/watch?v=Usj0J4rUumI&list=PLqC1FgzJhTiw4HaSmkN8_mMgKlZayIQHe
 ~~~
 
 ~~~
+______
+
+
 
 ~~~
 
