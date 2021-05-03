@@ -2690,24 +2690,33 @@ https://www.youtube.com/watch?v=Wjy_nlYXTik&t=2243s
 
 ___
 
-CRUD FullStack React JS, ASP.NET Core y SQL Server || Tutorial en Español || Parte 1
+## CRUD FullStack React JS, ASP.NET Core y SQL Server || Tutorial en Español || Parte 1
 
 https://www.youtube.com/watch?v=Usj0J4rUumI&list=PLqC1FgzJhTiw4HaSmkN8_mMgKlZayIQHe
+
+Tutorial completo con Asp.net Core React y sql server, aqui tenemos la primera parte son cuatro partes en videos de youtube
 ~~~
 
 ~~~
 ______
+## midudev:Fetching y Mutación de Datos en React con el hook useEffect
+
+https://www.youtube.com/watch?v=JEWFdKmr5wM
+~~~
+
+~~~
+____
+## Cómo utilizar USE REDUCER en React HOOKS!
+
+https://www.youtube.com/watch?v=fZojNH1OplI
+
 
 
 
 ~~~
 
 ~~~
-
-~~~
-
-~~~
-
+____
 ~~~
 
 ~~~

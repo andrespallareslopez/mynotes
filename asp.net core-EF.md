@@ -796,7 +796,120 @@ Hay que instalar Microsoft.EntityFrameworkCore y
 
 ___
 
+## Referencia de herramientas de Entity Framework Core: consola del administrador de paquetes en Visual Studio
 
+https://docs.microsoft.com/es-es/ef/core/cli/powershell
+
+Activamos las migraciones
+~~~
+enable-migrations
+~~~
+
+
+Generame un script sql para actualizar la base de datos
+~~~
+Update-Database -Script -SourceMigration: $InitialDatabase
+~~~
+
+ahora tenemos las herramientas de entity framework core desde la consola de administracion de paquetes, para utilizarlo desde visual studio
+
+Sacado del siguiente articulo:
+
+Referencia de herramientas de Entity Framework Core: consola del administrador de paquetes en Visual Studio
+
+https://docs.microsoft.com/es-es/ef/core/cli/powershell
+
+~~~
+Install-Package Microsoft.EntityFrameworkCore.Tools
+
+Update-Package Microsoft.EntityFrameworkCore.Tools
+
+
+~~~
+
+
+Y desde powershell podemos ver las herramientas instaladas
+
+
+~~~
+Get-Help about_EntityFrameworkCore
+~~~
+
+Lista de comandos
+
+Añadir una migracion
+~~~
+Add-Migration -Name "nombremigracion"
+~~~
+
+
+~~~
+Drop-Database
+~~~
+
+
+~~~
+Get-DbContext
+~~~
+
+Esta es nueva en EF Core 5.0
+~~~
+Get-Migration
+~~~
+
+
+~~~
+Remove-Migration -Force
+~~~
+
+~~~
+Scaffold-DbContext "Server=(localdb)\mssqllocaldb;Database=Blogging;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+~~~
+
+Ejemplo que scaffolding solo selecciona tablas y crea el contexto en una carpeta independiente con un nombre y un espacio de nombres especificados:
+
+~~~
+Scaffold-DbContext "Server=(localdb)\mssqllocaldb;Database=Blogging;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Tables "Blog","Post" -ContextDir Context -Context BlogContext -ContextNamespace New.Namespace
+~~~
+Genera un script SQL desde DbContext.Agregado en EF Core 3,0.
+~~~
+Script-DbContext
+~~~
+
+Genera un script SQL que aplica todos los cambios de una migración seleccionada a otra migración seleccionada.
+
+~~~
+Script-Migration 0 InitialCreate
+~~~
+
+En el ejemplo siguiente se crea un script para todas las migraciones después de la migración de InitialCreate con el identificador de migración.
+
+
+~~~
+Script-Migration 20180904195021_InitialCreate
+~~~
+Actualiza la base de datos a la última migración o a una migración especificada.
+
+
+
+~~~
+Update-Database
+~~~
+En el ejemplo siguiente se revierten todas las migraciones.
+
+~~~
+Update-Database 0
+~~~
+En los siguientes ejemplos se actualiza la base de datos a una migración especificada. El primero usa el nombre de la migración y el segundo usa el identificador de migración y una conexión especificada:
+
+
+~~~
+Update-Database InitialCreate
+Update-Database 20180904195021_InitialCreate -Connection your_connection_string
+~~~
+
+
+___
 
 
 

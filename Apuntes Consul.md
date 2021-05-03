@@ -73,7 +73,35 @@ public static class ApplicationBuilderExtensions
 
 ___
 
+___
 
+### Using Consul for Service Discovery with ASP.NET Core
+
+https://cecilphillip.com/using-consul-for-service-discovery-with-asp-net-core/
+
+
+
+
+___
+
+
+### Service Discovery And Health Checks In ASP.NET Core With Consul
+
+http://michaco.net/blog/ServiceDiscoveryAndHealthChecksInAspNetCoreWithConsul
+
+
+___
+
+
+### Intro to Distributed Config with Consul on ASP.NET COre
+
+
+https://www.dotnetcatch.com/2016/12/30/intro-to-distributed-config-with-consul-on-asp-net-core/
+
+
+
+
+___
 
 
 
