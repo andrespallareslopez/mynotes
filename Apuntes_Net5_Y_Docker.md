@@ -1,8 +1,6 @@
 # Apuntes Docker Net 5
 
-Desplegando una API REST con .NET5 y Docker en la nube de Azure!
 
-https://www.youtube.com/watch?v=xgXReaalO2U
 
 ___
 
@@ -31,5 +29,33 @@ ___
 #4 Crear una API REST con .NET 5, arquitectura, persistencia con EF y seguridad con JWT
 
 https://www.youtube.com/watch?v=kgy49jglKLo&list=PL-mmLKprTyguNSUCmiSnKAzElWwcReGVU&index=4
+
+utiliza asp.net identity
+
+___
+
+#5 Desplegando una API REST con .NET5 y Docker en la nube de Azure!
+
+https://www.youtube.com/watch?v=xgXReaalO2U
+
+para que pueda entrar a la base de datos desde docker permitir en el servidor conexiones entrantes al puerto tcp y y permitir conexiones remotras
+
+
+
+___
+
+
+API REST .NET 5 - #6 Logging con SERILOG y MongoDB, con Docker Compose y MongoDB Atlas
+
+https://www.youtube.com/watch?v=ScyEqNX4tbA&list=PL-mmLKprTyguNSUCmiSnKAzElWwcReGVU&index=6
+
+____
+
+
+
+
+
+
+
 
 

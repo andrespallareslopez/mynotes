@@ -1,5 +1,21 @@
 # Gestionar ErrorException en Aplicaciones Web en IIS
 
+Improving Error Handling in ASP.NET Web API 2.1 with OWIN
+
+https://blog.jayway.com/2016/01/08/improving-error-handling-asp-net-web-api-2-1-owin/
+
+___
+
+Configuración de ASP.NET Web API 2
+
+https://docs.microsoft.com/es-es/aspnet/web-api/overview/advanced/configuring-aspnet-web-api
+
+Apareceria como configurar con owin un asp.net web api clasica con net 4.6.1
+
+
+
+
+___
 Global exception handling in OWIN middleware
 
 https://newbedev.com/global-exception-handling-in-owin-middleware
@@ -62,5 +78,30 @@ https://www.youtube.com/watch?v=dHzq7c_FjXw
 
 ___
 
+Unhandled Exception Global Handler for OWIN / Katana?
+
+https://www.py4u.net/discuss/713919
+
+___
+
+
+Unhandled Exception Global Handler for OWIN / Katana?
+
+https://stackoverflow.com/questions/30918649/unhandled-exception-global-handler-for-owin-katana
+
+____
+
+HTTP Errors <httpErrors>
+
+https://docs.microsoft.com/en-us/iis/configuration/system.webserver/httperrors/
+
+
+___
+
+How to create an IIS custom error page to increase security
+
+https://helpdesk.kaseya.com/hc/en-gb/articles/229028008-How-to-create-an-IIS-custom-error-page-to-increase-security
+
+___
 
 
