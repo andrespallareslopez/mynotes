@@ -54,6 +54,12 @@ https://github.com/gatsbyjs/gatsby-es/blob/master/docs/docs/global-css.md
 
 https://www.youtube.com/watch?v=8t0vNu2fCCM&t=11727s
 
+### Gatsby V3 Tutorial and Recipes Site Project
+
+https://www.youtube.com/watch?v=JlxXHlygVLM
+
+
+
 
 
 
