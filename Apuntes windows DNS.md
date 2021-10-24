@@ -1,0 +1,2 @@
+# Apuntes windows server DNS
+
