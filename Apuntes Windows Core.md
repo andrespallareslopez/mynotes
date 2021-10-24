@@ -1,0 +1,10 @@
+# Apuntes windows server core
+
+
+
+
+
+
+
+
+

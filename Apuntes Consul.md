@@ -126,9 +126,9 @@ https://learn.hashicorp.com/tutorials/consul/load-balancing-nginx
 
 ___
 
+Generating dynamic config with Nginx and Consul-Template
 
-
-
+https://danielparker.me/nginx/consul-template/consul/nginx-consul-template/
 
 ____
 
