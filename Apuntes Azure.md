@@ -29,6 +29,8 @@ Virtual network
 
 vnet peering o vpn gateway allow cross Vnet Communication
 
+Azure tiene para hacer un diagrama de tu infraestructura
+
 
 ___
 
