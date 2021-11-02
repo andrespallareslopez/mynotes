@@ -48,5 +48,24 @@ https://www.youtube.com/watch?v=7rzawA--r20
 
 ____
 
+Conecte su red local a Azure mediante ExpressRoute
+
+https://www.youtube.com/watch?v=C6uglNSRlY8
+
+
+___
+
+Azure Networking For Beginners | Learn Azure Networking Basics | K21Academy
+
+https://www.youtube.com/watch?v=feQvnIUJ3Iw
+
+yo creo que el mejor para entender las subredes dentro de un virtual network
+
+
+___
+
+
+
+
 
 
