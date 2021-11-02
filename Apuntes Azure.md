@@ -39,11 +39,14 @@ Azure Virtual Network Step by Step
 https://www.youtube.com/watch?v=ADdGZEfmNzQ
 
 
-
-
 ___
 
+Azure Virtual Network Overview
 
+https://www.youtube.com/watch?v=7rzawA--r20
+
+
+____
 
 
 
