@@ -34,6 +34,14 @@ Azure tiene para hacer un diagrama de tu infraestructura
 
 ___
 
+Azure Virtual Network Step by Step
+
+https://www.youtube.com/watch?v=ADdGZEfmNzQ
+
+
+
+
+___
 
 
 
