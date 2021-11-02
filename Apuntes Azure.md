@@ -17,4 +17,23 @@ https://www.youtube.com/watch?v=-XhhlojFFxY
 
 ___
 
+https://www.youtube.com/watch?v=5NMcM4zJPM4
+
+AZ-900 Episodio 10 | Servicios de redes | Red virtual, puerta de enlace VPN, CDN, equilibrador de carga, aplicación GW
+
+Virtual network
+
+-subnet
+
+-subnet
+
+vnet peering o vpn gateway allow cross Vnet Communication
+
+
+___
+
+
+
+
+
 
