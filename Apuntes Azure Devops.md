@@ -59,5 +59,10 @@ stages:
 
 ____
 
+SERVICE CONNECTIONS | Connect Your AZURE SUBSCRIPTION and AZURE DEVOPS Account
 
+https://www.youtube.com/watch?v=Tpa7r_iXgM8
+
+Habla de como configurar la cuenta msdn visual studio profesional para que configuramos service connections en azure devops.
+ 
 
