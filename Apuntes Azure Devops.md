@@ -64,5 +64,13 @@ SERVICE CONNECTIONS | Connect Your AZURE SUBSCRIPTION and AZURE DEVOPS Account
 https://www.youtube.com/watch?v=Tpa7r_iXgM8
 
 Habla de como configurar la cuenta msdn visual studio profesional para que configuramos service connections en azure devops.
- 
+
+___
+
+PULL REQUEST WORKFLOW in AZURE DEVOPS - Raising a PR, Reviewing and Setting up Branch Policies
+
+https://www.youtube.com/watch?v=dGCid5W-HK0
+
+___
+
 

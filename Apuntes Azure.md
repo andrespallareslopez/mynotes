@@ -64,6 +64,20 @@ yo creo que el mejor para entender las subredes dentro de un virtual network
 
 ___
 
+Azure Private Endpoint & Private Link explained in plain English with a story & demo in 5 minutes
+
+https://www.youtube.com/watch?v=vVDql7IKneg
+
+___
+
+Azure Private Endpoints (Private Link) with services like App Services, SQL, and Storage Accounts
+
+https://www.youtube.com/watch?v=8Zof54j8qWk
+
+
+___
+
+
 
 
 

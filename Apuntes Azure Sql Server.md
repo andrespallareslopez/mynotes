@@ -1,0 +1,16 @@
+# Apuntes Azure Sql Server
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
