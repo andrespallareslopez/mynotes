@@ -24,6 +24,13 @@ https://www.youtube.com/watch?v=EN1CnJIK-n4&t=909s
 
 ___
 
+Azure Devops - CI/CD Pipelines con Terraform
+
+https://www.youtube.com/watch?v=XdT0P-5rpoQ
+
+____
+
+
 
 
 
