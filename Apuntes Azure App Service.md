@@ -16,7 +16,13 @@ En este video tutorial viene como crear un web app service y luego subir la apli
 ___
 
 
+Desplegar infraestructura en Azure con Terraform
 
+https://www.youtube.com/watch?v=EN1CnJIK-n4&t=909s
+
+
+
+___
 
 
 
