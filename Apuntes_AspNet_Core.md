@@ -1094,6 +1094,38 @@ export default App;
 
 ___
 
+Mini Profiler for ASP.ET Core Projects
+
+https://www.youtube.com/watch?v=7ThPz-9XM54
+
+___
+
+Using .NET Memory Profiler to investigate memory issues
+
+https://www.youtube.com/watch?v=b0tiHyeotRU
+
+___
+
+Using Visual Studio Diagnostic tools to investigate memory issues
+
+https://www.youtube.com/watch?v=TK1HfJ9pn7g
+
+___
+
+Performance Profiling | .NET Object Allocation Tracking Tool
+
+https://www.youtube.com/watch?v=60euKwSqT-U
+
+___
+
+Performance Profiling | CPU Usage Tool
+
+https://www.youtube.com/watch?v=X1-uHpEqNGM
+
+___
+
+
+
 
 
 
