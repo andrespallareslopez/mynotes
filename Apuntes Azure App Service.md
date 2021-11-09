@@ -30,6 +30,18 @@ https://www.youtube.com/watch?v=XdT0P-5rpoQ
 
 ____
 
+Curso Azure - 7 - App Service - Certificado/SSL
+
+https://www.youtube.com/watch?v=krLJajScyT4
+
+Azure suministra tambien un certificado y lo puedes compar
+
+"Certificados de app servicer" seria el apartado y valen dinero
+
+
+
+___
+
 
 
 
