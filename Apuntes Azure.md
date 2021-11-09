@@ -100,7 +100,8 @@ Azure Networking For Beginners | Learn Azure Networking Basics | K21Academy
 
 https://www.youtube.com/watch?v=feQvnIUJ3Iw
 
-yo creo que el mejor para entender las subredes dentro de un virtual network
+yo creo que el mejor para entender las subredes dentro de un virtual network tiene parte practica
+
 
 
 ___
@@ -118,7 +119,21 @@ https://www.youtube.com/watch?v=8Zof54j8qWk
 
 ___
 
+Azure Site-to-Site VPN quick setup
 
+https://www.youtube.com/watch?v=hKgEjqTp8MI
+
+
+___
+
+Site-to-Site Azure VPN with a Windows RRAS Server
+
+https://www.youtube.com/watch?v=QQ40gxxxT8Y
+
+En este tutorial muestra como crear un azure virtual private network gateway y como conectarlo a un windows RRAS Server en una red domestica con un router/model normal
+
+
+___
 
 
 
