@@ -143,5 +143,32 @@ Crear un azure virtual network gateway y descargar el cliente para crear una con
 
 ___
 
+How to setup Site to Site (S2S) VPN from local OnPrem to Azure Cloud in 10 steps
+
+https://www.youtube.com/watch?v=MorG47BTttU
+
+En este tutorial crea un virtual private network gateway que conecta con una red on-premise local a traves de un servidor windows 2019 on-preimise con RASS configurado y luego crea una maquina virtual en azure y una vez configurado la parte de azure VPN gateway y el servidor windows server RASS, los conecta sitio a sitio y luego desde la red local onpremise con el RASS activado a traves del windows server conecta a traves de la red de azure a la maquina virtual en azure.
+
+___
+
+How to Configure Azure Point to Site VPN Step By Step | Azure Point to Site VPN Certificate | AZ P2S
+
+https://www.youtube.com/watch?v=Gb3YE-0gBWQ
+
+crea dos tipos de certificado; uno el root o principal para luego utilizar este certificado para firmar y crear otros certificados
+
+con powershell:
+
+$cert = New-SelfSignedCertificate -Type Custom -keyspec Signature -Subject "CN=P2SRootNew" -keyExportPolicy Exportable -hashAlgorithm sha256 -keyLength 2048 -CertStoreLocation "Cert:\CurrentUser\My" -keyUsageProperty Sign -keyUsage CertSign
+
+New-selfSignedCertificate -Type Custom -DnsName P2SChildCertNew -keySpec Signature -Subject "CN=P2SChildCertNew" -keyExportPolicy Exportable -hashAlgorithm sha256 -keyLength 2048 -CertStoreLocation "Cert:\CurrentUser\My" -Signer $cert -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.2")
+
+
+
+
+
+
+___
+
 
 
