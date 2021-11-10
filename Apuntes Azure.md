@@ -130,7 +130,7 @@ Site-to-Site Azure VPN with a Windows RRAS Server
 
 https://www.youtube.com/watch?v=QQ40gxxxT8Y
 
-En este tutorial muestra como crear un azure virtual private network gateway y como conectarlo a un windows RRAS Server en una red domestica con un router/model normal
+En este tutorial muestra como crear un azure virtual private network gateway y como conectarlo a un windows RRAS Server en una red domestica con un router/modem normal
 
 
 ___
