@@ -137,6 +137,8 @@ ___
 
 Connect Local Computer to Azure Network VM Using RDP over Point to Site VPN - Hands On Demo!
 
+https://www.youtube.com/watch?v=oYmn17S2E_s&t=1406s
+
 Crear un azure virtual network gateway y descargar el cliente para crear una conexion VPN entre tu maquina local y la red "virtual network" que hayas creado en tu cuenta azure
 
 ___
