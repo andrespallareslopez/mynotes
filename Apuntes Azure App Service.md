@@ -42,6 +42,14 @@ Azure suministra tambien un certificado y lo puedes compar
 
 ___
 
+How to secure your Azure App Services
+
+https://portal.azure.com/#@everisgroup.onmicrosoft.com/resource/subscriptions/a9ddea3d-a948-4d52-926d-850fac004abe/resourceGroups/AzPaas/providers/Microsoft.Web/sites/andrespallares02
+
+necesitamos una plan standar para utilizar vnet dentro una azure app service
+
+
+___
 
 
 
