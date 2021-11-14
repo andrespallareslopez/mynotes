@@ -164,11 +164,51 @@ $cert = New-SelfSignedCertificate -Type Custom -keyspec Signature -Subject "CN=P
 New-selfSignedCertificate -Type Custom -DnsName P2SChildCertNew -keySpec Signature -Subject "CN=P2SChildCertNew" -keyExportPolicy Exportable -hashAlgorithm sha256 -keyLength 2048 -CertStoreLocation "Cert:\CurrentUser\My" -Signer $cert -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.2")
 
 
+___
+
+Curso y redes en microsoft Azure
+
+1-Introducción al curso (Redes en Azure)
+
+https://www.youtube.com/watch?v=2839dEa6pF0&list=PLWDmZWXFtqIqh2Hzh_Z3tzUvA-UjOODTD&index=1
+
+
+2-Crear una cuenta en Azure (Redes en Azure)
+
+https://www.youtube.com/watch?v=Ab2bu1PuSNE&list=PLWDmZWXFtqIqh2Hzh_Z3tzUvA-UjOODTD&index=2
+
+3 - Portal de Azure (Redes Azure)
+
+https://www.youtube.com/watch?v=eW3J-CyTf8A&list=PLWDmZWXFtqIqh2Hzh_Z3tzUvA-UjOODTD&index=3
+
+4 - Creación de primera red virtual (Redes Azure)
+
+https://www.youtube.com/watch?v=U1_qnfhNR2M&list=PLWDmZWXFtqIqh2Hzh_Z3tzUvA-UjOODTD&index=4
+
+5 - Primer servidor web (Redes Azure)
+
+https://www.youtube.com/watch?v=7cRHzqfjEpw&list=PLWDmZWXFtqIqh2Hzh_Z3tzUvA-UjOODTD&index=5
+
+
+____
+
+Azure Point-to-Site VPN with Certificate Based Authentication
+
+https://www.youtube.com/watch?v=Yshpo6V1qUQ
+
+point to site connections into azure v-net
+
+- Create a V-net Gateway
+- Create a Root Certificate
+- Create Client Certificates
+- Export Certificates
+- Configure  the  gateway for Point-to-site Connections
+- Configure the client
+- Revoke a Certificate
+
+
 
 
 
 
 ___
-
-
-

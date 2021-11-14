@@ -51,6 +51,22 @@ necesitamos una plan standar para utilizar vnet dentro una azure app service
 
 ___
 
+Azure Private Endpoint & Private Link explained in plain English with a story & demo in 5 minutes
+
+https://www.youtube.com/watch?v=vVDql7IKneg
+
+
+___
+
+
+
+
+
+
+
+
+
+
 
 
 
