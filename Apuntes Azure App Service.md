@@ -58,10 +58,48 @@ https://www.youtube.com/watch?v=vVDql7IKneg
 
 ___
 
+App Service Hybrid Connections | Azure Relay | SQL Server | On-Premise to Cloud
+
+https://www.youtube.com/watch?v=X_kY7BJQMik
+
+___
+
+¿Qué es Azure App Service, App Service Plans y App Service Environment?
+
+https://www.youtube.com/watch?v=4lSbl2J3KbY
+
+___
+
+WHAT IS AZURE APP SERVICE ENVIRONMENT AND HOW TO CREATE EXTERNAL ASE
+
+https://www.youtube.com/watch?v=_XZv17L6UQM
 
 
+____
 
+Azure App Service: Environment Variables and Configuration Settings
 
+https://www.youtube.com/watch?v=WIYERtNIIPM
+
+___
+
+Azure App Service: Environment Variables and Configuration Settings
+
+https://www.youtube.com/watch?v=WIYERtNIIPM
+
+___
+
+AZURE APP CONFIGURATION | Central Store For Application Configuration | ASP.NET Core Series
+
+https://www.youtube.com/watch?v=VEjYW14WKRM
+
+___
+
+Microsoft Azure App Service Configuration Part5 | Microsoft Azure Training
+
+https://www.youtube.com/watch?v=5uXb-j52gAw
+
+___
 
 
 
