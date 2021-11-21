@@ -34,7 +34,20 @@ https://www.youtube.com/watch?v=9eq3IeDAkvA&list=PL8wOlV8Hv3o9uHl0XFfI6_katp6BXN
 
 ___
 
+How to install and configure ADFS on Windows Server
 
+https://www.youtube.com/watch?v=jlF9PRiCH9s
+
+
+Este es el mas sencillo de configurar, el mas simple para tener un ADFS
+
+Crea un certificado a traves del servidor web iis, autofirmado, que luego lo exporta, para que lo coja el servidor ADFS.
+
+Despues de configurar hay que esperarse un poco porque si entramos a la herramienta cliente de ADFS nos da un error de no puede conectarse a una base de datos especia, hay que darle tiempo, cuando recien creado
+
+
+set-adfsproperties -EnableIdpInitiatedSignonpage $True
+___
 
 
 
