@@ -4,12 +4,6 @@ Tutorial de Azure Active Directory (AD, AAD) | Servicio de gestión de identidad
 
 https://www.youtube.com/watch?v=Ma7VAQE7ga4
 
-
-
-
-
-
-
 ___
 
 Inicio rápido: aplicación web de ASP.NET que hace que usuarios de Azure AD inicien sesión
@@ -122,8 +116,359 @@ https://www.youtube.com/watch?v=sRop37oQ_Hk
 
 ___
 
+Azure Active Directory v2 endpoint and MSAL: Whats new
+
+https://www.youtube.com/watch?v=GPm-5CS4rkI
+
+___
+
+Get User Details in Azure | Azure Graph API | Asp.Net Core
+
+https://www.youtube.com/watch?v=KNX3dvloaiM
+
+Utiliza la libreria Microsoft.Identity.Web y Microsoft.Identity.Web.MicrosoftGraph
 
 
+
+
+___
+
+
+Protect WebAPI with Azure AD Authentication
+
+https://www.youtube.com/watch?v=Yj2xVTMDoIY
+
+Este lo hace con asp.net normal utiliza librerias que utilizan owin
+
+___
+
+Usando Microsoft Graph para interactuar con el Directorio Activo de Azure
+
+https://www.youtube.com/watch?v=pdtecvzrDqM&t=1562s
+
+
+___
+
+Using Microsoft Graph API with Azure Active Directory
+
+https://www.youtube.com/watch?v=VO7s1434Meg
+
+___
+
+
+Obtención de un token a partir de la caché de tokens mediante MSAL.NET
+
+https://docs.microsoft.com/es-es/azure/active-directory/develop/msal-net-acquire-token-silently
+
+<pre>
+var accounts = await app.GetAccountsAsync();
+
+AuthenticationResult result = null;
+try
+{
+     result = await app.AcquireTokenSilent(scopes, accounts.FirstOrDefault())
+                       .ExecuteAsync();
+}
+catch (MsalUiRequiredException ex)
+{
+    // A MsalUiRequiredException happened on AcquireTokenSilent.
+    // This indicates you need to call AcquireTokenInteractive to acquire a token
+    Debug.WriteLine($"MsalUiRequiredException: {ex.Message}");
+
+    try
+    {
+        result = await app.AcquireTokenInteractive(scopes)
+                          .ExecuteAsync();
+    }
+    catch (MsalException msalex)
+    {
+        ResultText.Text = $"Error Acquiring Token:{System.Environment.NewLine}{msalex}";
+    }
+}
+catch (Exception ex)
+{
+    ResultText.Text = $"Error Acquiring Token Silently:{System.Environment.NewLine}{ex}";
+    return;
+}
+
+if (result != null)
+{
+    string accessToken = result.AccessToken;
+    // Use the token
+}
+
+</pre>
+
+
+___
+
+Configuración del registro en MSAL.NET
+
+https://docs.microsoft.com/es-es/azure/active-directory/develop/msal-logging-dotnet
+
+<pre>
+
+class Program
+{
+  private static void Log(LogLevel level, string message, bool containsPii)
+  {
+     if (containsPii)
+     {
+        Console.ForegroundColor = ConsoleColor.Red;
+     }
+     Console.WriteLine($"{level} {message}");
+     Console.ResetColor();
+  }
+
+  static void Main(string[] args)
+  {
+    var scopes = new string[] { "User.Read" };
+
+    var application = PublicClientApplicationBuilder.Create("<clientID>")
+                      .WithLogging(Log, LogLevel.Info, true)
+                      .Build();
+
+    AuthenticationResult result = application.AcquireTokenInteractive(scopes)
+                                             .ExecuteAsync().Result;
+  }
+}
+
+</pre>
+
+___
+
+Inicialización de aplicaciones cliente con MSAL.NET
+
+https://docs.microsoft.com/es-es/azure/active-directory/develop/msal-net-initializing-client-applications
+
+
+Inicialización de una aplicación cliente confidencial a partir del código
+<pre>
+
+string redirectUri = "https://myapp.azurewebsites.net";
+IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create(clientId)
+    .WithClientSecret(clientSecret)
+    .WithRedirectUri(redirectUri )
+    .Build();
+
+
+
+</pre>
+
+___
+
+Aplicación de escritorio que llama a las API web: adquisición de un token mediante el nombre de usuario y la contraseña
+
+https://docs.microsoft.com/es-es/azure/active-directory/develop/scenario-desktop-acquire-token-username-password?tabs=dotnet
+
+<pre>
+
+static async Task GetATokenForGraph()
+{
+ string authority = "https://login.microsoftonline.com/contoso.com";
+ string[] scopes = new string[] { "user.read" };
+ IPublicClientApplication app;
+ app = PublicClientApplicationBuilder.Create(clientId)
+       .WithAuthority(authority)
+       .Build();
+ var accounts = await app.GetAccountsAsync();
+
+ AuthenticationResult result = null;
+ if (accounts.Any())
+ {
+  result = await app.AcquireTokenSilent(scopes, accounts.FirstOrDefault())
+                    .ExecuteAsync();
+ }
+ else
+ {
+  try
+  {
+   var securePassword = new SecureString();
+   foreach (char c in "dummy")        // you should fetch the password
+    securePassword.AppendChar(c);  // keystroke by keystroke
+
+   result = await app.AcquireTokenByUsernamePassword(scopes,
+                                                    "joe@contoso.com",
+                                                     securePassword)
+                      .ExecuteAsync();
+  }
+  catch(MsalException)
+  {
+   // See details below
+  }
+ }
+ Console.WriteLine(result.Account.Username);
+}
+
+</pre>
+
+___
+
+Tutorial: Llamada a Microsoft Graph API desde una aplicación de escritorio de Windows
+
+https://docs.microsoft.com/es-es/azure/active-directory/develop/tutorial-v2-windows-desktop
+
+
+
+<pre>
+
+Install-Package Microsoft.Identity.Client -Pre
+
+
+</pre>
+
+
+<pre>
+using Microsoft.Identity.Client;
+
+public partial class App : Application
+{
+    static App()
+    {
+        _clientApp = PublicClientApplicationBuilder.Create(ClientId)
+            .WithAuthority(AzureCloudInstance.AzurePublic, Tenant)
+            .WithDefaultRedirectUri()
+            .Build();
+    }
+
+    // Below are the clientId (Application Id) of your app registration and the tenant information.
+    // You have to replace:
+    // - the content of ClientID with the Application Id for your app registration
+    // - the content of Tenant by the information about the accounts allowed to sign-in in your application:
+    //   - For Work or School account in your org, use your tenant ID, or domain
+    //   - for any Work or School accounts, use `organizations`
+    //   - for any Work or School accounts, or Microsoft personal account, use `common`
+    //   - for Microsoft Personal account, use consumers
+    private static string ClientId = "0b8b0665-bc13-4fdc-bd72-e0227b9fc011";
+
+    private static string Tenant = "common";
+
+    private static IPublicClientApplication _clientApp ;
+
+    public static IPublicClientApplication PublicClientApp { get { return _clientApp; } }
+}
+
+</pre>
+
+<pre>
+public partial class MainWindow : Window
+{
+    //Set the API Endpoint to Graph 'me' endpoint
+    string graphAPIEndpoint = "https://graph.microsoft.com/v1.0/me";
+
+    //Set the scope for API call to user.read
+    string[] scopes = new string[] { "user.read" };
+
+
+    public MainWindow()
+    {
+        InitializeComponent();
+    }
+
+  /// <summary>
+    /// Call AcquireToken - to acquire a token requiring user to sign-in
+    /// </summary>
+    private async void CallGraphButton_Click(object sender, RoutedEventArgs e)
+    {
+        AuthenticationResult authResult = null;
+        var app = App.PublicClientApp;
+        ResultText.Text = string.Empty;
+        TokenInfoText.Text = string.Empty;
+
+        var accounts = await app.GetAccountsAsync();
+        var firstAccount = accounts.FirstOrDefault();
+
+        try
+        {
+            authResult = await app.AcquireTokenSilent(scopes, firstAccount)
+                .ExecuteAsync();
+        }
+        catch (MsalUiRequiredException ex)
+        {
+            // A MsalUiRequiredException happened on AcquireTokenSilent.
+            // This indicates you need to call AcquireTokenInteractive to acquire a token
+            System.Diagnostics.Debug.WriteLine($"MsalUiRequiredException: {ex.Message}");
+
+            try
+            {
+                authResult = await app.AcquireTokenInteractive(scopes)
+                    .WithAccount(accounts.FirstOrDefault())
+                    .WithPrompt(Prompt.SelectAccount)
+                    .ExecuteAsync();
+            }
+            catch (MsalException msalex)
+            {
+                ResultText.Text = $"Error Acquiring Token:{System.Environment.NewLine}{msalex}";
+            }
+        }
+        catch (Exception ex)
+        {
+            ResultText.Text = $"Error Acquiring Token Silently:{System.Environment.NewLine}{ex}";
+            return;
+        }
+
+        if (authResult != null)
+        {
+            ResultText.Text = await GetHttpContentWithToken(graphAPIEndpoint, authResult.AccessToken);
+            DisplayBasicTokenInfo(authResult);
+            this.SignOutButton.Visibility = Visibility.Visible;
+        }
+    }
+    }
+</pre>
+
+<pre>
+/// <summary>
+/// Perform an HTTP GET request to a URL using an HTTP Authorization header
+/// </summary>
+/// <param name="url">The URL</param>
+/// <param name="token">The token</param>
+/// <returns>String containing the results of the GET operation</returns>
+public async Task<string> GetHttpContentWithToken(string url, string token)
+{
+    var httpClient = new System.Net.Http.HttpClient();
+    System.Net.Http.HttpResponseMessage response;
+    try
+    {
+        var request = new System.Net.Http.HttpRequestMessage(System.Net.Http.HttpMethod.Get, url);
+        //Add the token in Authorization header
+        request.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+        response = await httpClient.SendAsync(request);
+        var content = await response.Content.ReadAsStringAsync();
+        return content;
+    }
+    catch (Exception ex)
+    {
+        return ex.ToString();
+    }
+}
+</pre>
+para cerra sesion
+<pre>
+/// <summary>
+/// Sign out the current user
+/// </summary>
+private async void SignOutButton_Click(object sender, RoutedEventArgs e)
+{
+    var accounts = await App.PublicClientApp.GetAccountsAsync();
+
+    if (accounts.Any())
+    {
+        try
+        {
+            await App.PublicClientApp.RemoveAsync(accounts.FirstOrDefault());
+            this.ResultText.Text = "User has signed-out";
+            this.CallGraphButton.Visibility = Visibility.Visible;
+            this.SignOutButton.Visibility = Visibility.Collapsed;
+        }
+        catch (MsalException ex)
+        {
+            ResultText.Text = $"Error signing-out user: {ex.Message}";
+        }
+    }
+}
+
+</pre>
 
 
 
