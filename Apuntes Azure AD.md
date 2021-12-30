@@ -471,6 +471,42 @@ private async void SignOutButton_Click(object sender, RoutedEventArgs e)
 </pre>
 
 
+___
+
+Get access without a user
+
+https://docs.microsoft.com/en-us/graph/auth-v2-service
+
+
+___
+
+Asp.Net Core Web App with Azure Graph Api Integration - Get All Users Information
+
+https://www.youtube.com/watch?v=Z2Lu-PzWYLU
+
+consentimiento de administrador o admin consent
+
+consentimiento de administrador para un scope determinado cuando estamos creando la aplicacion, se da permisos explicitos por parte del administrador y esto hara que nuestra aplicacion no pregunte por una cuenta con el cuadro de dialogo de azure por defecto
+
+hay que utilizar la api de graph api 
+
+con esta manera
+
+<pre>
+   var clientId= configuration.GetValue<string>("AzureAd:ClientID");
+   var tenantID= configuration.GetValue<string>("AzureAd:TenantID");
+   var clientSecretCredential = new ClientSecretCredential(tenantid,clientid,clientsecrect);
+
+   GraphServiceClient graphServiceClient(clientSecrectCredential);
+
+   var users = graphServiceClient.Users.Request().Select(x=>x.DisplayName).GetAsync().Result;
+
+   
+   
+</pre>
+
+___
+
 
 
 
