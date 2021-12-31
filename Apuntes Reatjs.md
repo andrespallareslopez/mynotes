@@ -2717,7 +2717,20 @@ https://www.youtube.com/watch?v=fZojNH1OplI
 
 ~~~
 ____
+
+## Curso React: 45. Validación Formularios: Definición de componentes y lógica ( 1 / 4 ) - jonmircha
+
+https://www.youtube.com/watch?v=JYFMc_S6kWc
+
+
+
+
+
 ~~~
+
+~~~
+___
+
 
 ~~~
 
@@ -2727,7 +2740,7 @@ ____
 
 ~~~
 
-~~~
+
 
 
 
