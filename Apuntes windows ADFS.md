@@ -43,7 +43,7 @@ Este es el mas sencillo de configurar, el mas simple para tener un ADFS
 
 Crea un certificado a traves del servidor web iis, autofirmado, que luego lo exporta, para que lo coja el servidor ADFS.
 
-Despues de configurar hay que esperarse un poco porque si entramos a la herramienta cliente de ADFS nos da un error de no puede conectarse a una base de datos especia, hay que darle tiempo, cuando recien creado
+Despues de configurar hay que esperarse un poco porque si entramos a la herramienta cliente de ADFS nos da un error de no puede conectarse a una base de datos especial, hay que darle tiempo, cuando recien creado
 
 
 set-adfsproperties -EnableIdpInitiatedSignonpage $True
