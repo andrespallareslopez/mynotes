@@ -605,13 +605,20 @@ Luego en StartUp en el metodo Configure necesitamos añadir lo siguiente:
 
 ____
 
+ASP.NET Core, C#, IdentityServer4 - Authentication - Tricking Library Ep28
+
+https://www.youtube.com/watch?v=Ql0ZB67J0TQ&t=65s
+
+
+
+<pre>
+
+
+</pre>
 
 
 
 
 
-
-
-____
-
+___
 
