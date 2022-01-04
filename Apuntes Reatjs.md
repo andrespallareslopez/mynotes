@@ -2730,6 +2730,10 @@ https://www.youtube.com/watch?v=JYFMc_S6kWc
 
 ~~~
 ___
+## Curso React: 46. Validación Formularios: Programación de eventos ( 2 / 4 ) - jonmircha
+
+https://www.youtube.com/watch?v=n6i_3H3sA-Q
+
 
 
 ~~~
