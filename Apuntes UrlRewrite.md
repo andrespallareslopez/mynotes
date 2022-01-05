@@ -116,14 +116,60 @@ https://rakhesh.com/azure/url-redirection-using-azure-app-service/
 
 ___
 
+Qué reglas de URL rewrite deberías conocer en IIS7
+
+https://linube.com/blog/iis7-reglas-url-rewrite/
+
 
 
 
 ___
 
+Web.config redirects with rewrite rules - https, www, and more
+
+https://blog.elmah.io/web-config-redirects-with-rewrite-rules-https-www-and-more/
 
 
+Reverse proxy
+~~~
+<rule name="ReverseProxy" stopProcessing="true">
+  <match url="(.*)" />
+  <conditions logicalGrouping="MatchAll">
+    <add input="{REQUEST_URI}" negate="true" pattern="^(.*)/.well-known/(.*)$"/>
+  </conditions>
+  <action type="Rewrite" url="http://elmahio.github.io/blog/{R:1}" />
+</rule>
 
+~~~
 
+cualquier peticion redirecciona a http://elmahio.github.io/blog/{R:1}
 
+___
 
+Using Rewrite Maps in URL Rewrite Module
+
+https://docs.microsoft.com/en-us/iis/extensions/url-rewrite-module/using-rewrite-maps-in-url-rewrite-module
+
+~~~
+<rewrite>
+    <rewriteMaps>
+        <rewriteMap name="StaticRewrites" defaultValue="">
+            <add key="/article1" value="/article.aspx?id=1&amp;title=some-title" />
+            <add key="/some-title" value="/article.aspx?id=1&amp;title=some-title" />
+            <add key="/post/some-title.html" value="/article.aspx?id=1&amp;title=some-title" />
+        </rewriteMap>
+    </rewriteMaps>
+</rewrite>
+~~~
+
+~~~
+<rules>
+    <rule name="Rewrite Rule">
+        <match url=".*" />
+        <conditions>
+            <add input="{StaticRewrites:{REQUEST_URI}}" pattern="(.+)" />
+        </conditions>
+        <action type="Rewrite" url="{C:1}" />
+    </rule>
+</rules>
+~~~
