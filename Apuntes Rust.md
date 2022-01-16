@@ -48,6 +48,27 @@ Tutorial Rust: String vs str
 
 https://www.youtube.com/watch?v=p-C0M54_w7w
 ___
+Rust tutorial: Referencias y prestamos rust
+
+https://www.youtube.com/watch?v=q0nGi8njUeY
+
+___
+
+Rust Mutability, Borrows, and Moves - the ULTIMATE Tutorial!
+
+https://www.youtube.com/watch?v=vtUMT-GNaYE
 
 
 ___
+
+Introducción a Rust
+
+https://www.adictosaltrabajo.com/2020/05/12/introduccion-a-rust/
+
+
+
+___
+
+
+
+
