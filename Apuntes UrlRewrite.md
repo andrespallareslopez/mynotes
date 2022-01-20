@@ -115,9 +115,9 @@ URL redirection using Azure App Service
 https://rakhesh.com/azure/url-redirection-using-azure-app-service/
 
 ___
+URL Rewriting for Google friendly pages | SEO with Asp.net C#
 
-
-
+https://www.youtube.com/watch?v=vLvR99ZHKwk
 
 ___
 
