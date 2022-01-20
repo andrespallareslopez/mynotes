@@ -510,6 +510,13 @@ ___
 
 
 
+Redux desde cero - ¡Primeros pasos e introducción a Redux en español! (FullStack Bootcamp)
+
+https://www.youtube.com/watch?v=QEsukdXFxxs
+
+___
+
+
 
 
 

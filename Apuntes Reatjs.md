@@ -2744,6 +2744,14 @@ https://www.youtube.com/watch?v=n6i_3H3sA-Q
 
 ~~~
 
+___
+
+Redux desde cero - ¡Primeros pasos e introducción a Redux en español! (FullStack Bootcamp)
+
+https://www.youtube.com/watch?v=QEsukdXFxxs
+
+___
+
 
 
 
