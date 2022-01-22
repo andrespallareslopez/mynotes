@@ -1,12 +1,31 @@
 # Apuntes Azure Active Directory
 
-Tutorial de Azure Active Directory (AD, AAD) | Servicio de gestión de identidades y accesos
+  - [Tutorial de Azure Active Directory (AD, AAD) | Servicio de gestión de identidades y accesos](#tutorial-de-azure-active-directory-ad-aad--servicio-de-gestión-de-identidades-y-accesos)
+  - [Inicio rápido: aplicación web de ASP.NET que hace que usuarios de Azure AD inicien sesión](#inicio-rápido-aplicación-web-de-aspnet-que-hace-que-usuarios-de-azure-ad-inicien-sesión)
+  - [Desarrollo de aplicaciones ASP.NET con Azure Active Directory](#desarrollo-de-aplicaciones-aspnet-con-azure-active-directory)
+  - [Using ADAL .NET to Authenticate Users via Username/Password](#using-adal-net-to-authenticate-users-via-usernamepassword)
+  - [Azure Active Directory libraries for .NET](#azure-active-directory-libraries-for-net)
+  - [Configurar la sincronización entre un Directorio Activo on premises y Azure Active Directory](#configurar-la-sincronización-entre-un-directorio-activo-on-premises-y-azure-active-directory)
+  - [Como iniciar sesión con Azure Active Directory (oAuth 2.0) - ASP.Net [Curso/Tutorial, Español, 2020]](#como-iniciar-sesión-con-azure-active-directory-oauth-20---aspnet-cursotutorial-español-2020)
+  - [Azure Active Directory v2 endpoint and MSAL: Whats new](#azure-active-directory-v2-endpoint-and-msal-whats-new)
+  - [Get User Details in Azure | Azure Graph API | Asp.Net Core](#get-user-details-in-azure--azure-graph-api--aspnet-core)
+  - [Protect WebAPI with Azure AD Authentication](#protect-webapi-with-azure-ad-authentication)
+  - [Usando Microsoft Graph para interactuar con el Directorio Activo de Azure](#usando-microsoft-graph-para-interactuar-con-el-directorio-activo-de-azure)
+  - [Using Microsoft Graph API with Azure Active Directory](#using-microsoft-graph-api-with-azure-active-directory)
+  - [Obtención de un token a partir de la caché de tokens mediante MSAL.NET](#obtención-de-un-token-a-partir-de-la-caché-de-tokens-mediante-msalnet)
+  - [Configuración del registro en MSAL.NET](#configuración-del-registro-en-msalnet)
+  - [Inicialización de aplicaciones cliente con MSAL.NET](#inicialización-de-aplicaciones-cliente-con-msalnet)
+  - [Aplicación de escritorio que llama a las API web: adquisición de un token mediante el nombre de usuario y la contraseña](#aplicación-de-escritorio-que-llama-a-las-api-web-adquisición-de-un-token-mediante-el-nombre-de-usuario-y-la-contraseña)
+  - [Tutorial: Llamada a Microsoft Graph API desde una aplicación de escritorio de Windows](#tutorial-llamada-a-microsoft-graph-api-desde-una-aplicación-de-escritorio-de-windows)
+  - [Get access without a user](#get-access-without-a-user)
+
+## Tutorial de Azure Active Directory (AD, AAD) | Servicio de gestión de identidades y accesos
 
 https://www.youtube.com/watch?v=Ma7VAQE7ga4
 
 ___
 
-Inicio rápido: aplicación web de ASP.NET que hace que usuarios de Azure AD inicien sesión
+## Inicio rápido: aplicación web de ASP.NET que hace que usuarios de Azure AD inicien sesión
 
 https://docs.microsoft.com/es-es/azure/active-directory/develop/quickstart-v2-aspnet-webapp
 
@@ -14,14 +33,14 @@ https://docs.microsoft.com/es-es/azure/active-directory/develop/quickstart-v2-as
 
 ___
 
-Desarrollo de aplicaciones ASP.NET con Azure Active Directory
+## Desarrollo de aplicaciones ASP.NET con Azure Active Directory
 
 https://docs.microsoft.com/es-es/aspnet/identity/overview/getting-started/developing-aspnet-apps-with-windows-azure-active-directory
 
 
 ___
 
-Using ADAL .NET to Authenticate Users via Username/Password
+## Using ADAL .NET to Authenticate Users via Username/Password
 
 https://www.cloudidentity.com/blog/2014/07/08/using-adal-net-to-authenticate-users-via-usernamepassword/
 
@@ -29,7 +48,7 @@ https://www.cloudidentity.com/blog/2014/07/08/using-adal-net-to-authenticate-use
 
 ___
 
-Azure Active Directory libraries for .NET
+## Azure Active Directory libraries for .NET
 
 https://docs.microsoft.com/es-es/dotnet/api/overview/azure/activedirectory
 
@@ -99,14 +118,14 @@ if (authResult != null)
 ___
 
 
-Configurar la sincronización entre un Directorio Activo on premises y Azure Active Directory
+## Configurar la sincronización entre un Directorio Activo on premises y Azure Active Directory
 
 https://www.youtube.com/watch?v=Jfm76GyTNI0&t=436s
 
 
 ___
 
-Como iniciar sesión con Azure Active Directory (oAuth 2.0) - ASP.Net [Curso/Tutorial, Español, 2020]
+## Como iniciar sesión con Azure Active Directory (oAuth 2.0) - ASP.Net [Curso/Tutorial, Español, 2020]
 
 Utiliza .Net 4.8
 
@@ -116,13 +135,13 @@ https://www.youtube.com/watch?v=sRop37oQ_Hk
 
 ___
 
-Azure Active Directory v2 endpoint and MSAL: Whats new
+## Azure Active Directory v2 endpoint and MSAL: Whats new
 
 https://www.youtube.com/watch?v=GPm-5CS4rkI
 
 ___
 
-Get User Details in Azure | Azure Graph API | Asp.Net Core
+## Get User Details in Azure | Azure Graph API | Asp.Net Core
 
 https://www.youtube.com/watch?v=KNX3dvloaiM
 
@@ -134,7 +153,7 @@ Utiliza la libreria Microsoft.Identity.Web y Microsoft.Identity.Web.MicrosoftGra
 ___
 
 
-Protect WebAPI with Azure AD Authentication
+## Protect WebAPI with Azure AD Authentication
 
 https://www.youtube.com/watch?v=Yj2xVTMDoIY
 
@@ -142,21 +161,21 @@ Este lo hace con asp.net normal utiliza librerias que utilizan owin
 
 ___
 
-Usando Microsoft Graph para interactuar con el Directorio Activo de Azure
+## Usando Microsoft Graph para interactuar con el Directorio Activo de Azure
 
 https://www.youtube.com/watch?v=pdtecvzrDqM&t=1562s
 
 
 ___
 
-Using Microsoft Graph API with Azure Active Directory
+## Using Microsoft Graph API with Azure Active Directory
 
 https://www.youtube.com/watch?v=VO7s1434Meg
 
 ___
 
 
-Obtención de un token a partir de la caché de tokens mediante MSAL.NET
+## Obtención de un token a partir de la caché de tokens mediante MSAL.NET
 
 https://docs.microsoft.com/es-es/azure/active-directory/develop/msal-net-acquire-token-silently
 
@@ -202,7 +221,7 @@ if (result != null)
 
 ___
 
-Configuración del registro en MSAL.NET
+## Configuración del registro en MSAL.NET
 
 https://docs.microsoft.com/es-es/azure/active-directory/develop/msal-logging-dotnet
 
@@ -237,7 +256,7 @@ class Program
 
 ___
 
-Inicialización de aplicaciones cliente con MSAL.NET
+## Inicialización de aplicaciones cliente con MSAL.NET
 
 https://docs.microsoft.com/es-es/azure/active-directory/develop/msal-net-initializing-client-applications
 
@@ -257,7 +276,7 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
 
 ___
 
-Aplicación de escritorio que llama a las API web: adquisición de un token mediante el nombre de usuario y la contraseña
+## Aplicación de escritorio que llama a las API web: adquisición de un token mediante el nombre de usuario y la contraseña
 
 https://docs.microsoft.com/es-es/azure/active-directory/develop/scenario-desktop-acquire-token-username-password?tabs=dotnet
 
@@ -304,7 +323,7 @@ static async Task GetATokenForGraph()
 
 ___
 
-Tutorial: Llamada a Microsoft Graph API desde una aplicación de escritorio de Windows
+## Tutorial: Llamada a Microsoft Graph API desde una aplicación de escritorio de Windows
 
 https://docs.microsoft.com/es-es/azure/active-directory/develop/tutorial-v2-windows-desktop
 
@@ -473,7 +492,7 @@ private async void SignOutButton_Click(object sender, RoutedEventArgs e)
 
 ___
 
-Get access without a user
+## Get access without a user
 
 https://docs.microsoft.com/en-us/graph/auth-v2-service
 
@@ -506,11 +525,6 @@ con esta manera
 </pre>
 
 ___
-
-Azure API Management | Cómo gestionar APIs paso a paso
-
-https://www.youtube.com/watch?v=8lO2zmGF7OQ
-
 
 
 ___
