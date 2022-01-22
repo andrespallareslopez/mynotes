@@ -73,4 +73,10 @@ https://www.youtube.com/watch?v=dGCid5W-HK0
 
 ___
 
+Templates in Azure Pipelines: What, Why, and How
+
+https://www.youtube.com/watch?v=UQlRITs7veM
+
+___
+
 
