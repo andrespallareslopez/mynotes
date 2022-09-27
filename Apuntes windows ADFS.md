@@ -49,7 +49,7 @@ Despues de configurar hay que esperarse un poco porque si entramos a la herramie
 set-adfsproperties -EnableIdpInitiatedSignonpage $True
 ___
 
-
+nuevos cambios
 
 
 
